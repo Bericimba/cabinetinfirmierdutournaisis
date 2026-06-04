@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Notre Équipe Infirmière — Cabinet Infirmier du Tournaisis</title>
+<meta name="description" content="Découvrez l'équipe du Cabinet Infirmier du Tournaisis : infirmières diplômées, auxiliaire de soins, gestion administrative et soins esthétiques à domicile. Une équipe humaine et professionnelle au service de votre santé."/>
+<meta name="keywords" content="équipe infirmière Tournaisis, infirmière Quevaucamps, Céline Lhoir infirmière, Louise Joiffroy infirmière, soins à domicile Tournai, infirmier diplômé Belgique, cabinet infirmier, infirmier à domicile, infirmière à domicile, soins infirmiers, service infirmier, équipe infirmière, infirmier indépendant, soins personnalisés, professionnel de santé, expérience infirmière, écoute et accompagnement, coordination médicale, soins de santé, soins palliatifs, soins chroniques, maintien à domicile, gériatrie, soins à domicile Hainaut, infirmier agréé Belgique, infirmière Tournai, soins infirmiers Beloeil"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="Cabinet Infirmier du Tournaisis"/>
+<meta name="geo.region" content="BE-WHT"/>
+<meta name="geo.placename" content="Quevaucamps, Belgique"/>
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://cabinetinfirmierdutournaisis.be/equipe.html"/>
+<meta property="og:title" content="Notre Équipe — Cabinet Infirmier du Tournaisis"/>
+<meta property="og:description" content="Une équipe d'infirmiers investis, créatifs et profondément humains au service de votre santé dans le Tournaisis."/>
+<meta property="og:image" content="https://i.imgur.com/Nm6sS5R.png"/>
+<meta property="og:locale" content="fr_BE"/>
+<!-- Canonical -->
+<link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/equipe.html"/>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://i.imgur.com/Nm6sS5R.png"/>
+<link rel="apple-touch-icon" href="https://i.imgur.com/Nm6sS5R.png"/>
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Cabinet Infirmier du Tournaisis — Notre Équipe",
+  "url": "https://cabinetinfirmierdutournaisis.be/equipe.html",
+  "employee": [
+    {"@type":"Person","name":"Céline Lhoir","jobTitle":"Infirmière coordinatrice & fondatrice"},
+    {"@type":"Person","name":"Louise Joiffroy","jobTitle":"Infirmière en chef"},
+    {"@type":"Person","name":"Mélissa Devos","jobTitle":"Auxiliaire de soins"},
+    {"@type":"Person","name":"Jordan Daubie","jobTitle":"Infirmier"},
+    {"@type":"Person","name":"Peter Andries","jobTitle":"Gestion administrative"},
+    {"@type":"Person","name":"Léa Beaufays","jobTitle":"Soins esthétiques à domicile"}
+  ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --pink:#D4187A;--pink-light:#FBEAF3;--pink-mid:#E8529A;--pink-dark:#9A0F57;
+  --purple:#7B4FB5;--purple-light:#F0EAF8;--purple-mid:#9B72CC;
+  --teal:#1A9E8F;--teal-light:#E0F5F3;--teal-mid:#3DBDAF;
+  --warm:#FDF8FC;--text:#2C2A2B;--muted:#6B5F68;--border:#E8D8E4;--white:#fff;
+  --radius:14px;
+}
+body{font-family:'Segoe UI',sans-serif;color:var(--text);background:var(--white);}
+a{text-decoration:none;color:inherit;}
+
+/* TICKER */
+.ticker{background:linear-gradient(90deg,var(--pink),var(--purple),var(--teal));color:#fff;font-size:13px;padding:8px 0;overflow:hidden;white-space:nowrap;}
+.ticker-inner{display:inline-block;animation:scroll 35s linear infinite;}
+@keyframes scroll{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
+
+/* NAV */
+nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;padding:0 1.25rem;}
+.nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.logo-area{display:flex;align-items:center;gap:10px;}
+.logo-area img{width:44px;height:44px;object-fit:contain;}
+.logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
+.logo-sub{font-size:10px;color:var(--muted);}
+.nav-links{display:flex;gap:1.2rem;font-size:13px;}
+.nav-links a{color:var(--muted);transition:color .2s;}
+.nav-links a:hover{color:var(--pink);}
+.nav-links a.active{color:var(--pink);font-weight:600;}
+.nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}
+.mobile-menu{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--border);padding:1rem 1.25rem;gap:.75rem;}
+.mobile-menu a{color:var(--text);font-size:15px;padding:.5rem 0;border-bottom:1px solid var(--border);}
+.mobile-menu a:last-child{border:none;}
+.mobile-menu.open{display:flex;}
+
+/* HERO ÉQUIPE */
+.hero-equipe{background:linear-gradient(135deg,#FDF0F7,#F0EAF8,#E0F5F3);padding:4rem 1.25rem 3rem;}
+.hero-equipe-inner{max-width:1100px;margin:auto;text-align:center;}
+.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:1.5rem;}
+.breadcrumb a{color:var(--pink);}
+.breadcrumb span{margin:0 .5rem;opacity:.5;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--pink-light);color:var(--pink);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:1rem;border:1px solid #F0B0D0;}
+.hero-equipe h1{font-size:2.8rem;font-weight:800;line-height:1.15;margin-bottom:1rem;}
+.hero-equipe h1 .grad{background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-equipe p{font-size:1.05rem;color:var(--muted);line-height:1.75;max-width:650px;margin:0 auto 2rem;}
+.team-stats{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;}
+.ts{text-align:center;}
+.ts-num{font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ts-label{font-size:13px;color:var(--muted);}
+
+/* FILTRES */
+.filtres{background:var(--white);border-bottom:1px solid var(--border);padding:.875rem 1.25rem;position:sticky;top:64px;z-index:90;}
+.filtres-inner{max-width:1100px;margin:auto;display:flex;gap:.5rem;flex-wrap:wrap;}
+.filtre-btn{background:var(--white);border:1.5px solid var(--border);color:var(--muted);padding:7px 16px;border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;}
+.filtre-btn:hover,.filtre-btn.active{border-color:var(--pink);color:var(--pink);background:var(--pink-light);}
+.filtre-btn.active{font-weight:700;}
+
+/* GRILLE ÉQUIPE */
+.equipe-section{padding:3rem 1.25rem;}
+.equipe-inner{max-width:1100px;margin:auto;}
+.section-tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:1.5rem;letter-spacing:.06em;text-transform:uppercase;}
+.tag-pink{background:var(--pink-light);color:var(--pink);border:1px solid #F0B0D0;}
+.tag-purple{background:var(--purple-light);color:var(--purple);border:1px solid #C8A8E8;}
+.tag-teal{background:var(--teal-light);color:var(--teal);border:1px solid #8DD8D0;}
+
+/* CARTE MEMBRE — format étendu */
+.membre-card{background:var(--white);border-radius:20px;border:1px solid var(--border);overflow:hidden;margin-bottom:2rem;display:grid;grid-template-columns:280px 1fr;transition:box-shadow .2s;}
+.membre-card:hover{box-shadow:0 8px 32px rgba(212,24,122,.1);}
+.membre-card.reverse{grid-template-columns:1fr 280px;}
+.membre-photo{background:linear-gradient(135deg,#FDF0F7,#F0EAF8);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 1.5rem;gap:1rem;}
+.membre-card.reverse .membre-photo{order:2;}
+.big-avatar{width:110px;height:110px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;font-weight:800;color:#fff;margin-bottom:.5rem;}
+.av-pink{background:linear-gradient(135deg,var(--pink),var(--pink-mid));}
+.av-purple{background:linear-gradient(135deg,var(--purple),var(--purple-mid));}
+.av-teal{background:linear-gradient(135deg,var(--teal),var(--teal-mid));}
+.av-grad{background:linear-gradient(135deg,var(--pink),var(--purple),var(--teal));}
+.membre-name{font-size:1.2rem;font-weight:800;text-align:center;}
+.membre-role-badge{font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;text-align:center;}
+.rb-pink{background:var(--pink-light);color:var(--pink);}
+.rb-purple{background:var(--purple-light);color:var(--purple);}
+.rb-teal{background:var(--teal-light);color:var(--teal);}
+.membre-content{padding:2rem 2.5rem;}
+.membre-content h2{font-size:1.5rem;font-weight:800;margin-bottom:.25rem;}
+.membre-content .sous-titre{font-size:.875rem;font-weight:600;margin-bottom:1.25rem;}
+.sc-pink{color:var(--pink);}
+.sc-purple{color:var(--purple);}
+.sc-teal{color:var(--teal);}
+.membre-desc{font-size:.925rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;}
+.membre-desc strong{color:var(--text);}
+.competences{margin-bottom:1.25rem;}
+.competences h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:.6rem;}
+.comp-list{display:flex;flex-wrap:wrap;gap:.4rem;}
+.comp{font-size:12px;padding:4px 12px;border-radius:20px;font-weight:500;}
+.comp.p{background:var(--pink-light);color:var(--pink-dark);}
+.comp.v{background:var(--purple-light);color:var(--purple);}
+.comp.t{background:var(--teal-light);color:var(--teal);}
+.valeurs{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);}
+.valeur{display:flex;align-items:center;gap:.4rem;font-size:12px;color:var(--muted);}
+.valeur svg{width:14px;height:14px;stroke:var(--pink);fill:none;stroke-width:2;flex-shrink:0;}
+
+/* CITATION */
+.citation{background:linear-gradient(135deg,var(--pink-light),var(--purple-light));border-left:4px solid var(--pink);border-radius:0 var(--radius) var(--radius) 0;padding:1rem 1.25rem;margin:1rem 0;font-style:italic;font-size:.925rem;color:var(--text);line-height:1.65;}
+
+/* SECTION REJOINDRE */
+.rejoindre{background:linear-gradient(135deg,var(--pink),var(--purple),var(--teal));padding:4rem 1.25rem;text-align:center;color:#fff;}
+.rejoindre h2{font-size:2rem;font-weight:800;margin-bottom:.75rem;}
+.rejoindre p{font-size:1rem;opacity:.85;line-height:1.7;max-width:550px;margin:0 auto 2rem;}
+.btn-white{background:#fff;color:var(--pink);padding:14px 32px;border-radius:25px;font-size:15px;font-weight:700;border:none;cursor:pointer;display:inline-block;}
+
+/* CTA FLOTTANT MOBILE */
+.cta-float{display:none;position:fixed;bottom:1.25rem;right:1.25rem;z-index:200;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:13px 18px;border-radius:30px;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(212,24,122,.4);align-items:center;gap:8px;border:none;cursor:pointer;}
+.cta-float svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.5;}
+
+/* FOOTER */
+footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
+.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-cit{font-size:1.3rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+footer p{font-size:.825rem;color:#A898A4;line-height:1.7;}
+footer a{color:var(--pink-mid);font-size:.825rem;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links,.nav-btn{display:none;}
+  .hamburger{display:flex;}
+  .hero-equipe h1{font-size:2rem;}
+  .team-stats{gap:1.25rem;}
+  .filtres{top:64px;}
+  .membre-card,.membre-card.reverse{grid-template-columns:1fr;grid-template-rows:auto 1fr;}
+  .membre-card.reverse .membre-photo{order:0;}
+  .membre-photo{padding:2rem 1.5rem;}
+  .membre-content{padding:1.5rem;}
+  .cta-float{display:flex;}
+  .footer-inner{flex-direction:column;text-align:center;}
+}
+@media(max-width:420px){
+  .hero-equipe h1{font-size:1.7rem;}
+  .membre-content h2{font-size:1.25rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-inner">
+    ✦ Tournai &nbsp;•&nbsp; Antoing &nbsp;•&nbsp; Péruwelz &nbsp;•&nbsp; Leuze &nbsp;•&nbsp; Brunehaut &nbsp;•&nbsp; Rumes &nbsp;•&nbsp; Pecq &nbsp;•&nbsp; Estaimpuis &nbsp;•&nbsp; Celles &nbsp;•&nbsp; Mont-de-l'Enclus &nbsp;•&nbsp; Frasnes-lez-Anvaing &nbsp;•&nbsp; Beloeil &nbsp;•&nbsp; 24h/24 – 7j/7 &nbsp;•&nbsp; (+32) 069.30.41.33 &nbsp;•&nbsp;
+  </span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo-area">
+      <img src="https://i.imgur.com/Nm6sS5R.png" alt="Logo CIT"/>
+      <div>
+        <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
+        <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="equipe.html" class="active">Équipe</a>
+      <a href="dispensaire.html">Dispensaire</a>
+      <a href="index.html#facturation">Facturation</a>
+      <a href="index.html#zone">Zone</a>
+      <a href="remplacement.html">Remplacements</a>
+    </div>
+    <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
+    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="#" onclick="this.closest('.mobile-menu').classList.remove('open')">Accueil</a>
+    <a href="#" onclick="this.closest('.mobile-menu').classList.remove('open')">Équipe</a>
+    <a href="#" onclick="this.closest('.mobile-menu').classList.remove('open')">Dispensaire</a>
+    <a href="#" onclick="this.closest('.mobile-menu').classList.remove('open')">Facturation</a>
+    <a href="#" onclick="this.closest('.mobile-menu').classList.remove('open')">Zone</a>
+    <a href="index.html#rdv" style="color:var(--pink);font-weight:700;">📅 Prendre RDV</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-equipe">
+  <div class="hero-equipe-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span>›</span>Notre équipe</div>
+    <div class="hero-tag">👩‍⚕️ Une équipe pas tout à fait normale</div>
+    <h1>Notre <span class="grad">équipe</span></h1>
+    <p>Professionnels, investis, créatifs et réunis autour d'une conviction simple : les soins méritent autant de compétence que d'humanité.</p>
+    <div class="team-stats">
+      <div class="ts"><div class="ts-num">6</div><div class="ts-label">Soignants & collaborateurs</div></div>
+      <div class="ts"><div class="ts-num">24/7</div><div class="ts-label">Disponibilité</div></div>
+      <div class="ts"><div class="ts-num">10+</div><div class="ts-label">Ans d'expérience cumulée</div></div>
+      <div class="ts"><div class="ts-num">13+</div><div class="ts-label">Communes couvertes</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTRES -->
+<div class="filtres">
+  <div class="filtres-inner">
+    <button class="filtre-btn active" onclick="filtrer('tous',this)">Tous</button>
+    <button class="filtre-btn" onclick="filtrer('infirmier',this)">Infirmiers</button>
+    <button class="filtre-btn" onclick="filtrer('auxiliaire',this)">Auxiliaires</button>
+    <button class="filtre-btn" onclick="filtrer('admin',this)">Administratif</button>
+    <button class="filtre-btn" onclick="filtrer('esthetique',this)">Bien-être</button>
+  </div>
+</div>
+
+<!-- MEMBRES -->
+<section class="equipe-section">
+  <div class="equipe-inner">
+
+    <!-- CÉLINE -->
+    <div class="membre-card" data-cat="infirmier" id="celine">
+      <div class="membre-photo">
+        <img src="https://i.imgur.com/C040BYl.png" alt="Céline Lhoir" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--pink-light);margin-bottom:.5rem;"/>
+        <div class="membre-name">Céline Lhoir</div>
+        <div class="membre-role-badge rb-pink">Fondatrice & coordinatrice</div>
+      </div>
+      <div class="membre-content">
+        <h2>Céline Lhoir</h2>
+        <div class="sous-titre sc-pink">Fondatrice · Infirmière coordinatrice · Gestionnaire</div>
+        <p class="membre-desc">
+          Chez Céline, les idées vont vite, les solutions arrivent souvent avant la fin de la phrase… et l'humour n'est jamais très loin. Fondatrice du cabinet, infirmière de terrain et gestionnaire dans l'âme, elle mélange vision globale, expérience pratique et ce fameux <strong>« humour Lhoir »</strong> : parfois subtil, parfois imprévisible, rarement absent.
+        </p>
+
+        <!-- CONTENU ÉTENDU -->
+        <div id="celine-plus" style="display:none;">
+          <p class="membre-desc">
+            Infirmière diplômée, titulaire d'un diplôme de gestion d'entreprise et d'un diplôme de directrice de maison de repos en Wallonie, elle évolue entre soins, management, coordination et amélioration continue avec une énergie créative difficile à ranger dans une case.
+          </p>
+
+          <div class="competences">
+            <h4>Spécialités</h4>
+            <div class="comp-list">
+              <span class="comp p">Pansements & injections</span>
+              <span class="comp p">Prises de sang</span>
+              <span class="comp p">Surveillance vitale</span>
+              <span class="comp p">Pathologies chroniques</span>
+              <span class="comp p">Éducation thérapeutique</span>
+              <span class="comp p">Coordination médicale</span>
+              <span class="comp v">Soins à domicile</span>
+              <span class="comp v">Accompagnement personnalisé</span>
+              <span class="comp v">Pré- & post-opératoire</span>
+              <span class="comp v">Management d'équipe</span>
+              <span class="comp t">Gestion d'entreprise</span>
+              <span class="comp t">Direction maison de repos</span>
+              <span class="comp t">Consultance MR Wallonie</span>
+            </div>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--pink-light);border-radius:var(--radius);border:1px solid #F0B0D0;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--pink);margin-bottom:.5rem;">⭐ Approche & valeurs</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Pour Céline, un soin technique n'a de valeur que s'il reste profondément humain. Elle défend une pratique fondée sur la confiance, la transparence, le respect et la connexion réelle avec les patients. Curieuse, créative et orientée solutions, elle aime autant résoudre les problèmes que repenser les façons de mieux prendre soin.</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;margin-top:.75rem;">Sérieuse dans son métier, jamais froide dans sa manière d'être, elle cultive une ambiance où compétence et légèreté peuvent cohabiter — même quand la journée décide de tester la patience collective.</p>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--purple-light);border-radius:var(--radius);border:1px solid #C8A8E8;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--purple);margin-bottom:.5rem;">🎨 Personnalité</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Esprit vif, créativité débordante, humour légèrement incontrôlé. Collectionne les blouses colorées, les idées improbables, les astuces pratiques… et les blagues qui arrivent parfois au moment où personne ne les avait demandées mais où tout le monde en avait besoin.</p>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--teal-light);border-radius:var(--radius);border:1px solid #8DD8D0;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--teal);margin-bottom:.5rem;">🗓️ Disponibilité</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Intervenante au Cabinet Infirmier du Tournaisis pour consultations au cabinet ou visites à domicile — flexible, organisée, discrète et capable de gérer une situation complexe… tout en lançant une remarque parfaitement inutile mais étonnamment efficace pour détendre l'atmosphère.</p>
+          </div>
+
+          <div class="citation">« Pour un soin, un conseil ou une question, Céline écoute, accompagne et soigne avec engagement. Et selon l'humeur du jour, il existe un faible risque statistique d'exposition à l'humour Lhoir. »</div>
+        </div>
+
+        <!-- BOUTON PLUS / MOINS -->
+        <button onclick="
+          var el=document.getElementById('celine-plus');
+          var btn=this;
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+        " style="margin-top:1rem;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
+
+        <div class="citation">« Pour moi, un soin technique n'a de valeur que s'il reste profondément humain. »</div>
+        <div class="competences">
+          <h4>Spécialités & formations</h4>
+          <div class="comp-list">
+            <span class="comp p">Soins courants</span>
+            <span class="comp p">Pathologies chroniques</span>
+            <span class="comp p">Pré- & post-opératoire</span>
+            <span class="comp v">Gestion d'entreprise</span>
+            <span class="comp v">Direction maison de repos</span>
+            <span class="comp t">Consultance MR Wallonie</span>
+            <span class="comp t">Management d'équipe</span>
+          </div>
+        </div>
+        <div class="valeurs">
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Humanité</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Disponibilité 24/7</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Confiance</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>Humour</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOUISE -->
+    <div class="membre-card reverse" data-cat="infirmier" id="louise">
+      <div class="membre-photo" style="background:linear-gradient(135deg,#F0EAF8,#E8D8F8);">
+        <img src="https://i.imgur.com/k2ojrge.png" alt="Louise Joiffroy" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--purple-light);margin-bottom:.5rem;"/>
+        <div class="membre-name">Louise Joiffroy</div>
+        <div class="membre-role-badge rb-purple">Infirmière en chef</div>
+      </div>
+      <div class="membre-content">
+        <h2>Louise Joiffroy</h2>
+        <div class="sous-titre sc-purple">Infirmière diplômée · 10 ans d'expérience</div>
+        <p class="membre-desc">
+          Infirmière en chef passionnée, irrévérencieuse et profondément investie, elle sait créer une relation de confiance sans jamais perdre de vue l'essentiel : <strong>la qualité du soin</strong>. Infirmière diplômée avec 10 ans d'expérience, Louise accompagne les patients chroniques, post-opératoires et les prises en charge complexes avec rigueur, efficacité et engagement.
+        </p>
+
+        <!-- CONTENU ÉTENDU -->
+        <div id="louise-plus" style="display:none;">
+
+          <div class="competences">
+            <h4>Parcours & compétences</h4>
+            <div class="comp-list">
+              <span class="comp v">Soins à domicile</span>
+              <span class="comp v">Patients chroniques</span>
+              <span class="comp v">Pansements complexes</span>
+              <span class="comp p">Injections & perfusions</span>
+              <span class="comp p">Soins post-opératoires</span>
+              <span class="comp t">Évaluation clinique</span>
+              <span class="comp t">Accompagnement personnalisé</span>
+            </div>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--purple-light);border-radius:var(--radius);border:1px solid #C8A8E8;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--purple);margin-bottom:.5rem;">🎓 Formation</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Diplôme d'infirmière · 10 ans d'expérience terrain en soins à domicile et accompagnement complexe.</p>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--pink-light);border-radius:var(--radius);border:1px solid #F0B0D0;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--pink);margin-bottom:.5rem;">💡 Approche & style</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Rigoureuse, accessible et dotée d'un humour parfois décalé, Louise sait détendre l'atmosphère sans jamais compromettre la sécurité, le confort ou la qualité des soins. Son approche repose sur une communication claire, une écoute attentive et une capacité d'adaptation à tous les âges et à toutes les situations.</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;margin-top:.75rem;font-style:italic;">Sa philosophie est simple : soigner le corps, respecter la personne et offrir un sourire quand le moment s'y prête.</p>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--teal-light);border-radius:var(--radius);border:1px solid #8DD8D0;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--teal);margin-bottom:.75rem;">✅ Engagements</p>
+            <div style="display:flex;flex-direction:column;gap:.5rem;">
+              <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.875rem;"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">•</span>Disponibilité et suivi personnalisé entre l'hôpital et le domicile</div>
+              <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.875rem;"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">•</span>Éducation thérapeutique et soutien aux proches</div>
+              <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.875rem;"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">•</span>Respect strict de la dignité, de la confidentialité et de l'autonomie</div>
+            </div>
+          </div>
+
+          <div class="citation">« Disponible au Cabinet Infirmier du Tournaisis pour visites, conseils et suivi — professionnelle, efficace… et parfois anecdote incluse. »</div>
+        </div>
+
+        <!-- BOUTON PLUS / MOINS -->
+        <button onclick="
+          var el=document.getElementById('louise-plus');
+          var btn=this;
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+        " style="margin-top:1rem;background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
+
+        <div class="citation">« Soigner le corps, respecter la personne et offrir un sourire quand le moment s'y prête. »</div>
+        <div class="valeurs">
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Rigueur</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Authenticité</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Réactivité</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÉLISSA -->
+    <div class="membre-card" data-cat="auxiliaire" id="melissa">
+      <div class="membre-photo" style="background:linear-gradient(135deg,#E0F5F3,#D0EDE9);">
+        <img src="https://i.imgur.com/pa82DU3.png" alt="Mélissa Devos" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--teal-light);margin-bottom:.5rem;"/>
+        <div class="membre-name">Mélissa Devos</div>
+        <div class="membre-role-badge rb-teal">Auxiliaire de soins</div>
+      </div>
+      <div class="membre-content">
+        <h2>Mélissa Devos</h2>
+        <div class="sous-titre sc-teal">Auxiliaire en soins à domicile & gériatriques</div>
+        <p class="membre-desc">
+          Auxiliaire de soins franche, originale et sans détour. Mélissa accompagne les patients à domicile et en gériatrie avec rigueur, réalisme et engagement, dans les soins du quotidien comme dans les situations plus complexes.
+        </p>
+
+        <!-- CONTENU ÉTENDU -->
+        <div id="melissa-plus" style="display:none;">
+
+          <div class="competences">
+            <h4>Compétences</h4>
+            <div class="comp-list">
+              <span class="comp t">Aide au quotidien</span>
+              <span class="comp t">Accompagnement personnalisé</span>
+              <span class="comp t">Soins délégués</span>
+              <span class="comp v">Suivi maladies chroniques</span>
+              <span class="comp v">Coordination infirmières</span>
+              <span class="comp v">Écoute active</span>
+              <span class="comp p">Organisation à domicile</span>
+              <span class="comp p">Gestion réactive des besoins</span>
+            </div>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--teal-light);border-radius:var(--radius);border:1px solid #8DD8D0;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--teal);margin-bottom:.5rem;">🎓 Formation</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Diplôme d'auxiliaire de soins · Formation en prévention des chutes · Expérience en maison de repos et soins à domicile.</p>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--pink-light);border-radius:var(--radius);border:1px solid #F0B0D0;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--pink);margin-bottom:.5rem;">💡 Approche & valeurs</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Une pratique centrée sur le respect, la confidentialité et l'autonomie. Mélissa privilégie une relation honnête, sans faux-semblants, où l'on peut compter sur sa franchise, son sens pratique et sa capacité à garder le cap.</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;margin-top:.75rem;">Créative lorsqu'il faut trouver des solutions, investie dans le travail d'équipe, elle apporte aussi un humour discret, parfois mordant, mais toujours humain.</p>
+          </div>
+
+          <div class="citation">« Disponible au Cabinet Infirmier du Tournaisis pour des soins sûrs, humains et légèrement hors normes. »</div>
+        </div>
+
+        <!-- BOUTON PLUS / MOINS -->
+        <button onclick="
+          var el=document.getElementById('melissa-plus');
+          var btn=this;
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+        " style="margin-top:1rem;background:linear-gradient(135deg,var(--teal),var(--teal-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
+
+        <div class="citation">« Soigner sans faux-semblants. Être là, vraiment. »</div>
+        <div class="valeurs">
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Franchise</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Fiabilité</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Engagement</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JORDAN -->
+    <div class="membre-card reverse" data-cat="infirmier" id="jordan">
+      <div class="membre-photo" style="background:linear-gradient(135deg,#F0EAF8,#FDF0F7);">
+        <img src="https://i.imgur.com/UeUAcAl.png" alt="Jordan Daubie" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--purple-light);margin-bottom:.5rem;"/>
+        <div class="membre-name">Jordan Daubie</div>
+        <div class="membre-role-badge rb-purple">Infirmier</div>
+      </div>
+      <div class="membre-content">
+        <h2>Jordan Daubie</h2>
+        <div class="sous-titre sc-purple">Infirmier diplômé · Soins complexes & palliatifs</div>
+        <p class="membre-desc">
+          Infirmier diplômé, Jordan prend en charge les patients chroniques, post-opératoires et en fin de vie avec professionnalisme, intuition et engagement. Derrière une présence calme se cache une approche singulière et profondément humaine.
+        </p>
+
+        <!-- CONTENU ÉTENDU -->
+        <div id="jordan-plus" style="display:none;">
+
+          <div class="competences">
+            <h4>Compétences</h4>
+            <div class="comp-list">
+              <span class="comp p">Pansements complexes</span>
+              <span class="comp p">Perfusions & injections</span>
+              <span class="comp v">Évaluation clinique</span>
+              <span class="comp v">Éducation thérapeutique</span>
+              <span class="comp v">Coordination pluridisciplinaire</span>
+              <span class="comp t">Accompagnement individualisé</span>
+              <span class="comp t">Soins palliatifs</span>
+            </div>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--purple-light);border-radius:var(--radius);border:1px solid #C8A8E8;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--purple);margin-bottom:.5rem;">🎓 Formation</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Diplôme d'infirmier · Expérience en soins à domicile, accompagnement chronique et soins palliatifs.</p>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--pink-light);border-radius:var(--radius);border:1px solid #F0B0D0;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--pink);margin-bottom:.5rem;">💡 Approche du soin</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Une pratique centrée sur la personne, mêlant rigueur clinique et sensibilité humaine. Créatif dans sa façon d'améliorer le confort et le bien-être, Jordan apporte une touche différente au soin : une présence rassurante, une écoute attentive, parfois un humour subtil, toujours une approche originale qui laisse une empreinte positive.</p>
+          </div>
+
+          <div class="citation">« Disponible au Cabinet Infirmier du Tournaisis — des soins professionnels, humains et légèrement hors des sentiers battus. »</div>
+        </div>
+
+        <!-- BOUTON PLUS / MOINS -->
+        <button onclick="
+          var el=document.getElementById('jordan-plus');
+          var btn=this;
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+        " style="margin-top:1rem;background:linear-gradient(135deg,var(--pink),var(--purple),var(--teal));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
+
+        <div class="citation">« Une présence rassurante, une écoute attentive — toujours une approche originale. »</div>
+        <div class="valeurs">
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Sensibilité</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Discrétion</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Originalité</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PETER -->
+    <div class="membre-card" data-cat="admin" id="peter">
+      <div class="membre-photo" style="background:linear-gradient(135deg,#F0EAF8,#E8D8F8);">
+        <img src="https://i.imgur.com/p4dVmiM.png" alt="Peter Andries" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--purple-light);margin-bottom:.5rem;"/>
+        <div class="membre-name">Peter Andries</div>
+        <div class="membre-role-badge rb-purple">Gestion administrative</div>
+      </div>
+      <div class="membre-content">
+        <h2>Peter Andries</h2>
+        <div class="sous-titre sc-purple">Responsable administratif & tarification infirmière</div>
+        <p class="membre-desc">
+          Encodage, suivi, facturation, coordination administrative… Peter transforme le chaos administratif en quelque chose de presque agréable. <strong>(Bon… presque.)</strong> Méthodique, impliqué et orienté solutions, il accompagne les soignants avec une mission simple : leur faire gagner du temps, alléger leur charge mentale et leur permettre de se consacrer pleinement à leur métier.
+        </p>
+
+        <!-- CONTENU ÉTENDU -->
+        <div id="peter-plus" style="display:none;">
+
+          <div class="competences">
+            <h4>Missions</h4>
+            <div class="comp-list">
+              <span class="comp v">Facturation INAMI</span>
+              <span class="comp v">Encodage des prestations</span>
+              <span class="comp v">Tarification infirmière</span>
+              <span class="comp t">e-Health & tiers payant</span>
+              <span class="comp t">Suivi administratif</span>
+              <span class="comp p">Accompagnement infirmiers indépendants</span>
+            </div>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--purple-light);border-radius:var(--radius);border:1px solid #C8A8E8;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--purple);margin-bottom:.5rem;">🤝 Pour les infirmiers indépendants</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Vous êtes infirmier(e) indépendant(e) ? Peter peut prendre en charge votre facturation et vos démarches administratives INAMI — pour que vous puissiez soigner sans la paperasse.</p>
+          </div>
+
+          <div class="citation">« L'homme qui apprivoise l'administratif — méthodique, impliqué, et capable de rendre un tableau Excel presque poétique. »</div>
+        </div>
+
+        <!-- BOUTON PLUS / MOINS -->
+        <button onclick="
+          var el=document.getElementById('peter-plus');
+          var btn=this;
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+        " style="margin-top:1rem;background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
+
+        <div class="citation">« Un bon administratif, c'est aussi une façon de prendre soin des soignants. »</div>
+        <div style="margin-top:1rem;padding:1rem;background:var(--purple-light);border-radius:10px;border:1px solid #C8A8E8;">
+          <p style="font-size:.875rem;color:var(--purple);font-weight:600;margin-bottom:.25rem;">Service de tarification infirmière</p>
+          <p style="font-size:.825rem;color:var(--muted);line-height:1.6;">Vous êtes infirmier(e) indépendant(e) ? Peter peut prendre en charge votre facturation et vos démarches administratives INAMI.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LÉA -->
+    <div class="membre-card reverse" data-cat="esthetique" id="lea">
+      <div class="membre-photo" style="background:linear-gradient(135deg,#FDF0F7,#FBEAF3);">
+        <img src="https://i.imgur.com/7UENBqa.png" alt="Léa Beaufays" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--pink-light);margin-bottom:.5rem;"/>
+        <div class="membre-name">Léa Beaufays</div>
+        <div class="membre-role-badge rb-pink">Soins esthétiques à domicile</div>
+      </div>
+      <div class="membre-content">
+        <h2>Léa Beaufays</h2>
+        <div class="sous-titre sc-pink">Esthéticienne · Soins bien-être à domicile</div>
+        <p class="membre-desc">
+          À travers ses soins esthétiques à domicile, Léa accompagne chacun avec professionnalisme, sens du détail et une approche profondément humaine. Son objectif ? Offrir bien plus qu'un soin : <strong>un moment pour soi, une parenthèse de bien-être</strong> et un coup de pouce à la confiance en soi — directement chez vous.
+        </p>
+
+        <!-- CONTENU ÉTENDU -->
+        <div id="lea-plus" style="display:none;">
+
+          <p class="membre-desc">
+            Attentive, minutieuse et passionnée, Léa place l'écoute, la personnalisation et le confort au cœur de sa pratique.
+          </p>
+
+          <div class="competences">
+            <h4>Prestations</h4>
+            <div class="comp-list">
+              <span class="comp p">Soins du visage</span>
+              <span class="comp p">Nettoyage & hydratation</span>
+              <span class="comp p">Soins personnalisés</span>
+              <span class="comp v">Bien-être global</span>
+              <span class="comp v">Confiance en soi</span>
+              <span class="comp t">Déplacement à domicile</span>
+            </div>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--pink-light);border-radius:var(--radius);border:1px solid #F0B0D0;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--pink);margin-bottom:.5rem;">💆 Approche & valeurs</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Professionnelle, attentive et passionnée, Léa apporte ses soins directement à votre domicile avec une approche humaine, personnalisée et sans complications. Chaque soin est adapté à vos besoins, votre rythme et votre confort.</p>
+          </div>
+
+          <div style="margin:1.25rem 0;padding:1.25rem;background:var(--purple-light);border-radius:var(--radius);border:1px solid #C8A8E8;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--purple);margin-bottom:.5rem;">🏠 Soins à domicile</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Pas besoin de se déplacer — Léa vient chez vous, à votre convenance, pour vous offrir une expérience de bien-être dans votre propre espace, en toute sérénité.</p>
+          </div>
+
+          <div class="citation">« Parce qu'au fond, le plus beau résultat reste souvent la meilleure version de vous-même. »</div>
+        </div>
+
+        <!-- BOUTON PLUS / MOINS -->
+        <button onclick="
+          var el=document.getElementById('lea-plus');
+          var btn=this;
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+        " style="margin-top:1rem;background:linear-gradient(135deg,var(--pink),var(--pink-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
+
+        <div class="citation">« Le plus beau résultat reste souvent la meilleure version de vous-même. »</div>
+        <div class="valeurs">
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Bienveillance</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>Bien-être</div>
+          <div class="valeur"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Personnalisation</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REJOINDRE -->
+<div class="rejoindre">
+  <h2>Rejoignez notre équipe ?</h2>
+  <p>Vous êtes infirmier(e), auxiliaire ou professionnel de santé et vous partagez nos valeurs ? Nous serions ravis de vous rencontrer.</p>
+  <a class="btn-white" href="mailto:cabinftournaisis@gmx.com?subject=Candidature spontanée - CIT">Envoyer une candidature</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-cit">C.I.T</div>
+      <p>Avenue de l'Europe, 68 · Quevaucamps 7972<br/>
+      <a href="tel:+3269304133">(+32) 069.30.41.33</a> · <a href="mailto:cabinftournaisis@gmx.com">cabinftournaisis@gmx.com</a></p>
+    </div>
+    <p style="color:#706070;font-size:.775rem;">© 2025 Cabinet Infirmier du Tournaisis · BCE BE0832.195.365</p>
+  </div>
+</footer>
+
+<!-- BOUTON FLOTTANT MOBILE -->
+<button class="cta-float" onclick="window.location.href='tel:+3269304133'">
+  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.95 5.95l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Appeler
+</button>
+
+<script>
+function filtrer(cat, btn) {
+  document.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.membre-card').forEach(card => {
+    if (cat === 'tous' || card.dataset.cat === cat) {
+      card.style.display = 'grid';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

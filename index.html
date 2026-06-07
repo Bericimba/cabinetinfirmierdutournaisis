@@ -813,16 +813,13 @@ window.addEventListener('load', function(){
     box-shadow:0 4px 16px rgba(212,24,122,.4);
     display:flex;align-items:center;justify-content:center;
     transition:transform .2s,box-shadow .2s;
-  " title="Activer la musique">
-    🎵
-  </button>
+  " title="Activer la musique">🎵</button>
   <div id="audio-label" style="
     position:absolute;left:56px;top:50%;transform:translateY(-50%);
-    background:rgba(255,255,255,.95);color:var(--muted);
+    background:rgba(255,255,255,.95);color:#6B5F68;
     font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;
     white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.1);
-    border:1px solid var(--border);
-    opacity:1;transition:opacity .3s;
+    border:1px solid #E8D8E4;opacity:1;transition:opacity .3s;
   ">Activer la musique</div>
 </div>
 
@@ -830,41 +827,61 @@ window.addEventListener('load', function(){
 var music = document.getElementById('bg-music');
 var btn = document.getElementById('audio-btn');
 var label = document.getElementById('audio-label');
-var playing = false;
 
-// Cache le label après 4 secondes
-setTimeout(function(){ label.style.opacity='0'; }, 4000);
-
-function toggleMusic(){
-  if(!playing){
+function setPlaying(state){
+  if(state){
     music.volume = 0.35;
-    music.play();
+    music.play().catch(function(){});
     btn.innerHTML = '🔊';
     btn.style.background = 'linear-gradient(135deg,#1A9E8F,#7B4FB5)';
-    label.textContent = 'Musique activée';
-    label.style.opacity = '1';
-    setTimeout(function(){ label.style.opacity='0'; }, 2000);
-    playing = true;
+    localStorage.setItem('cit_music','on');
   } else {
     music.pause();
     btn.innerHTML = '🎵';
     btn.style.background = 'linear-gradient(135deg,#D4187A,#7B4FB5)';
-    label.textContent = 'Musique désactivée';
-    label.style.opacity = '1';
-    setTimeout(function(){ label.style.opacity='0'; }, 2000);
-    playing = false;
+    localStorage.setItem('cit_music','off');
   }
 }
 
-// Hover effect
+function toggleMusic(){
+  var isPlaying = !music.paused;
+  setPlaying(!isPlaying);
+  label.textContent = !isPlaying ? 'Musique activée' : 'Musique désactivée';
+  label.style.opacity='1';
+  setTimeout(function(){ label.style.opacity='0'; }, 2000);
+}
+
+// Au chargement, reprendre si musique était activée
+window.addEventListener('load', function(){
+  var saved = localStorage.getItem('cit_music');
+  if(saved === 'on'){
+    // Petite astuce : on attend une interaction utilisateur minimale
+    music.volume = 0.35;
+    music.play().then(function(){
+      btn.innerHTML = '🔊';
+      btn.style.background = 'linear-gradient(135deg,#1A9E8F,#7B4FB5)';
+    }).catch(function(){
+      // Navigateur bloque l'autoplay → on attend un clic
+      document.addEventListener('click', function startMusic(){
+        if(localStorage.getItem('cit_music')==='on'){
+          music.play();
+          btn.innerHTML = '🔊';
+          btn.style.background = 'linear-gradient(135deg,#1A9E8F,#7B4FB5)';
+        }
+        document.removeEventListener('click', startMusic);
+      });
+    });
+  }
+  setTimeout(function(){ label.style.opacity='0'; }, 4000);
+});
+
+// Hover
 btn.addEventListener('mouseenter', function(){
   this.style.transform='scale(1.1)';
-  this.style.boxShadow='0 6px 20px rgba(212,24,122,.5)';
   label.style.opacity='1';
 });
 btn.addEventListener('mouseleave', function(){
   this.style.transform='scale(1)';
-  this.style.boxShadow='0 4px 16px rgba(212,24,122,.4)';
   setTimeout(function(){ label.style.opacity='0'; }, 1500);
 });
 </script>

@@ -638,5 +638,21 @@ footer a{color:var(--purple-mid);font-size:.825rem;}
   </div>
 </footer>
 
+<!-- LECTEUR AUDIO FLOTTANT -->
+<div id="audio-player" style="position:fixed;bottom:5rem;left:1.25rem;z-index:300;">
+  <audio id="bg-music" loop>
+    <source src="https://res.cloudinary.com/drmwcbidz/video/upload/v1780844281/chill_background-lounge-20591_taoxo4.mp3" type="audio/mp3"/>
+  </audio>
+  <button id="audio-btn" onclick="toggleMusic()" style="width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#D4187A,#7B4FB5);color:#fff;font-size:1.2rem;box-shadow:0 4px 16px rgba(212,24,122,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s;">🎵</button>
+  <div id="audio-label" style="position:absolute;left:56px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.95);color:#6B5F68;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.1);border:1px solid #E8D8E4;opacity:1;transition:opacity .3s;">Activer la musique</div>
+</div>
+<script>
+var music=document.getElementById('bg-music'),btn=document.getElementById('audio-btn'),label=document.getElementById('audio-label');
+function toggleMusic(){var p=!music.paused;if(!p){music.volume=0.35;music.play().catch(function(){});btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';localStorage.setItem('cit_music','on');}else{music.pause();btn.innerHTML='🎵';btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';localStorage.setItem('cit_music','off');}label.textContent=!p?'Musique activée':'Musique désactivée';label.style.opacity='1';setTimeout(function(){label.style.opacity='0';},2000);}
+window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
+btn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';label.style.opacity='1';});
+btn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';setTimeout(function(){label.style.opacity='0';},1500);});
+</script>
+
 </body>
 </html>

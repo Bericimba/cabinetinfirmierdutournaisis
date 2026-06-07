@@ -801,7 +801,73 @@ window.addEventListener('load', function(){
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- LECTEUR AUDIO FLOTTANT -->
+<div id="audio-player" style="position:fixed;bottom:5rem;left:1.25rem;z-index:300;">
+  <audio id="bg-music" loop>
+    <source src="https://res.cloudinary.com/drmwcbidz/video/upload/v1780844281/chill_background-lounge-20591_taoxo4.mp3" type="audio/mp3"/>
+  </audio>
+  <button id="audio-btn" onclick="toggleMusic()" style="
+    width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;
+    background:linear-gradient(135deg,var(--pink),var(--purple));
+    color:#fff;font-size:1.2rem;
+    box-shadow:0 4px 16px rgba(212,24,122,.4);
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .2s,box-shadow .2s;
+  " title="Activer la musique">
+    🎵
+  </button>
+  <div id="audio-label" style="
+    position:absolute;left:56px;top:50%;transform:translateY(-50%);
+    background:rgba(255,255,255,.95);color:var(--muted);
+    font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;
+    white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.1);
+    border:1px solid var(--border);
+    opacity:1;transition:opacity .3s;
+  ">Activer la musique</div>
+</div>
+
+<script>
+var music = document.getElementById('bg-music');
+var btn = document.getElementById('audio-btn');
+var label = document.getElementById('audio-label');
+var playing = false;
+
+// Cache le label après 4 secondes
+setTimeout(function(){ label.style.opacity='0'; }, 4000);
+
+function toggleMusic(){
+  if(!playing){
+    music.volume = 0.35;
+    music.play();
+    btn.innerHTML = '🔊';
+    btn.style.background = 'linear-gradient(135deg,#1A9E8F,#7B4FB5)';
+    label.textContent = 'Musique activée';
+    label.style.opacity = '1';
+    setTimeout(function(){ label.style.opacity='0'; }, 2000);
+    playing = true;
+  } else {
+    music.pause();
+    btn.innerHTML = '🎵';
+    btn.style.background = 'linear-gradient(135deg,#D4187A,#7B4FB5)';
+    label.textContent = 'Musique désactivée';
+    label.style.opacity = '1';
+    setTimeout(function(){ label.style.opacity='0'; }, 2000);
+    playing = false;
+  }
+}
+
+// Hover effect
+btn.addEventListener('mouseenter', function(){
+  this.style.transform='scale(1.1)';
+  this.style.boxShadow='0 6px 20px rgba(212,24,122,.5)';
+  label.style.opacity='1';
+});
+btn.addEventListener('mouseleave', function(){
+  this.style.transform='scale(1)';
+  this.style.boxShadow='0 4px 16px rgba(212,24,122,.4)';
+  setTimeout(function(){ label.style.opacity='0'; }, 1500);
+});
+</script>
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">

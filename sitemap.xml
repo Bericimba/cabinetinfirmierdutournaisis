@@ -33,4 +33,12 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Page Blog -->
+  <url>
+    <loc>https://cabinetinfirmierdutournaisis.be/blog.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="google-site-verification" content="PiXlZgCQsQIa5fYctGj9q1pDrabJ2FiSBZmd4nsXSkM"/>
+<title>Blog & Actualités — Cabinet Infirmier du Tournaisis</title>
+<meta name="description" content="Conseils santé, prévention et actualités du Cabinet Infirmier du Tournaisis. Articles rédigés par notre équipe infirmière pour prendre soin de vous au quotidien."/>
+<meta name="keywords" content="blog infirmier, conseils santé Tournai, prévention santé Tournaisis, actualités cabinet infirmier, soins à domicile conseils, santé Quevaucamps"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://cabinetinfirmierdutournaisis.be/blog.html"/>
+<meta property="og:title" content="Blog & Actualités — Cabinet Infirmier du Tournaisis"/>
+<meta property="og:description" content="Conseils santé, prévention et actualités du Cabinet Infirmier du Tournaisis."/>
+<meta property="og:image" content="https://i.imgur.com/Nm6sS5R.png"/>
+<meta property="og:locale" content="fr_BE"/>
+<link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/blog.html"/>
+<link rel="icon" type="image/png" href="https://i.imgur.com/Nm6sS5R.png"/>
+<link rel="apple-touch-icon" href="https://i.imgur.com/Nm6sS5R.png"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --pink:#D4187A;--pink-light:#FBEAF3;--pink-mid:#E8529A;--pink-dark:#9A0F57;
+  --purple:#7B4FB5;--purple-light:#F0EAF8;--purple-mid:#9B72CC;
+  --teal:#1A9E8F;--teal-light:#E0F5F3;--teal-mid:#3DBDAF;
+  --warm:#FDF8FC;--text:#2C2A2B;--muted:#6B5F68;--border:#E8D8E4;--white:#fff;
+  --radius:12px;
+}
+body{font-family:'Segoe UI',sans-serif;color:var(--text);background:var(--white);font-size:16px;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;}
+
+/* TICKER */
+.ticker{background:linear-gradient(90deg,var(--pink),var(--purple),var(--teal));color:#fff;font-size:13px;padding:8px 0;overflow:hidden;white-space:nowrap;}
+.ticker-inner{display:inline-block;animation:scroll 35s linear infinite;}
+@keyframes scroll{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
+
+/* NAV */
+nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;padding:0 1.25rem;}
+.nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.logo-area{display:flex;align-items:center;gap:10px;}
+.logo-area img{width:44px;height:44px;object-fit:contain;}
+.logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
+.logo-sub{font-size:10px;color:var(--muted);}
+.nav-links{display:flex;gap:1.2rem;font-size:13px;}
+.nav-links a{color:var(--muted);transition:color .2s;}
+.nav-links a:hover{color:var(--pink);}
+.nav-links a.active{color:var(--pink);font-weight:700;}
+.nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}
+.mobile-menu{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--border);padding:1rem 1.25rem;gap:.75rem;}
+.mobile-menu a{color:var(--text);font-size:15px;padding:.5rem 0;border-bottom:1px solid var(--border);}
+.mobile-menu a:last-child{border:none;}
+.mobile-menu.open{display:flex;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--pink-light),var(--purple-light),var(--teal-light));padding:4rem 1.25rem 3rem;}
+.hero-inner{max-width:1100px;margin:auto;text-align:center;}
+.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:1.5rem;}
+.breadcrumb a{color:var(--pink);}
+.breadcrumb span{margin:0 .5rem;opacity:.5;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--pink-light);color:var(--pink);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:1rem;border:1px solid #F0B0D0;}
+.hero h1{font-size:2.6rem;font-weight:800;line-height:1.15;margin-bottom:1rem;}
+.hero h1 .grad{background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero p{font-size:1rem;color:var(--muted);line-height:1.75;max-width:600px;margin:0 auto 2rem;}
+.cat-btns{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;}
+.cat-btn{padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:2px solid transparent;transition:all .2s;}
+.cat-btn.all{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;}
+.cat-btn.sante{background:var(--white);color:var(--teal);border-color:var(--teal);}
+.cat-btn.actu{background:var(--white);color:var(--purple);border-color:var(--purple);}
+
+/* SECTIONS */
+section{padding:3.5rem 1.25rem;}
+.section-inner{max-width:1100px;margin:auto;}
+.section-tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:.75rem;letter-spacing:.06em;text-transform:uppercase;}
+.tag-pink{background:var(--pink-light);color:var(--pink);border:1px solid #F0B0D0;}
+.tag-purple{background:var(--purple-light);color:var(--purple);border:1px solid #C8A8E8;}
+.tag-teal{background:var(--teal-light);color:var(--teal);border:1px solid #8DD8D0;}
+h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
+.section-sub{color:var(--muted);font-size:.95rem;line-height:1.7;margin-bottom:2rem;}
+
+/* ARTICLE À LA UNE */
+.une-card{background:var(--white);border-radius:20px;border:1px solid var(--border);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;transition:box-shadow .2s;margin-bottom:2.5rem;}
+.une-card:hover{box-shadow:0 8px 32px rgba(212,24,122,.1);}
+.une-img{background:linear-gradient(135deg,var(--pink-light),var(--purple-light));display:flex;align-items:center;justify-content:center;font-size:5rem;min-height:300px;}
+.une-content{padding:2.5rem;}
+.cat-badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:.75rem;}
+.cb-sante{background:var(--teal-light);color:var(--teal);}
+.cb-actu{background:var(--purple-light);color:var(--purple);}
+.une-date{font-size:12px;color:var(--muted);margin-bottom:.75rem;display:block;}
+.une-content h3{font-size:1.5rem;font-weight:800;line-height:1.3;margin-bottom:.75rem;}
+.une-content p{font-size:.925rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;}
+.btn-lire{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:10px 20px;border-radius:20px;font-size:13px;font-weight:700;}
+.auteur-row{display:flex;align-items:center;gap:.75rem;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+.auteur-row img{width:36px;height:36px;border-radius:50%;object-fit:cover;}
+.auteur-row strong{display:block;font-size:.825rem;font-weight:700;}
+.auteur-row span{font-size:.775rem;color:var(--muted);}
+
+/* GRILLE ARTICLES */
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+.article-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;transition:box-shadow .2s,transform .2s;}
+.article-card:hover{box-shadow:0 6px 24px rgba(123,79,181,.12);transform:translateY(-3px);}
+.article-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;}
+.ai-pink{background:linear-gradient(135deg,var(--pink-light),#F8D0E8);}
+.ai-purple{background:linear-gradient(135deg,var(--purple-light),#E0D0F8);}
+.ai-teal{background:linear-gradient(135deg,var(--teal-light),#C8EDE8);}
+.article-body{padding:1.25rem;}
+.article-body h3{font-size:1rem;font-weight:700;line-height:1.4;margin-bottom:.5rem;}
+.article-body p{font-size:.825rem;color:var(--muted);line-height:1.6;margin-bottom:1rem;}
+.article-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.875rem;border-top:1px solid var(--border);}
+.article-footer img{width:28px;height:28px;border-radius:50%;object-fit:cover;}
+.auteur-name{font-size:.775rem;font-weight:600;}
+.read-time{font-size:.75rem;color:var(--muted);}
+
+/* NEWSLETTER */
+.newsletter{background:linear-gradient(135deg,var(--purple),var(--pink));padding:3.5rem 1.25rem;text-align:center;color:#fff;}
+.newsletter h2{color:#fff;margin-bottom:.5rem;}
+.newsletter p{opacity:.85;font-size:.95rem;max-width:500px;margin:0 auto 1.75rem;line-height:1.7;}
+.newsletter-form{display:flex;gap:.75rem;max-width:450px;margin:0 auto;flex-wrap:wrap;justify-content:center;}
+.newsletter-form input{flex:1;min-width:200px;padding:12px 16px;border-radius:25px;border:none;font-size:14px;color:var(--text);}
+.newsletter-form button{background:#fff;color:var(--purple);padding:12px 24px;border-radius:25px;font-size:14px;font-weight:700;border:none;cursor:pointer;}
+
+/* PLACEHOLDER */
+.placeholder-msg{text-align:center;padding:3rem;background:var(--warm);border-radius:var(--radius);border:2px dashed var(--border);margin:1rem 0;}
+.placeholder-msg p{font-size:.95rem;color:var(--muted);line-height:1.7;}
+
+/* CTA FLOAT */
+.cta-float{display:none;position:fixed;bottom:1.25rem;right:1.25rem;z-index:200;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:13px 18px;border-radius:30px;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(212,24,122,.4);align-items:center;gap:8px;border:none;cursor:pointer;}
+.cta-float svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.5;}
+
+/* FOOTER */
+footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
+.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-cit{font-size:1.3rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+footer p{font-size:.825rem;color:#A898A4;line-height:1.7;}
+footer a{color:var(--pink-mid);font-size:.825rem;}
+.footer-bottom{width:100%;border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#706070;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links,.nav-btn{display:none;}
+  .hamburger{display:flex;}
+  .hero h1{font-size:2rem;}
+  .une-card{grid-template-columns:1fr;}
+  .une-img{min-height:200px;}
+  .cta-float{display:flex;}
+  section{padding:2.5rem 1rem;}
+  h2{font-size:1.5rem;}
+  .footer-inner{flex-direction:column;text-align:center;}
+}
+@media(max-width:420px){
+  .articles-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:1.7rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-inner">
+    ✦ Conseils santé & prévention &nbsp;•&nbsp; Actualités du CIT &nbsp;•&nbsp; Cabinet Infirmier du Tournaisis &nbsp;•&nbsp; Quevaucamps &nbsp;•&nbsp; (+32) 069.30.41.33 &nbsp;•&nbsp; 24h/24 – 7j/7 &nbsp;•&nbsp;
+  </span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo-area">
+      <img src="https://i.imgur.com/Nm6sS5R.png" alt="Logo CIT"/>
+      <div>
+        <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
+        <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="equipe.html">Équipe</a>
+      <a href="dispensaire.html">Dispensaire</a>
+      <a href="remplacement.html">Remplacements</a>
+      <a href="blog.html" class="active">Blog</a>
+    </div>
+    <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
+    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Accueil</a>
+    <a href="equipe.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Équipe</a>
+    <a href="dispensaire.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Dispensaire</a>
+    <a href="remplacement.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Remplacements</a>
+    <a href="blog.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Blog</a>
+    <a href="index.html#rdv" style="color:var(--pink);font-weight:700;">📅 Prendre RDV</a>
+  </div>
+</nav>
+
+<!-- BOUTON FLOTTANT -->
+<button class="cta-float" onclick="window.location.href='tel:+3269304133'">
+  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.95 5.95l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Appeler
+</button>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span>›</span>Blog & Actualités</div>
+    <div class="hero-tag">📝 Conseils & Actualités</div>
+    <h1>Le blog <span class="grad">du CIT</span></h1>
+    <p>Conseils santé, prévention et actualités du cabinet — rédigés par notre équipe infirmière pour prendre soin de vous au quotidien.</p>
+    <div class="cat-btns">
+      <button class="cat-btn all" onclick="filtrer('tous',this)">Tous les articles</button>
+      <button class="cat-btn sante" onclick="filtrer('sante',this)">🩺 Conseils santé</button>
+      <button class="cat-btn actu" onclick="filtrer('actu',this)">📢 Actualités cabinet</button>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE À LA UNE -->
+<section style="background:var(--warm);" id="articles">
+  <div class="section-inner">
+    <span class="section-tag tag-pink">À la une</span>
+    <h2>Dernier article</h2>
+
+    <!-- ARTICLE À LA UNE -->
+    <div class="une-card" data-cat="sante">
+      <div class="une-img">🏠</div>
+      <div class="une-content">
+        <span class="cat-badge cb-sante">Conseils santé</span>
+        <span class="une-date">📅 01 Juin 2026</span>
+        <h3>Les 10 Avantages des Soins Infirmiers à Domicile</h3>
+        <p>Les soins infirmiers à domicile représentent une alternative de plus en plus prisée aux hospitalisations prolongées. Cette approche personnalisée offre de nombreux avantages tant pour les patients que pour leurs familles.</p>
+        <a href="#article-domicile" class="btn-lire" onclick="document.getElementById('article-domicile').style.display='block';this.style.display='none';">Lire l'article →</a>
+
+        <!-- CONTENU COMPLET DE L'ARTICLE -->
+        <div id="article-domicile" style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+
+          <h4 style="font-size:1rem;font-weight:700;color:var(--pink);margin-bottom:.75rem;">Pourquoi choisir les soins infirmiers à domicile ?</h4>
+          <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;">Les soins infirmiers à domicile représentent une alternative de plus en plus prisée aux hospitalisations prolongées. Cette approche personnalisée offre de nombreux avantages tant pour les patients que pour leurs familles.</p>
+
+          <div style="display:flex;flex-direction:column;gap:.875rem;margin-bottom:1.5rem;">
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">1. Le confort de votre environnement</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Recevoir des soins dans le confort de votre domicile réduit le stress et favorise une récupération plus rapide. Vous restez entouré de vos proches et de vos repères quotidiens.</p>
+            </div>
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">2. Des soins personnalisés</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Contrairement aux établissements hospitaliers, les soins à domicile permettent une attention individuelle et un suivi adapté à vos besoins spécifiques.</p>
+            </div>
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">3. Réduction des risques d'infections</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">En évitant les milieux hospitaliers, vous limitez considérablement les risques d'infections nosocomiales.</p>
+            </div>
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">4. Flexibilité des horaires</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les interventions sont planifiées selon vos disponibilités et votre rythme de vie.</p>
+            </div>
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">5. Maintien de l'autonomie</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les soins à domicile encouragent le maintien de votre indépendance et de vos habitudes quotidiennes.</p>
+            </div>
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">6. Économies significatives</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les soins à domicile sont souvent plus économiques qu'une hospitalisation prolongée.</p>
+            </div>
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">7. Implication de la famille</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Vos proches peuvent participer activement à votre rétablissement et être formés aux gestes essentiels.</p>
+            </div>
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">8. Continuité des soins</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Un même infirmier peut assurer le suivi de votre traitement, garantissant une meilleure connaissance de votre dossier médical.</p>
+            </div>
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">9. Récupération plus rapide</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les études montrent que les patients récupèrent généralement plus vite dans leur environnement familier.</p>
+            </div>
+            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">10. Qualité de vie préservée</p>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Vous pouvez maintenir vos activités sociales et votre vie quotidienne tout en recevant les soins nécessaires.</p>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,var(--pink-light),var(--purple-light));border-radius:var(--radius);padding:1.25rem;border:1px solid #F0B0D0;margin-bottom:1rem;">
+            <p style="font-size:.875rem;font-weight:700;color:var(--pink);margin-bottom:.4rem;">Conclusion</p>
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Les soins infirmiers à domicile offrent une solution humaine et efficace pour de nombreuses situations médicales. Au CIT, nous mettons notre expertise au service de votre bien-être.</p>
+          </div>
+
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;">
+            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#soins</span>
+            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#domicile</span>
+            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#infirmier</span>
+            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#santé</span>
+            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#bien-être</span>
+          </div>
+
+          <button onclick="this.closest('#article-domicile').style.display='none';document.querySelector('.btn-lire').style.display='inline-flex';" style="background:none;border:1px solid var(--border);color:var(--muted);padding:7px 16px;border-radius:20px;font-size:13px;cursor:pointer;">Réduire ▲</button>
+        </div>
+
+        <div class="auteur-row">
+          <img src="https://i.imgur.com/C040BYl.png" alt="Céline Lhoir"/>
+          <div><strong>Céline Lhoir</strong><span>Infirmière coordinatrice · Cabinet Infirmier du Tournaisis</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GRILLE ARTICLES -->
+<section style="background:var(--white);">
+  <div class="section-inner">
+    <span class="section-tag tag-purple">Tous les articles</span>
+    <h2>Conseils & Actualités</h2>
+    <p class="section-sub">Retrouvez ici tous nos articles classés par catégorie.</p>
+
+    <div class="articles-grid" id="grille">
+
+      <!--
+      ════════════════════════════════════════
+      ARTICLE 1 — MODIFIEZ ICI
+      ════════════════════════════════════════
+      -->
+      <div class="article-card" data-cat="sante">
+        <div class="article-img ai-teal">💉</div>
+        <div class="article-body">
+          <span class="cat-badge cb-sante">Conseils santé</span>
+          <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 À renseigner</span>
+          <h3>Comment se préparer à une prise de sang à domicile ?</h3>
+          <p>Quelques conseils simples pour que votre prélèvement se déroule dans les meilleures conditions.</p>
+          <div class="article-footer">
+            <div style="display:flex;align-items:center;gap:.5rem;">
+              <img src="https://i.imgur.com/k2ojrge.png" alt="Louise"/>
+              <span class="auteur-name">Louise Joiffroy</span>
+            </div>
+            <span class="read-time">⏱ 3 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      ════════════════════════════════════════
+      ARTICLE 2 — MODIFIEZ ICI
+      ════════════════════════════════════════
+      -->
+      <div class="article-card" data-cat="sante">
+        <div class="article-img ai-pink">🩹</div>
+        <div class="article-body">
+          <span class="cat-badge cb-sante">Conseils santé</span>
+          <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 À renseigner</span>
+          <h3>Reconnaître et prévenir les escarres à domicile</h3>
+          <p>Les escarres peuvent survenir rapidement chez les personnes alitées. Voici comment les prévenir efficacement.</p>
+          <div class="article-footer">
+            <div style="display:flex;align-items:center;gap:.5rem;">
+              <img src="https://i.imgur.com/UeUAcAl.png" alt="Jordan"/>
+              <span class="auteur-name">Jordan Daubie</span>
+            </div>
+            <span class="read-time">⏱ 4 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      ════════════════════════════════════════
+      ARTICLE 3 — MODIFIEZ ICI
+      ════════════════════════════════════════
+      -->
+      <div class="article-card" data-cat="actu">
+        <div class="article-img ai-purple">📢</div>
+        <div class="article-body">
+          <span class="cat-badge cb-actu">Actualités cabinet</span>
+          <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 À renseigner</span>
+          <h3>Notre dispensaire est ouvert 24h/24 grâce au visiophone</h3>
+          <p>Découvrez comment notre système de visiophone vous permet d'accéder aux soins à toute heure, en toute sécurité.</p>
+          <div class="article-footer">
+            <div style="display:flex;align-items:center;gap:.5rem;">
+              <img src="https://i.imgur.com/C040BYl.png" alt="Céline"/>
+              <span class="auteur-name">Céline Lhoir</span>
+            </div>
+            <span class="read-time">⏱ 2 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      ════════════════════════════════════════
+      ARTICLE 4 — MODIFIEZ ICI
+      ════════════════════════════════════════
+      -->
+      <div class="article-card" data-cat="sante">
+        <div class="article-img ai-teal">🩺</div>
+        <div class="article-body">
+          <span class="cat-badge cb-sante">Conseils santé</span>
+          <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 À renseigner</span>
+          <h3>Diabète et soins infirmiers à domicile : ce qu'il faut savoir</h3>
+          <p>Le suivi du diabète nécessite une attention quotidienne. Notre équipe vous accompagne à domicile.</p>
+          <div class="article-footer">
+            <div style="display:flex;align-items:center;gap:.5rem;">
+              <img src="https://i.imgur.com/pa82DU3.png" alt="Mélissa"/>
+              <span class="auteur-name">Mélissa Devos</span>
+            </div>
+            <span class="read-time">⏱ 5 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      ════════════════════════════════════════
+      ARTICLE 5 — MODIFIEZ ICI
+      ════════════════════════════════════════
+      -->
+      <div class="article-card" data-cat="actu">
+        <div class="article-img ai-purple">🔬</div>
+        <div class="article-body">
+          <span class="cat-badge cb-actu">Actualités cabinet</span>
+          <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 À renseigner</span>
+          <h3>Nouveau : biologie fonctionnelle & nutritionnelle au cabinet</h3>
+          <p>Le CIT propose désormais des analyses avancées en biologie fonctionnelle pour une médecine préventive et personnalisée.</p>
+          <div class="article-footer">
+            <div style="display:flex;align-items:center;gap:.5rem;">
+              <img src="https://i.imgur.com/C040BYl.png" alt="Céline"/>
+              <span class="auteur-name">Céline Lhoir</span>
+            </div>
+            <span class="read-time">⏱ 3 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      ════════════════════════════════════════
+      ARTICLE 6 — MODIFIEZ ICI
+      ════════════════════════════════════════
+      -->
+      <div class="article-card" data-cat="sante">
+        <div class="article-img ai-pink">💆</div>
+        <div class="article-body">
+          <span class="cat-badge cb-sante">Bien-être</span>
+          <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 À renseigner</span>
+          <h3>Les bienfaits des soins esthétiques pour le bien-être des patients</h3>
+          <p>Prendre soin de son apparence contribue à la confiance en soi et au bien-être général. Léa vous explique.</p>
+          <div class="article-footer">
+            <div style="display:flex;align-items:center;gap:.5rem;">
+              <img src="https://i.imgur.com/7UENBqa.png" alt="Léa"/>
+              <span class="auteur-name">Léa Beaufays</span>
+            </div>
+            <span class="read-time">⏱ 3 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      ════════════════════════════════════════
+      → AJOUTEZ VOS PROCHAINS ARTICLES ICI
+         Copiez-collez un bloc .article-card
+         et modifiez le contenu
+      ════════════════════════════════════════
+      -->
+
+    </div>
+
+    <div class="placeholder-msg" id="no-result" style="display:none;">
+      <p>Aucun article dans cette catégorie pour le moment.<br/><strong>Revenez bientôt !</strong></p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-cit">C.I.T</div>
+      <p>Avenue de l'Europe, 68 · Quevaucamps 7972<br/>
+      <a href="tel:+3269304133">(+32) 069.30.41.33</a> · <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a></p>
+    </div>
+    <div>
+      <p style="margin-bottom:.5rem;"><a href="index.html">Accueil</a> · <a href="equipe.html">Équipe</a> · <a href="dispensaire.html">Dispensaire</a></p>
+      <p><a href="remplacement.html">Remplacements</a> · <a href="blog.html">Blog</a> · <a href="index.html#rdv">RDV</a></p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Cabinet Infirmier du Tournaisis</span>
+      <span>Tous droits réservés · Belgique</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LECTEUR AUDIO FLOTTANT -->
+<div id="audio-player" style="position:fixed;bottom:5rem;left:1.25rem;z-index:300;">
+  <audio id="bg-music" loop>
+    <source src="https://res.cloudinary.com/drmwcbidz/video/upload/v1780844281/chill_background-lounge-20591_taoxo4.mp3" type="audio/mp3"/>
+  </audio>
+  <button id="audio-btn" onclick="toggleMusic()" style="width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#D4187A,#7B4FB5);color:#fff;font-size:1.2rem;box-shadow:0 4px 16px rgba(212,24,122,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s;">🎵</button>
+  <div id="audio-label" style="position:absolute;left:56px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.95);color:#6B5F68;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.1);border:1px solid #E8D8E4;opacity:1;transition:opacity .3s;">Activer la musique</div>
+</div>
+
+<script>
+// Filtres
+function filtrer(cat, btn) {
+  document.querySelectorAll('.cat-btn').forEach(b => {
+    b.style.background=''; b.style.color=''; b.style.borderColor='';
+  });
+  if(cat==='tous') btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';
+
+  var cards = document.querySelectorAll('.article-card, .une-card');
+  var visible = 0;
+  cards.forEach(c => {
+    if(cat==='tous' || c.dataset.cat===cat){ c.style.display=''; visible++; }
+    else { c.style.display='none'; }
+  });
+  document.getElementById('no-result').style.display = visible===0 ? 'block' : 'none';
+}
+
+// Musique
+var music=document.getElementById('bg-music'),btn=document.getElementById('audio-btn'),label=document.getElementById('audio-label');
+function toggleMusic(){var p=!music.paused;if(!p){music.volume=0.35;music.play().catch(function(){});btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';localStorage.setItem('cit_music','on');}else{music.pause();btn.innerHTML='🎵';btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';localStorage.setItem('cit_music','off');}label.textContent=!p?'Musique activée':'Musique désactivée';label.style.opacity='1';setTimeout(function(){label.style.opacity='0';},2000);}
+window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
+btn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';label.style.opacity='1';});
+btn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';setTimeout(function(){label.style.opacity='0';},1500);});
+</script>
+
+</body>
+</html>

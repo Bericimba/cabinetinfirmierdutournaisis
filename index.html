@@ -348,7 +348,7 @@ footer a:hover{color:var(--pink-mid);}
 .splash-progress{
   height:100%;width:0%;border-radius:4px;
   background:linear-gradient(90deg,#D4187A,#7B4FB5,#1A9E8F);
-  animation:progress 8s ease forwards;
+  animation:progress 3.5s ease forwards;
 }
 @keyframes progress{
   0%{width:0%;}
@@ -370,7 +370,7 @@ footer a:hover{color:var(--pink-mid);}
 
 <script>
 window.addEventListener('load', function(){
-  var duration = Math.floor(Math.random() * (10000 - 7000 + 1)) + 7000;
+  var duration = 4000;
   setTimeout(function(){
     document.getElementById('splash').classList.add('hide');
     setTimeout(function(){

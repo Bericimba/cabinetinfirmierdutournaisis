@@ -41,4 +41,12 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Page Mentions légales -->
+  <url>
+    <loc>https://cabinetinfirmierdutournaisis.be/mentions.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

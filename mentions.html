@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mentions légales & Politique de confidentialité — Cabinet Infirmier du Tournaisis</title>
+<meta name="description" content="Mentions légales et politique de confidentialité du Cabinet Infirmier du Tournaisis. Informations sur le traitement des données personnelles conformément au RGPD."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/mentions.html"/>
+<link rel="icon" type="image/png" href="https://i.imgur.com/Nm6sS5R.png"/>
+<link rel="apple-touch-icon" href="https://i.imgur.com/Nm6sS5R.png"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --pink:#D4187A;--pink-light:#FBEAF3;--pink-mid:#E8529A;--pink-dark:#9A0F57;
+  --purple:#7B4FB5;--purple-light:#F0EAF8;--purple-mid:#9B72CC;
+  --teal:#1A9E8F;--teal-light:#E0F5F3;--teal-mid:#3DBDAF;
+  --warm:#FDF8FC;--text:#2C2A2B;--muted:#6B5F68;--border:#E8D8E4;--white:#fff;
+  --radius:12px;
+}
+body{font-family:'Segoe UI',sans-serif;color:var(--text);background:var(--white);font-size:16px;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;}
+
+/* TICKER */
+.ticker{background:linear-gradient(90deg,var(--pink),var(--purple),var(--teal));color:#fff;font-size:13px;padding:8px 0;overflow:hidden;white-space:nowrap;}
+.ticker-inner{display:inline-block;animation:scroll 35s linear infinite;}
+@keyframes scroll{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
+
+/* NAV */
+nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;padding:0 1.25rem;}
+.nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.logo-area{display:flex;align-items:center;gap:10px;}
+.logo-area img{width:44px;height:44px;object-fit:contain;}
+.logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
+.logo-sub{font-size:10px;color:var(--muted);}
+.nav-links{display:flex;gap:1.2rem;font-size:13px;}
+.nav-links a{color:var(--muted);transition:color .2s;}
+.nav-links a:hover{color:var(--pink);}
+.nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}
+.mobile-menu{display:none;flex-direction:column;gap:0;background:var(--white);border-top:1px solid var(--border);}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:.75rem 1.25rem;font-size:14px;color:var(--muted);border-bottom:1px solid var(--border);}
+.mobile-menu a:hover{color:var(--pink);}
+
+/* HERO MENTIONS */
+.hero-mentions{background:linear-gradient(135deg,var(--pink-light),var(--purple-light));padding:3rem 1.25rem 2rem;text-align:center;border-bottom:1px solid var(--border);}
+.hero-mentions .tag{display:inline-block;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:1rem;letter-spacing:.5px;}
+.hero-mentions h1{font-size:2rem;font-weight:800;margin-bottom:.75rem;background:linear-gradient(135deg,var(--pink-dark),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-mentions p{color:var(--muted);font-size:.925rem;max-width:600px;margin:0 auto;}
+
+/* CONTENU */
+.page-inner{max-width:860px;margin:0 auto;padding:3rem 1.25rem 4rem;}
+
+.section-ml{margin-bottom:2.5rem;}
+.section-ml h2{font-size:1.2rem;font-weight:800;color:var(--pink-dark);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--pink-light);display:flex;align-items:center;gap:.6rem;}
+.section-ml h3{font-size:1rem;font-weight:700;color:var(--purple);margin:.875rem 0 .4rem;}
+.section-ml p{font-size:.9rem;color:var(--text);line-height:1.8;margin-bottom:.6rem;}
+.section-ml ul{padding-left:1.25rem;margin-bottom:.6rem;}
+.section-ml ul li{font-size:.9rem;color:var(--text);line-height:1.8;margin-bottom:.25rem;}
+.section-ml a{color:var(--purple);text-decoration:underline;}
+.section-ml a:hover{color:var(--pink);}
+
+.info-box{background:var(--purple-light);border:1px solid #C8A8E8;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1rem;}
+.info-box p{margin:0;font-size:.9rem;color:var(--text);line-height:1.8;}
+.info-box strong{color:var(--purple);}
+
+.warning-box{background:#FFF8E8;border:1px solid #F5C97A;border-radius:var(--radius);padding:1.1rem 1.5rem;margin:1rem 0;display:flex;gap:.75rem;align-items:flex-start;}
+.warning-box p{margin:0;font-size:.875rem;color:#7A5500;line-height:1.7;}
+
+.toc{background:var(--warm);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:2.5rem;}
+.toc h2{font-size:.95rem;font-weight:700;color:var(--purple);margin-bottom:.75rem;}
+.toc ol{padding-left:1.25rem;}
+.toc li{font-size:.875rem;line-height:1.9;}
+.toc a{color:var(--purple);}
+.toc a:hover{color:var(--pink);}
+
+.update-badge{display:inline-block;background:var(--teal-light);color:var(--teal);font-size:.8rem;font-weight:600;padding:3px 12px;border-radius:20px;border:1px solid #8DD8D0;margin-bottom:2rem;}
+
+/* FOOTER */
+footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
+.footer-inner{max-width:1100px;margin:auto;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;margin-bottom:2rem;}
+footer h4{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+footer p,footer li,footer a{font-size:.825rem;line-height:1.8;color:#A898A4;}
+footer ul{list-style:none;}
+footer a:hover{color:var(--pink-mid);}
+.footer-cit{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem;}
+.footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#706070;flex-wrap:wrap;gap:.5rem;}
+.social-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--pink-mid);font-size:.825rem;margin-top:.5rem;}
+
+/* BOUTON FLOTTANT */
+.cta-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border:none;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;cursor:pointer;display:none;align-items:center;gap:.5rem;box-shadow:0 4px 20px rgba(212,24,122,.4);}
+.cta-float svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;}
+
+@media(max-width:768px){
+  .nav-links,.nav-btn{display:none;}
+  .hamburger{display:flex;}
+  .cta-float{display:flex;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero-mentions h1{font-size:1.6rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-inner">
+    ✦ Tournai &nbsp;•&nbsp; Antoing &nbsp;•&nbsp; Péruwelz &nbsp;•&nbsp; Leuze &nbsp;•&nbsp; Brunehaut &nbsp;•&nbsp; Rumes &nbsp;•&nbsp; Pecq &nbsp;•&nbsp; Estaimpuis &nbsp;•&nbsp; Celles &nbsp;•&nbsp; Mont-de-l'Enclus &nbsp;•&nbsp; Frasnes-lez-Anvaing &nbsp;•&nbsp; Beloeil &nbsp;•&nbsp; Bernissart &nbsp;•&nbsp; 24h/24 – 7j/7 &nbsp;•&nbsp; (+32) 069.30.41.33 &nbsp;•&nbsp;
+  </span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo-area">
+      <img src="https://i.imgur.com/Nm6sS5R.png" alt="Logo Cabinet Infirmier du Tournaisis"/>
+      <div>
+        <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
+        <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#prestations">Soins</a>
+      <a href="equipe.html">Équipe</a>
+      <a href="dispensaire.html">Dispensaire</a>
+      <a href="index.html#facturation">Facturation</a>
+      <a href="remplacement.html">Remplacements</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
+    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html#prestations">Nos soins</a>
+    <a href="equipe.html">L'équipe</a>
+    <a href="dispensaire.html">Dispensaire</a>
+    <a href="index.html#facturation">Facturation</a>
+    <a href="remplacement.html">Remplacements</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#rdv" style="color:var(--pink);font-weight:700;">📅 Prendre RDV</a>
+  </div>
+</nav>
+
+<!-- BOUTON FLOTTANT -->
+<button class="cta-float" onclick="window.location.href='tel:+3269304133'">
+  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.95 5.95l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Appeler
+</button>
+
+<!-- HERO -->
+<div class="hero-mentions">
+  <div class="tag">Informations légales</div>
+  <h1>Mentions légales &amp; Confidentialité</h1>
+  <p>Conformément à la législation belge et au Règlement Général sur la Protection des Données (RGPD), nous vous informons ci-dessous de l'identité de notre cabinet et de la façon dont vos données personnelles sont traitées.</p>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<div class="page-inner">
+
+  <span class="update-badge">Dernière mise à jour : juin 2025</span>
+
+  <!-- TABLE DES MATIÈRES -->
+  <div class="toc">
+    <h2>Sommaire</h2>
+    <ol>
+      <li><a href="#identite">Identité de l'éditeur</a></li>
+      <li><a href="#hebergement">Hébergement du site</a></li>
+      <li><a href="#propriete">Propriété intellectuelle</a></li>
+      <li><a href="#responsabilite">Limitation de responsabilité</a></li>
+      <li><a href="#donnees">Protection des données personnelles (RGPD)</a></li>
+      <li><a href="#droits">Vos droits</a></li>
+      <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#contact-dpo">Contact pour les données personnelles</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. IDENTITÉ -->
+  <div class="section-ml" id="identite">
+    <h2>1. Identité de l'éditeur</h2>
+    <div class="info-box">
+      <p>
+        <strong>Dénomination :</strong> Cabinet Infirmier du Tournaisis (CIT)<br/>
+        <strong>Forme juridique :</strong> Entreprise individuelle / Cabinet infirmier indépendant<br/>
+        <strong>Numéro BCE :</strong> BE0832.195.365<br/>
+        <strong>Adresse :</strong> Avenue de l'Europe, 68 — 7972 Quevaucamps, Belgique<br/>
+        <strong>Téléphone :</strong> <a href="tel:+3269304133">(+32) 069.30.41.33</a><br/>
+        <strong>E-mail :</strong> <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a><br/>
+        <strong>Site web :</strong> <a href="https://cabinetinfirmierdutournaisis.be">https://cabinetinfirmierdutournaisis.be</a><br/>
+        <strong>Agrément INAMI :</strong> Conventionnés INAMI, soins remboursés aux tarifs officiels
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. HÉBERGEMENT -->
+  <div class="section-ml" id="hebergement">
+    <h2>2. Hébergement du site</h2>
+    <p>Le présent site est hébergé par un prestataire externe. Pour toute question technique relative à l'hébergement, vous pouvez nous contacter à l'adresse <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a>.</p>
+    <p>Les vidéos présentes sur le site sont hébergées sur la plateforme <strong>Cloudinary</strong> (Cloudinary Ltd, 3400 Central Expressway, Santa Clara, CA 95051, USA). Les images sont hébergées sur des services tiers. Ces prestataires disposent de leurs propres politiques de confidentialité.</p>
+  </div>
+
+  <!-- 3. PROPRIÉTÉ INTELLECTUELLE -->
+  <div class="section-ml" id="propriete">
+    <h2>3. Propriété intellectuelle</h2>
+    <p>L'ensemble du contenu de ce site — textes, photographies, illustrations, logo, structure — est la propriété exclusive du Cabinet Infirmier du Tournaisis ou de ses collaborateurs, sauf mention contraire.</p>
+    <p>Toute reproduction, représentation, modification ou exploitation, totale ou partielle, de ce contenu par quelque procédé que ce soit, sans autorisation préalable et écrite du Cabinet Infirmier du Tournaisis, est strictement interdite et constituerait une contrefaçon sanctionnée par le droit belge.</p>
+  </div>
+
+  <!-- 4. RESPONSABILITÉ -->
+  <div class="section-ml" id="responsabilite">
+    <h2>4. Limitation de responsabilité</h2>
+    <p>Les informations présentes sur ce site ont une vocation <strong>purement informative</strong>. Elles ne constituent en aucun cas un avis médical et ne remplacent pas une consultation auprès d'un professionnel de santé qualifié.</p>
+    <p>Le Cabinet Infirmier du Tournaisis s'efforce de maintenir les informations à jour, mais ne peut garantir l'exactitude, l'exhaustivité ou l'actualité de toutes les données publiées. Sa responsabilité ne pourra être engagée en cas d'erreur ou d'omission.</p>
+    <p>Le site peut contenir des liens vers des sites tiers. Le Cabinet Infirmier du Tournaisis n'est pas responsable du contenu de ces sites externes.</p>
+  </div>
+
+  <!-- 5. DONNÉES PERSONNELLES -->
+  <div class="section-ml" id="donnees">
+    <h2>5. Protection des données personnelles (RGPD)</h2>
+    <p>Le Cabinet Infirmier du Tournaisis s'engage à protéger la vie privée de ses visiteurs et patients, conformément au <strong>Règlement (UE) 2016/679</strong> du 27 avril 2016 (RGPD) et à la <strong>loi belge du 30 juillet 2018</strong> relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel.</p>
+
+    <h3>Quelles données collectons-nous ?</h3>
+    <p>Lorsque vous utilisez notre site, nous pouvons collecter les données suivantes :</p>
+    <ul>
+      <li>Via le <strong>formulaire de prise de rendez-vous</strong> : nom, numéro de téléphone, type de soin souhaité, date souhaitée et message libre.</li>
+      <li>Via le <strong>formulaire de contact</strong> (remplacements) : nom, téléphone et description de la demande.</li>
+      <li>Les données techniques collectées automatiquement par les serveurs (adresse IP, type de navigateur, pages visitées) à des fins statistiques anonymes.</li>
+    </ul>
+
+    <h3>Finalités du traitement</h3>
+    <p>Vos données personnelles sont utilisées exclusivement pour :</p>
+    <ul>
+      <li>Répondre à vos demandes de rendez-vous ou de contact ;</li>
+      <li>Organiser et assurer le suivi des soins infirmiers ;</li>
+      <li>Respecter nos obligations légales (notamment vis-à-vis de l'INAMI) ;</li>
+      <li>Améliorer notre service (statistiques de fréquentation anonymisées).</li>
+    </ul>
+
+    <h3>Base légale du traitement</h3>
+    <p>Le traitement de vos données repose sur :</p>
+    <ul>
+      <li>Votre <strong>consentement</strong> lors de la soumission d'un formulaire ;</li>
+      <li>L'<strong>exécution d'un contrat</strong> ou de mesures précontractuelles (prise en charge de soins) ;</li>
+      <li>Le respect d'une <strong>obligation légale</strong> (facturation INAMI, dossier patient).</li>
+    </ul>
+
+    <h3>Durée de conservation</h3>
+    <ul>
+      <li><strong>Données de contact (formulaires web) :</strong> conservées le temps nécessaire au traitement de votre demande, et au maximum 1 an.</li>
+      <li><strong>Dossiers de soins :</strong> conservés conformément à la législation belge relative aux dossiers médicaux (minimum 30 ans pour les dossiers patients adultes).</li>
+      <li><strong>Données de facturation :</strong> conservées 7 ans conformément aux obligations comptables belges.</li>
+    </ul>
+
+    <h3>Partage des données</h3>
+    <p>Vos données personnelles ne sont <strong>jamais vendues ni cédées à des tiers</strong> à des fins commerciales. Elles peuvent être partagées uniquement avec :</p>
+    <ul>
+      <li>Les membres de l'équipe du Cabinet Infirmier du Tournaisis impliqués dans votre prise en charge ;</li>
+      <li>Les organismes légalement habilités (INAMI, mutuelles) dans le cadre du remboursement des soins ;</li>
+      <li>Votre médecin traitant ou spécialiste, dans le cadre de la coordination des soins.</li>
+    </ul>
+
+    <div class="warning-box">
+      <span style="font-size:1.2rem;flex-shrink:0;">ℹ️</span>
+      <p>Les formulaires de contact présents sur ce site transmettent vos données directement par e-mail à notre cabinet. Aucune base de données en ligne ne stocke ces informations.</p>
+    </div>
+  </div>
+
+  <!-- 6. VOS DROITS -->
+  <div class="section-ml" id="droits">
+    <h2>6. Vos droits</h2>
+    <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+    <ul>
+      <li><strong>Droit d'accès :</strong> obtenir confirmation que des données vous concernant sont traitées et en recevoir une copie.</li>
+      <li><strong>Droit de rectification :</strong> faire corriger des données inexactes ou incomplètes.</li>
+      <li><strong>Droit à l'effacement :</strong> demander la suppression de vos données dans les cas prévus par la loi.</li>
+      <li><strong>Droit à la limitation du traitement :</strong> demander la suspension temporaire du traitement de vos données.</li>
+      <li><strong>Droit d'opposition :</strong> vous opposer au traitement de vos données pour des motifs légitimes.</li>
+      <li><strong>Droit à la portabilité :</strong> recevoir vos données dans un format structuré et lisible.</li>
+    </ul>
+    <p>Pour exercer l'un de ces droits, contactez-nous par e-mail à <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a> ou par courrier à l'adresse du cabinet. Nous nous engageons à répondre dans un délai d'un mois.</p>
+    <p>Si vous estimez que vos droits ne sont pas respectés, vous avez le droit d'introduire une réclamation auprès de l'<strong>Autorité de Protection des Données (APD)</strong> :</p>
+    <div class="info-box">
+      <p>
+        <strong>Autorité de Protection des Données</strong><br/>
+        Rue de la Presse, 35 — 1000 Bruxelles, Belgique<br/>
+        Tél. : +32 2 274 48 00<br/>
+        Site : <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener">www.autoriteprotectiondonnees.be</a><br/>
+        E-mail : <a href="mailto:contact@apd-gba.be">contact@apd-gba.be</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 7. COOKIES -->
+  <div class="section-ml" id="cookies">
+    <h2>7. Cookies</h2>
+    <p>Ce site utilise un nombre limité de cookies techniques, strictement nécessaires à son bon fonctionnement.</p>
+
+    <h3>Cookies utilisés</h3>
+    <ul>
+      <li><strong>Cookie de préférence musicale</strong> (<code>cit_music</code>) : mémorise si vous avez activé ou désactivé la musique de fond. Ce cookie ne contient aucune donnée personnelle et expire à la fermeture du navigateur.</li>
+    </ul>
+
+    <p>Ce site <strong>n'utilise pas</strong> de cookies de suivi, de publicité ou d'analyse comportementale (pas de Google Analytics, pas de Facebook Pixel, ni aucun cookie tiers de traçage).</p>
+
+    <h3>Gestion des cookies</h3>
+    <p>Vous pouvez à tout moment supprimer les cookies stockés via les paramètres de votre navigateur. Cela n'affectera pas votre expérience de navigation sur ce site.</p>
+  </div>
+
+  <!-- 8. CONTACT DPO -->
+  <div class="section-ml" id="contact-dpo">
+    <h2>8. Contact pour les données personnelles</h2>
+    <p>Pour toute question relative à la protection de vos données personnelles ou pour exercer vos droits, vous pouvez nous contacter :</p>
+    <div class="info-box">
+      <p>
+        <strong>Cabinet Infirmier du Tournaisis</strong><br/>
+        Avenue de l'Europe, 68 — 7972 Quevaucamps, Belgique<br/>
+        <strong>E-mail :</strong> <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a><br/>
+        <strong>Téléphone :</strong> <a href="tel:+3269304133">(+32) 069.30.41.33</a>
+      </p>
+    </div>
+    <p style="font-size:.825rem;color:var(--muted);margin-top:1rem;">Page mise à jour en juin 2025. Le Cabinet Infirmier du Tournaisis se réserve le droit de modifier ces mentions légales à tout moment. Nous vous invitons à les consulter régulièrement.</p>
+  </div>
+
+</div><!-- /page-inner -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-cit">C.I.T</div>
+        <p>Cabinet infirmier indépendant · Soins à domicile &amp; dispensaire<br/>
+        Conventionnés INAMI · Tiers payant.</p>
+        <p style="margin-top:.5rem;">BCE : BE0832.195.365</p>
+        <a href="https://www.facebook.com/p/Cabinet-Infirmier-du-Tournaisis-61558686962236/" class="social-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          Suivez-nous sur Facebook
+        </a>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#prestations">Nos soins</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+          <li><a href="dispensaire.html">Dispensaire</a></li>
+          <li><a href="index.html#facturation">Facturation</a></li>
+          <li><a href="remplacement.html">Remplacements</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="mentions.html" style="color:var(--pink-mid);">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Avenue de l'Europe, 68<br/>Quevaucamps 7972<br/>Belgique</p>
+        <p style="margin-top:.5rem;"><a href="tel:+3269304133">(+32) 069.30.41.33</a></p>
+        <p><a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Cabinet Infirmier du Tournaisis</span>
+      <span>Tous droits réservés · Belgique</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

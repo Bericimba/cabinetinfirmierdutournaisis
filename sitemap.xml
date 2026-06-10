@@ -49,4 +49,11 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://cabinetinfirmierdutournaisis.be/faq-soins-infirmiers.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

@@ -576,7 +576,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
       <p><a href="remplacement.html">Remplacements</a> · <a href="blog.html">Blog</a> · <a href="index.html#rdv">RDV</a> · <a href="mentions.html">Mentions légales</a></p>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Cabinet Infirmier du Tournaisis</span>
+        <span>© <span id="annee-actuelle"></span> Cabinet Infirmier du Tournaisis</span>
       <span>Tous droits réservés · Belgique</span>
     </div>
   </div>
@@ -615,6 +615,8 @@ window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==
 btn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';label.style.opacity='1';});
 btn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';setTimeout(function(){label.style.opacity='0';},1500);});
 </script>
-
+<script>
+     document.getElementById("annee-actuelle").textContent = new Date().getFullYear();
+   </script>
 </body>
 </html>

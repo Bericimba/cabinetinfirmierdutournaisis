@@ -625,7 +625,7 @@ footer a:hover{color:var(--pink-mid);}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Cabinet Infirmier du Tournaisis</span>
+        <span>© <span id="annee-actuelle"></span> Cabinet Infirmier du Tournaisis</span>
       <span>Tous droits réservés · Belgique</span>
     </div>
   </div>
@@ -639,6 +639,8 @@ document.querySelectorAll('.faq-question').forEach(function(button){
   });
 });
 </script>
-
+<script>
+     document.getElementById("annee-actuelle").textContent = new Date().getFullYear();
+   </script>
 </body>
 </html>

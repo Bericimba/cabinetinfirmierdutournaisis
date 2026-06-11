@@ -1,15 +1,7 @@
-# Cabinet Infirmier du Tournaisis — robots.txt
+# Cabinet Infirmier du Tournaisis
 # https://cabinetinfirmierdutournaisis.be
 
 User-agent: *
 Allow: /
 
-# Pages autorisées
-Allow: /index.html
-Allow: /equipe.html
-Allow: /dispensaire.html
-Allow: /remplacement.html
-Allow: /blog.html
-
-# Sitemap
 Sitemap: https://cabinetinfirmierdutournaisis.be/sitemap.xml

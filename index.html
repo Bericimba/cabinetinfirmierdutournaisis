@@ -817,11 +817,13 @@ btn.addEventListener('mouseleave', function(){
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Cabinet Infirmier du Tournaisis</span>
+        <span>© <span id="annee-actuelle"></span> Cabinet Infirmier du Tournaisis</span>
       <span>Tous droits réservés · Belgique</span>
     </div>
   </div>
 </footer>
-
+<script>
+     document.getElementById("annee-actuelle").textContent = new Date().getFullYear();
+   </script>
 </body>
 </html>

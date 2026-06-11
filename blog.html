@@ -318,27 +318,107 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
     <div class="articles-grid" id="grille">
 
-      <!--
-      ════════════════════════════════════════
-      ARTICLE 1 — MODIFIEZ ICI
-      ════════════════════════════════════════
-      -->
-      <div class="article-card" data-cat="sante">
-        <div class="article-img ai-teal">💉</div>
-        <div class="article-body">
-          <span class="cat-badge cb-sante">Conseils santé</span>
-          <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 À renseigner</span>
-          <h3>Comment se préparer à une prise de sang à domicile ?</h3>
-          <p>Quelques conseils simples pour que votre prélèvement se déroule dans les meilleures conditions.</p>
-          <div class="article-footer">
-            <div style="display:flex;align-items:center;gap:.5rem;">
-              <img src="https://i.imgur.com/k2ojrge.png" alt="Louise"/>
-              <span class="auteur-name">Louise Joiffroy</span>
-            </div>
-            <span class="read-time">⏱ 3 min</span>
-          </div>
-        </div>
+      <!-- ARTICLE 1 — PRISE DE SANG À DOMICILE -->
+<div class="article-card" data-cat="sante">
+  <div class="article-img ai-teal">💉</div>
+  <div class="article-body">
+    <span class="cat-badge cb-sante">Conseils santé</span>
+    <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 11 Juin 2026</span>
+
+    <h3>Comment se déroule une prise de sang à domicile ?</h3>
+
+    <p>
+      La prise de sang à domicile permet de réaliser un prélèvement sanguin sans devoir se déplacer.
+      Une solution pratique pour les personnes âgées, les patients chroniques ou en convalescence.
+    </p>
+
+    <a href="#article-prise-sang"
+       class="btn-lire"
+       onclick="document.getElementById('article-prise-sang').style.display='block';this.style.display='none';">
+      Lire l'article →
+    </a>
+
+    <div id="article-prise-sang" style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+
+      <h4 style="font-size:1rem;font-weight:700;color:var(--teal);margin-bottom:.75rem;">
+        Pourquoi réaliser une prise de sang à domicile ?
+      </h4>
+
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;">
+        La prise de sang à domicile est une solution confortable pour les patients qui ne peuvent pas se déplacer
+        ou qui souhaitent bénéficier d’un suivi médical dans leur environnement habituel. Elle est particulièrement
+        adaptée aux personnes âgées, aux personnes à mobilité réduite, aux patients chroniques ou après une hospitalisation.
+      </p>
+
+      <h4 style="font-size:1rem;font-weight:700;color:var(--teal);margin-bottom:.75rem;">
+        Comment se déroule le prélèvement ?
+      </h4>
+
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;">
+        L’infirmière vérifie la prescription médicale, prépare le matériel nécessaire et réalise le prélèvement
+        dans le respect des règles d’hygiène et de sécurité. Les échantillons sont ensuite identifiés puis transmis
+        au laboratoire pour analyse.
+      </p>
+
+      <h4 style="font-size:1rem;font-weight:700;color:var(--teal);margin-bottom:.75rem;">
+        Faut-il être à jeun ?
+      </h4>
+
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;">
+        Certaines analyses nécessitent d’être à jeun, notamment pour la glycémie, le cholestérol ou certains bilans sanguins.
+        Il est important de suivre les recommandations du médecin ou du laboratoire.
+      </p>
+
+      <h4 style="font-size:1rem;font-weight:700;color:var(--teal);margin-bottom:.75rem;">
+        Quels documents préparer ?
+      </h4>
+
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;">
+        Avant le passage de l’infirmière, préparez votre prescription médicale, votre carte d’identité,
+        vos informations de mutuelle et les éventuels documents transmis par le laboratoire.
+      </p>
+
+      <h4 style="font-size:1rem;font-weight:700;color:var(--teal);margin-bottom:.75rem;">
+        À domicile ou au dispensaire
+      </h4>
+
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;">
+        Le Cabinet Infirmier du Tournaisis réalise les prises de sang à domicile ainsi qu’au dispensaire de Quevaucamps.
+        L’équipe intervient dans le Tournaisis, notamment à Quevaucamps, Tournai, Beloeil, Péruwelz, Bernissart,
+        Antoing, Leuze-en-Hainaut, Brunehaut et Rumes.
+      </p>
+
+      <div style="background:linear-gradient(135deg,var(--teal-light),var(--purple-light));border-radius:var(--radius);padding:1.25rem;border:1px solid #8DD8D0;margin-bottom:1rem;">
+        <p style="font-size:.875rem;font-weight:700;color:var(--teal);margin-bottom:.4rem;">Conclusion</p>
+        <p style="font-size:.875rem;color:var(--text);line-height:1.75;">
+          La prise de sang à domicile facilite le suivi médical tout en offrant confort, sécurité et accompagnement personnalisé.
+          Pour organiser un prélèvement, contactez le Cabinet Infirmier du Tournaisis.
+        </p>
       </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;">
+        <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#priseDeSang</span>
+        <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#domicile</span>
+        <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#Tournaisis</span>
+        <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#dispensaire</span>
+      </div>
+
+      <button onclick="this.closest('#article-prise-sang').style.display='none';this.closest('.article-body').querySelector('.btn-lire').style.display='inline-flex';"
+              style="background:none;border:1px solid var(--border);color:var(--muted);padding:7px 16px;border-radius:20px;font-size:13px;cursor:pointer;">
+        Réduire ▲
+      </button>
+
+    </div>
+
+    <div class="article-footer" style="margin-top:1rem;">
+      <div style="display:flex;align-items:center;gap:.5rem;">
+        <img src="https://i.imgur.com/k2ojrge.png" alt="Louise Joiffroy"/>
+        <span class="auteur-name">Louise Joiffroy</span>
+      </div>
+      <span class="read-time">⏱ 5 min</span>
+    </div>
+  </div>
+</div>
 
       <!--
       ════════════════════════════════════════

@@ -1,59 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Page d'accueil -->
-  <url>
-    <loc>https://cabinetinfirmierdutournaisis.be/</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <!-- Accueil -->
+    <url>
+        <loc>https://cabinetinfirmierdutournaisis.be/</loc>
+        <lastmod>2026-06-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-  <!-- Page Équipe -->
-  <url>
-    <loc>https://cabinetinfirmierdutournaisis.be/equipe.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <!-- Équipe -->
+    <url>
+        <loc>https://cabinetinfirmierdutournaisis.be/equipe.html</loc>
+        <lastmod>2026-06-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- Page Dispensaire -->
-  <url>
-    <loc>https://cabinetinfirmierdutournaisis.be/dispensaire.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <!-- Dispensaire -->
+    <url>
+        <loc>https://cabinetinfirmierdutournaisis.be/dispensaire.html</loc>
+        <lastmod>2026-06-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-  <!-- Page Remplacements -->
-  <url>
-    <loc>https://cabinetinfirmierdutournaisis.be/remplacement.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <!-- Remplacement infirmier -->
+    <url>
+        <loc>https://cabinetinfirmierdutournaisis.be/remplacement.html</loc>
+        <lastmod>2026-06-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- Page Blog -->
-  <url>
-    <loc>https://cabinetinfirmierdutournaisis.be/blog.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <!-- FAQ soins infirmiers -->
+    <url>
+        <loc>https://cabinetinfirmierdutournaisis.be/faq-soins-infirmiers.html</loc>
+        <lastmod>2026-06-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- Page Mentions légales -->
-  <url>
-    <loc>https://cabinetinfirmierdutournaisis.be/mentions.html</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+    <!-- Blog -->
+    <url>
+        <loc>https://cabinetinfirmierdutournaisis.be/blog.html</loc>
+        <lastmod>2026-06-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
-  <url>
-    <loc>https://cabinetinfirmierdutournaisis.be/faq-soins-infirmiers.html</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <!-- Mentions légales -->
+    <url>
+        <loc>https://cabinetinfirmierdutournaisis.be/mentions.html</loc>
+        <lastmod>2026-06-11</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
 
 </urlset>

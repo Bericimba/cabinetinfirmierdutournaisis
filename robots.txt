@@ -1,7 +1,11 @@
+# =================================================================
 # Cabinet Infirmier du Tournaisis
 # https://cabinetinfirmierdutournaisis.be
+# Robots.txt
+# =================================================================
 
 User-agent: *
 Allow: /
 
+# Sitemap XML
 Sitemap: https://cabinetinfirmierdutournaisis.be/sitemap.xml

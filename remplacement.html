@@ -655,6 +655,15 @@ window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==
 btn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';label.style.opacity='1';});
 btn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';setTimeout(function(){label.style.opacity='0';},1500);});
 </script>
+<script>
+document.addEventListener('click', function(e){
+  var menu = document.querySelector('.mobile-menu');
+  var burger = document.querySelector('.hamburger');
+  if(menu && menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
+</script>
 
 </body>
 </html>

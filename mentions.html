@@ -366,6 +366,15 @@ footer a:hover{color:var(--pink-mid);}
     </div>
   </div>
 </footer>
+<script>
+document.addEventListener('click', function(e){
+  var menu = document.querySelector('.mobile-menu');
+  var burger = document.querySelector('.hamburger');
+  if(menu && menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
+</script>
 
 </body>
 </html>

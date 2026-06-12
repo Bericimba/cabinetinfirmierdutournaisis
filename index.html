@@ -673,17 +673,34 @@ footer a:hover{color:var(--pink-mid);}
             <option>Autre</option>
           </select>
         </div>
+        <div class="form-row">
+          <label>Lieu du soin souhaité</label>
+          <div style="display:flex;gap:1.5rem;margin-top:.4rem;">
+            <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;cursor:pointer;">
+              <input id="rdv-domicile" type="checkbox" style="width:18px;height:18px;cursor:pointer;"/> Domicile
+            </label>
+            <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;cursor:pointer;">
+              <input id="rdv-dispensaire" type="checkbox" style="width:18px;height:18px;cursor:pointer;"/> Dispensaire
+            </label>
+          </div>
+        </div>
         <div class="form-row"><label>Date souhaitée</label><input id="rdv-date" type="date"/></div>
         <div class="form-row"><label>Message (optionnel)</label><textarea id="rdv-msg" rows="3" placeholder="Précisez votre demande ou votre adresse…"></textarea></div>
         <button class="btn-white" onclick="
-          var nom=document.getElementById('rdv-nom').value;
-          var tel=document.getElementById('rdv-tel').value;
-          var soin=document.getElementById('rdv-soin').value;
-          var date=document.getElementById('rdv-date').value;
-          var msg=document.getElementById('rdv-msg').value;
-          var body='Nom : '+nom+'%0ATéléphone : '+tel+'%0AType de soin : '+soin+'%0ADate souhaitée : '+date+'%0AMessage : '+msg;
-          window.location.href='mailto:info@cabinetinfirmierdutournaisis.be?subject=Demande de rendez-vous - CIT&body='+body;
-        ">Envoyer ma demande ✦</button>
+                  var nom=document.getElementById('rdv-nom').value;
+                  var tel=document.getElementById('rdv-tel').value;
+                  var soin=document.getElementById('rdv-soin').value;
+                  var domicile=document.getElementById('rdv-domicile').checked;
+                  var dispensaire=document.getElementById('rdv-dispensaire').checked;
+                  var lieu=[];
+                  if(domicile) lieu.push('Domicile');
+                  if(dispensaire) lieu.push('Dispensaire');
+                  lieu=lieu.length? lieu.join(' + ') : 'Non précisé';
+                  var date=document.getElementById('rdv-date').value;
+                  var msg=document.getElementById('rdv-msg').value;
+                  var body='Nom : '+nom+'%0ATéléphone : '+tel+'%0AType de soin : '+soin+'%0ALieu souhaité : '+lieu+'%0ADate souhaitée : '+date+'%0AMessage : '+msg;
+                  window.location.href='mailto:info@cabinetinfirmierdutournaisis.be?subject=Demande de rendez-vous - CIT&body='+body;
+                ">Envoyer ma demande ✦</button>
       </div>
       <div class="contact-info">
         <div class="contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.95 5.95l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong>Téléphone</strong><span><a href="tel:+3269304133" style="color:rgba(255,255,255,.85);">(+32) 069.30.41.33</a></span></div></div>

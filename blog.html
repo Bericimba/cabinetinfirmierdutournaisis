@@ -432,21 +432,104 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
       ════════════════════════════════════════
       -->
       <div class="article-card" data-cat="sante">
-        <div class="article-img ai-pink">🩹</div>
-        <div class="article-body">
-          <span class="cat-badge cb-sante">Conseils santé</span>
-          <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 04 Juin 2026</span>
-          <h3>Reconnaître et prévenir les escarres à domicile</h3>
-          <p>Les escarres peuvent survenir rapidement chez les personnes alitées. Voici comment les prévenir efficacement.</p>
-          <div class="article-footer">
-            <div style="display:flex;align-items:center;gap:.5rem;">
-              <img src="https://i.imgur.com/UeUAcAl.png" alt="Jordan"/>
-              <span class="auteur-name">Jordan Daubie</span>
+              <div class="article-img ai-pink">🩹</div>
+              <div class="article-body">
+                <span class="cat-badge cb-sante">Conseils santé</span>
+                <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 05 Juin 2026</span>
+                <h3>Reconnaître et prévenir les escarres à domicile</h3>
+                <p>Les escarres sont des lésions cutanées fréquentes chez les personnes alitées ou à mobilité réduite. Une surveillance régulière et des gestes simples permettent souvent de les éviter.</p>
+
+                <a href="#article-escarres" class="btn-lire" onclick="document.getElementById('article-escarres').style.display='block';this.style.display='none';">Lire l'article →</a>
+
+                <!-- CONTENU COMPLET DE L'ARTICLE -->
+                <div id="article-escarres" style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+
+                  <h4 style="font-size:1rem;font-weight:700;color:var(--pink);margin-bottom:.75rem;">Qu'est-ce qu'une escarre ?</h4>
+                  <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;">Une escarre est une plaie provoquée par une pression prolongée sur une zone du corps. Cette pression diminue la circulation sanguine et peut entraîner une détérioration progressive de la peau.</p>
+                  <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:.5rem;">Les zones les plus touchées sont :</p>
+                  <ul style="font-size:.875rem;color:var(--muted);line-height:1.8;margin:0 0 1.25rem 1.25rem;">
+                    <li>Le sacrum, au niveau du bas du dos</li>
+                    <li>Les talons</li>
+                    <li>Les hanches</li>
+                    <li>Les chevilles</li>
+                    <li>Les coudes</li>
+                    <li>Les omoplates</li>
+                    <li>L'arrière de la tête</li>
+                  </ul>
+
+                  <h4 style="font-size:1rem;font-weight:700;color:var(--pink);margin-bottom:.75rem;">Comment reconnaître les premiers signes ?</h4>
+                  <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:.5rem;">Une escarre détectée rapidement est plus facile à prendre en charge. Certains signes doivent alerter :</p>
+                  <ul style="font-size:.875rem;color:var(--muted);line-height:1.8;margin:0 0 1.25rem 1.25rem;">
+                    <li>Une rougeur persistante qui ne disparaît pas</li>
+                    <li>Une peau chaude, froide, dure ou douloureuse</li>
+                    <li>Une sensation d'inconfort au niveau d'un point d'appui</li>
+                    <li>L'apparition d'une cloque</li>
+                    <li>Une plaie ou une zone de peau abîmée</li>
+                  </ul>
+                  <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;">En cas de doute, il est conseillé de contacter rapidement un professionnel de santé.</p>
+
+                  <h4 style="font-size:1rem;font-weight:700;color:var(--pink);margin-bottom:.75rem;">Comment prévenir les escarres à domicile ?</h4>
+                  <div style="display:flex;flex-direction:column;gap:.875rem;margin-bottom:1.5rem;">
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">Changer régulièrement de position</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Pour limiter la pression sur les zones sensibles, il est important de modifier régulièrement la position de la personne alitée ou installée en fauteuil.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">Surveiller la peau chaque jour</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Une inspection quotidienne permet de repérer rapidement une rougeur ou une irritation, notamment au niveau des talons, des hanches et du sacrum.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">Maintenir une bonne hygiène</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Une peau propre, sèche et bien hydratée est mieux protégée. Il est recommandé d'utiliser des produits doux et d'éviter les frottements excessifs.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">Veiller à l'alimentation et à l'hydratation</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Une alimentation équilibrée, suffisamment riche en protéines, ainsi qu'une bonne hydratation favorisent la santé de la peau et la cicatrisation.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">Utiliser du matériel adapté</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Selon la situation, un matelas adapté, un coussin anti-escarres ou des protections spécifiques peuvent être recommandés.</p>
+                    </div>
+                  </div>
+
+                  <h4 style="font-size:1rem;font-weight:700;color:var(--pink);margin-bottom:.75rem;">Le rôle de l'infirmière à domicile</h4>
+                  <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;">L'infirmière à domicile joue un rôle essentiel dans la prévention et la prise en charge des escarres. Elle évalue les risques, surveille l'état de la peau, réalise les soins nécessaires et conseille les proches aidants.</p>
+
+                  <h4 style="font-size:1rem;font-weight:700;color:var(--pink);margin-bottom:.75rem;">Quand consulter ?</h4>
+                  <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:.5rem;">Il est recommandé de consulter rapidement en cas de :</p>
+                  <ul style="font-size:.875rem;color:var(--muted);line-height:1.8;margin:0 0 1.25rem 1.25rem;">
+                    <li>Rougeur persistante</li>
+                    <li>Douleur inhabituelle</li>
+                    <li>Plaie, cloque ou écoulement</li>
+                    <li>Mauvaise odeur</li>
+                    <li>Aggravation de l'état général</li>
+                  </ul>
+
+                  <div style="margin:1.25rem 0;padding:1.25rem;background:linear-gradient(135deg,var(--purple-light),var(--teal-light));border-radius:var(--radius);border:1px solid #C8A8E8;">
+                    <p style="font-size:.875rem;font-weight:700;color:var(--purple);margin-bottom:.5rem;">🩺 Besoin de soins infirmiers à domicile ?</p>
+                    <p style="font-size:.875rem;color:var(--text);line-height:1.75;margin-bottom:1rem;">Le Cabinet Infirmier du Tournaisis accompagne les patients à domicile pour la prévention, la surveillance et les soins des escarres dans la région de Tournai, Péruwelz, Beloeil, Bernissart, Antoing, Leuze-en-Hainaut, Brunehaut, Rumes et les communes voisines.</p>
+                    <a href="index.html#rdv" style="display:inline-block;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;padding:10px 20px;border-radius:20px;font-size:13px;font-weight:700;">Contacter le cabinet →</a>
+                  </div>
+
+                  <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;">
+                    <span style="background:var(--pink-light);color:var(--pink);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#escarres</span>
+                    <span style="background:var(--pink-light);color:var(--pink);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#prévention</span>
+                    <span style="background:var(--pink-light);color:var(--pink);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#domicile</span>
+                    <span style="background:var(--pink-light);color:var(--pink);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#Tournaisis</span>
+                  </div>
+
+                  <button onclick="this.closest('#article-escarres').style.display='none';this.closest('.article-body').querySelector('.btn-lire').style.display='inline-flex';" style="background:none;border:1px solid var(--border);color:var(--muted);padding:7px 16px;border-radius:20px;font-size:13px;cursor:pointer;">Réduire ▲</button>
+                </div>
+
+                <div class="article-footer" style="margin-top:1rem;">
+                  <div style="display:flex;align-items:center;gap:.5rem;">
+                    <img src="https://i.imgur.com/UeUAcAl.png" alt="Jordan"/>
+                    <span class="auteur-name">Jordan Daubie</span>
+                  </div>
+                  <span class="read-time">⏱ 6 min</span>
+                </div>
+              </div>
             </div>
-            <span class="read-time">⏱ 4 min</span>
-          </div>
-        </div>
-      </div>
 
       <!--
       ════════════════════════════════════════

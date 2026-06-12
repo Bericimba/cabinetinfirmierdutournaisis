@@ -187,6 +187,10 @@ h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .tarif-highlight h3{font-size:1.1rem;font-weight:800;margin-bottom:1rem;}
 .tarif-highlight p{font-size:.875rem;opacity:.9;line-height:1.75;margin-bottom:1.25rem;}
 .tarif-highlight .btn-white{background:#fff;color:var(--purple);padding:12px 24px;border-radius:25px;font-size:14px;font-weight:700;border:none;cursor:pointer;display:inline-block;width:100%;text-align:center;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+@media(max-width:768px){
+  .contact-grid{grid-template-columns:1fr;gap:1.25rem;}
+}
 
 /* PROFILS */
 .profils{background:var(--white);}
@@ -557,7 +561,7 @@ footer a{color:var(--purple-mid);font-size:.825rem;}
     <span class="section-tag tag-purple">Contact</span>
     <h2>Parlons de votre besoin</h2>
     <p class="section-sub">Remplacement, tarification ou simple question — contactez-nous et nous vous répondons rapidement.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+    <div class="contact-grid">
       <div style="background:var(--white);border-radius:var(--radius);padding:1.75rem;border:1px solid var(--border);">
         <div style="margin-bottom:1rem;">
           <label style="display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:.4rem;">Nom & prénom</label>

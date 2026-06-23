@@ -218,13 +218,13 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
     <!-- ARTICLE À LA UNE -->
     <div class="une-card" data-cat="sante">
-      <div class="une-img">🏠</div>
+        <div class="une-img">☀️</div>
       <div class="une-content">
         <span class="cat-badge cb-sante">Conseils santé</span>
-        <span class="une-date">📅 01 Juin 2026</span>
-        <h3>Les 10 Avantages des Soins Infirmiers à Domicile</h3>
-        <p>Les soins infirmiers à domicile représentent une alternative de plus en plus prisée aux hospitalisations prolongées. Cette approche personnalisée offre de nombreux avantages tant pour les patients que pour leurs familles.</p>
-        <a href="#article-domicile" class="btn-lire" onclick="document.getElementById('article-domicile').style.display='block';this.style.display='none';">Lire l'article →</a>
+        <span class="une-date">📅 21 Juin 2026</span>
+        <h3>Fortes chaleurs : les bons réflexes pour protéger votre santé</h3>
+        <p>Les périodes de fortes températures peuvent avoir des conséquences importantes sur notre organisme, surtout chez les personnes âgées, les enfants et les patients fragilisés. Voici les bons réflexes à adopter.</p>
+        <a href="#article-chaleurs" class="btn-lire" onclick="document.getElementById('article-chaleurs').style.display='block';this.style.display='none';">Lire l'article complet ↓</a>
 
         <!-- CONTENU COMPLET DE L'ARTICLE -->
         <div id="article-domicile" style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
@@ -292,8 +292,8 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <div class="auteur-row">
-          <img src="https://i.imgur.com/C040BYl.png" alt="Céline Lhoir"/>
-          <div><strong>Céline Lhoir</strong><span>Infirmière coordinatrice · Cabinet Infirmier du Tournaisis</span></div>
+          <img src="https://i.imgur.com/k2ojrge.png" alt="Louise Joiffroy"/>
+          <div><strong>Louise Joiffroy</strong><span>Infirmière en chef · Cabinet Infirmier du Tournaisis</span></div>
         </div>
       </div>
     </div>
@@ -695,13 +695,98 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
       </div>
 
-      <!--
-      ════════════════════════════════════════
-      → AJOUTEZ VOS PROCHAINS ARTICLES ICI
-         Copiez-collez un bloc .article-card
-         et modifiez le contenu
-      ════════════════════════════════════════
-      -->
+      <!-- ARTICLE SOINS À DOMICILE — Céline Lhoir — 01 juin 2026 -->
+            <div class="article-card" data-cat="sante">
+              <div class="article-img ai-pink">🏠</div>
+              <div class="article-body">
+                <span class="cat-badge cb-sante">Conseils santé</span>
+                <span class="une-date" style="font-size:11px;display:block;margin:.3rem 0;">📅 01 Juin 2026</span>
+                <h3>Les 10 avantages des soins infirmiers à domicile</h3>
+                <p>Recevoir des soins chez soi offre confort, sécurité et personnalisation. Découvrez pourquoi de plus en plus de patients et de familles choisissent cette solution.</p>
+
+                <a href="#article-domicile-grille" class="btn-lire" onclick="document.getElementById('article-domicile-grille').style.display='block';this.style.display='none';">Lire l'article →</a>
+
+                <!-- CONTENU COMPLET -->
+                <div id="article-domicile-grille" style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+
+                  <div style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.25rem;">
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">1. Le confort de votre environnement</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Recevoir des soins chez vous réduit le stress et favorise une récupération plus rapide. Vous restez entouré de vos proches et de vos repères quotidiens.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">2. Des soins entièrement personnalisés</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Chaque patient est unique. À domicile, l'infirmier adapte son approche à vos besoins spécifiques, sans contrainte d'horaire institutionnel.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">3. Réduction des risques d'infection</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">En évitant les milieux hospitaliers, vous limitez considérablement les risques d'infections nosocomiales.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">4. La présence de vos proches</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Famille et amis peuvent rester à vos côtés sans restriction d'horaires de visite. Ce soutien affectif contribue directement au rétablissement.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">5. Une meilleure coordination médicale</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">L'infirmier à domicile fait le lien entre le médecin traitant, le spécialiste et la famille, assurant une continuité des soins optimale.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">6. Le maintien de l'autonomie</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Rester chez soi préserve l'indépendance du patient et renforce son sentiment de dignité et de contrôle sur sa vie quotidienne.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">7. Une récupération souvent plus rapide</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les études montrent que les patients soignés à domicile récupèrent en moyenne plus vite, grâce à un environnement familier et moins stressant.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">8. Une disponibilité 24h/24</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Le CIT assure une présence et une joignabilité à toute heure, y compris la nuit et le week-end, grâce au dispensaire et au visiophone.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">9. Un accompagnement global</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Au-delà du soin technique, l'infirmier à domicile soutient aussi les proches aidants, souvent épuisés, en les guidant et en les rassurant.</p>
+                    </div>
+                    <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
+                      <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">10. Des soins remboursés par l'INAMI</p>
+                      <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les soins infirmiers à domicile sont conventionnés INAMI. Vous bénéficiez d'un remboursement selon votre mutuelle, sans frais excessifs.</p>
+                    </div>
+                  </div>
+
+                  <div style="background:linear-gradient(135deg,var(--pink-light),var(--purple-light));border-radius:var(--radius);padding:1.1rem 1.25rem;border:1px solid #F0B0D0;margin-bottom:1.25rem;">
+                    <p style="font-size:.875rem;color:var(--text);line-height:1.75;margin:0;">
+                      🏡 <strong>Le CIT est à vos côtés 24h/24 et 7j/7</strong> pour assurer vos soins à domicile avec professionnalisme et bienveillance.<br/>
+                      📞 <strong>069 30 41 33</strong> · Au service de votre santé dans tout le Tournaisis.
+                    </p>
+                  </div>
+
+                  <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;">
+                    <span style="background:var(--pink-light);color:var(--pink-dark);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#soinsÀDomicile</span>
+                    <span style="background:var(--pink-light);color:var(--pink-dark);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#infirmier</span>
+                    <span style="background:var(--pink-light);color:var(--pink-dark);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#INAMI</span>
+                    <span style="background:var(--pink-light);color:var(--pink-dark);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#Tournaisis</span>
+                  </div>
+
+                  <button onclick="document.getElementById('article-domicile-grille').style.display='none';this.closest('.article-body').querySelector('.btn-lire').style.display='inline-flex';"
+                          style="background:none;border:1px solid var(--border);color:var(--muted);padding:7px 16px;border-radius:20px;font-size:13px;cursor:pointer;">Réduire ▲</button>
+                </div>
+
+                <div class="article-footer" style="margin-top:1rem;">
+                  <div style="display:flex;align-items:center;gap:.5rem;">
+                    <img src="https://i.imgur.com/C040BYl.png" alt="Céline Lhoir"/>
+                    <span class="auteur-name">Céline Lhoir</span>
+                  </div>
+                  <span class="read-time">⏱ 4 min</span>
+                </div>
+              </div>
+            </div>
+
+            <!--
+            ════════════════════════════════════════
+            → AJOUTEZ VOS PROCHAINS ARTICLES ICI
+               Copiez-collez un bloc .article-card
+               et modifiez le contenu
+            ════════════════════════════════════════
+            -->
 
     </div>
 

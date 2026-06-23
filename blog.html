@@ -211,84 +211,64 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 </div>
 
 <!-- ARTICLE À LA UNE -->
-<section style="background:var(--warm);" id="articles">
-  <div class="section-inner">
-    <span class="section-tag tag-pink">À la une</span>
-    <h2>Dernier article</h2>
-
-    <!-- ARTICLE À LA UNE -->
     <div class="une-card" data-cat="sante">
-        <div class="une-img">☀️</div>
+      <div class="une-img" style="background:linear-gradient(135deg,var(--teal-light),var(--pink-light));">☀️</div>
       <div class="une-content">
         <span class="cat-badge cb-sante">Conseils santé</span>
         <span class="une-date">📅 21 Juin 2026</span>
         <h3>Fortes chaleurs : les bons réflexes pour protéger votre santé</h3>
-        <p>Les périodes de fortes températures peuvent avoir des conséquences importantes sur notre organisme, surtout chez les personnes âgées, les enfants et les patients fragilisés. Voici les bons réflexes à adopter.</p>
-        <a href="#article-chaleurs" class="btn-lire" onclick="document.getElementById('article-chaleurs').style.display='block';this.style.display='none';">Lire l'article complet ↓</a>
+        <p>Les périodes de fortes températures peuvent avoir des conséquences importantes sur notre organisme, surtout chez les personnes âgées, les enfants et les patients fragilisés. L'équipe du CIT vous partage les gestes essentiels.</p>
+        <a href="#article-chaleurs-une" class="btn-lire" onclick="document.getElementById('article-chaleurs-une').style.display='block';this.style.display='none';">Lire l'article →</a>
 
-        <!-- CONTENU COMPLET DE L'ARTICLE -->
-        <div id="article-domicile" style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+        <!-- CONTENU COMPLET -->
+        <div id="article-chaleurs-une" style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
 
-          <h4 style="font-size:1rem;font-weight:700;color:var(--pink);margin-bottom:.75rem;">Pourquoi choisir les soins infirmiers à domicile ?</h4>
-          <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;">Les soins infirmiers à domicile représentent une alternative de plus en plus prisée aux hospitalisations prolongées. Cette approche personnalisée offre de nombreux avantages tant pour les patients que pour leurs familles.</p>
+          <h4 style="font-size:1rem;font-weight:700;color:var(--teal);margin-bottom:.75rem;">☀️ Pourquoi la chaleur est-elle dangereuse ?</h4>
+          <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;">
+            Les fortes chaleurs peuvent entraîner une déshydratation rapide, un coup de chaleur ou aggraver des maladies chroniques. Les personnes âgées, les jeunes enfants, les femmes enceintes et les patients sous traitement médicamenteux sont particulièrement vulnérables.
+          </p>
 
-          <div style="display:flex;flex-direction:column;gap:.875rem;margin-bottom:1.5rem;">
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">1. Le confort de votre environnement</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Recevoir des soins dans le confort de votre domicile réduit le stress et favorise une récupération plus rapide. Vous restez entouré de vos proches et de vos repères quotidiens.</p>
+          <div style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.25rem;">
+            <div style="background:var(--teal-light);border-radius:var(--radius);padding:.9rem 1.1rem;border:1px solid #8DD8D0;">
+              <p style="font-size:.875rem;color:var(--text);line-height:1.7;margin:0;"><strong>💧 Hydratez-vous régulièrement</strong><br/>Buvez de l'eau tout au long de la journée, même sans sensation de soif.</p>
             </div>
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">2. Des soins personnalisés</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Contrairement aux établissements hospitaliers, les soins à domicile permettent une attention individuelle et un suivi adapté à vos besoins spécifiques.</p>
+            <div style="background:var(--purple-light);border-radius:var(--radius);padding:.9rem 1.1rem;border:1px solid #C8A8E8;">
+              <p style="font-size:.875rem;color:var(--text);line-height:1.7;margin:0;"><strong>🏠 Gardez votre logement au frais</strong><br/>Fermez les volets en journée et aérez tôt le matin et en soirée.</p>
             </div>
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">3. Réduction des risques d'infections</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">En évitant les milieux hospitaliers, vous limitez considérablement les risques d'infections nosocomiales.</p>
+            <div style="background:var(--pink-light);border-radius:var(--radius);padding:.9rem 1.1rem;border:1px solid #F0B0D0;">
+              <p style="font-size:.875rem;color:var(--text);line-height:1.7;margin:0;"><strong>👕 Adoptez une tenue adaptée</strong><br/>Portez des vêtements légers, amples et de couleur claire.</p>
             </div>
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">4. Flexibilité des horaires</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les interventions sont planifiées selon vos disponibilités et votre rythme de vie.</p>
+            <div style="background:var(--teal-light);border-radius:var(--radius);padding:.9rem 1.1rem;border:1px solid #8DD8D0;">
+              <p style="font-size:.875rem;color:var(--text);line-height:1.7;margin:0;"><strong>🥗 Privilégiez une alimentation légère</strong><br/>Favorisez les fruits, les légumes et les repas faciles à digérer.</p>
             </div>
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">5. Maintien de l'autonomie</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les soins à domicile encouragent le maintien de votre indépendance et de vos habitudes quotidiennes.</p>
+            <div style="background:var(--purple-light);border-radius:var(--radius);padding:.9rem 1.1rem;border:1px solid #C8A8E8;">
+              <p style="font-size:.875rem;color:var(--text);line-height:1.7;margin:0;"><strong>🚶 Évitez les efforts entre 11h et 17h</strong><br/>Limitez toute activité physique intense aux heures les plus chaudes.</p>
             </div>
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">6. Économies significatives</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les soins à domicile sont souvent plus économiques qu'une hospitalisation prolongée.</p>
-            </div>
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">7. Implication de la famille</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Vos proches peuvent participer activement à votre rétablissement et être formés aux gestes essentiels.</p>
-            </div>
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--purple);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">8. Continuité des soins</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Un même infirmier peut assurer le suivi de votre traitement, garantissant une meilleure connaissance de votre dossier médical.</p>
-            </div>
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--teal);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">9. Récupération plus rapide</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Les études montrent que les patients récupèrent généralement plus vite dans leur environnement familier.</p>
-            </div>
-            <div style="background:var(--warm);border-radius:10px;padding:1rem 1.25rem;border-left:4px solid var(--pink);">
-              <p style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">10. Qualité de vie préservée</p>
-              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Vous pouvez maintenir vos activités sociales et votre vie quotidienne tout en recevant les soins nécessaires.</p>
+            <div style="background:var(--pink-light);border-radius:var(--radius);padding:.9rem 1.1rem;border:1px solid #F0B0D0;">
+              <p style="font-size:.875rem;color:var(--text);line-height:1.7;margin:0;"><strong>❤️ Prenez des nouvelles de vos proches</strong><br/>Un simple appel peut faire toute la différence auprès des personnes isolées.</p>
             </div>
           </div>
 
-          <div style="background:linear-gradient(135deg,var(--pink-light),var(--purple-light));border-radius:var(--radius);padding:1.25rem;border:1px solid #F0B0D0;margin-bottom:1rem;">
-            <p style="font-size:.875rem;font-weight:700;color:var(--pink);margin-bottom:.4rem;">Conclusion</p>
-            <p style="font-size:.875rem;color:var(--text);line-height:1.75;">Les soins infirmiers à domicile offrent une solution humaine et efficace pour de nombreuses situations médicales. Au CIT, nous mettons notre expertise au service de votre bien-être.</p>
+          <h4 style="font-size:1rem;font-weight:700;color:var(--pink);margin-bottom:.6rem;">⚠️ Signes d'alerte à ne pas ignorer</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.25rem;">
+            <span style="background:var(--pink-light);color:var(--pink-dark);font-size:.85rem;padding:5px 12px;border-radius:20px;border:1px solid #F0B0D0;">Fatigue inhabituelle</span>
+            <span style="background:var(--pink-light);color:var(--pink-dark);font-size:.85rem;padding:5px 12px;border-radius:20px;border:1px solid #F0B0D0;">Maux de tête</span>
+            <span style="background:var(--pink-light);color:var(--pink-dark);font-size:.85rem;padding:5px 12px;border-radius:20px;border:1px solid #F0B0D0;">Crampes musculaires</span>
+            <span style="background:var(--pink-light);color:var(--pink-dark);font-size:.85rem;padding:5px 12px;border-radius:20px;border:1px solid #F0B0D0;">Vertiges</span>
+            <span style="background:var(--pink-light);color:var(--pink-dark);font-size:.85rem;padding:5px 12px;border-radius:20px;border:1px solid #F0B0D0;">Nausées</span>
+            <span style="background:var(--pink-light);color:var(--pink-dark);font-size:.85rem;padding:5px 12px;border-radius:20px;border:1px solid #F0B0D0;">Confusion</span>
+            <span style="background:var(--pink-light);color:var(--pink-dark);font-size:.85rem;padding:5px 12px;border-radius:20px;border:1px solid #F0B0D0;">Sensation de malaise</span>
           </div>
 
-          <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;">
-            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#soins</span>
-            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#domicile</span>
-            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#infirmier</span>
-            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#santé</span>
-            <span style="background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;">#bien-être</span>
+          <div style="background:linear-gradient(135deg,var(--teal-light),var(--purple-light));border-radius:var(--radius);padding:1.1rem 1.25rem;border:1px solid #8DD8D0;margin-bottom:1.25rem;">
+            <p style="font-size:.875rem;color:var(--text);line-height:1.75;margin:0;">
+              🏡 <strong>Le C.I.T. est à vos côtés 24h/24 et 7j/7</strong> pour assurer vos soins à domicile avec professionnalisme et bienveillance.<br/>
+              📞 <strong>069 30 41 33</strong> · 📧 info@cabinetinfirmierdutournaisis.be
+            </p>
           </div>
 
-          <button onclick="this.closest('#article-domicile').style.display='none';document.querySelector('.btn-lire').style.display='inline-flex';" style="background:none;border:1px solid var(--border);color:var(--muted);padding:7px 16px;border-radius:20px;font-size:13px;cursor:pointer;">Réduire ▲</button>
+          <button onclick="document.getElementById('article-chaleurs-une').style.display='none';this.closest('.une-content').querySelector('.btn-lire').style.display='inline-flex';"
+                  style="background:none;border:1px solid var(--border);color:var(--muted);padding:7px 16px;border-radius:20px;font-size:13px;cursor:pointer;">Réduire ▲</button>
         </div>
 
         <div class="auteur-row">

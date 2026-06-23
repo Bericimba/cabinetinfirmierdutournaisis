@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog — Cabinet Infirmier du Tournaisis</title>
+    <link>https://cabinetinfirmierdutournaisis.be/blog.html</link>
+    <description>Conseils santé, prévention et actualités du Cabinet Infirmier du Tournaisis.</description>
+    <language>fr-BE</language>
+    <atom:link href="https://cabinetinfirmierdutournaisis.be/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Œdème des membres inférieurs : comprendre et prévenir le gonflement des jambes</title>
+      <link>https://cabinetinfirmierdutournaisis.be/blog.html#article-oedeme</link>
+      <description>Jambes lourdes, chevilles gonflées, pieds qui augmentent de volume… Ces signes fréquents correspondent à une accumulation de liquide dans les tissus. L'équipe du CIT vous informe et vous accompagne.</description>
+      <pubDate>Mon, 22 Jun 2026 08:00:00 +0200</pubDate>
+      <author>Jordan Daubie — Cabinet Infirmier du Tournaisis</author>
+    </item>
+
+    <item>
+      <title>Comment se déroule une prise de sang à domicile ?</title>
+      <link>https://cabinetinfirmierdutournaisis.be/blog.html#article-prise-sang</link>
+      <description>La prise de sang à domicile permet de réaliser un prélèvement sanguin sans devoir se déplacer. Une solution pratique pour les personnes âgées, les patients chroniques ou en convalescence.</description>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0200</pubDate>
+      <author>Louise Joiffroy — Cabinet Infirmier du Tournaisis</author>
+    </item>
+
+    <item>
+      <title>Les 10 avantages des soins infirmiers à domicile</title>
+      <link>https://cabinetinfirmierdutournaisis.be/blog.html</link>
+      <description>Les soins infirmiers à domicile représentent une alternative de plus en plus prisée aux hospitalisations prolongées. Découvrez pourquoi avec l'équipe du CIT.</description>
+      <pubDate>Mon, 01 Jun 2026 08:00:00 +0200</pubDate>
+      <author>Céline Lhoir — Cabinet Infirmier du Tournaisis</author>
+    </item>
+
+    <item>
+      <title>Reconnaître et prévenir les escarres à domicile</title>
+      <link>https://cabinetinfirmierdutournaisis.be/blog.html#article-escarres</link>
+      <description>Les escarres sont des lésions cutanées fréquentes chez les personnes alitées ou à mobilité réduite. Une surveillance régulière et des gestes simples permettent souvent de les éviter.</description>
+      <pubDate>Fri, 05 Jun 2026 08:00:00 +0200</pubDate>
+      <author>Jordan Daubie — Cabinet Infirmier du Tournaisis</author>
+    </item>
+
+    <item>
+      <title>Nouveau : biologie fonctionnelle et nutritionnelle au cabinet</title>
+      <link>https://cabinetinfirmierdutournaisis.be/blog.html</link>
+      <description>Le CIT propose désormais des analyses avancées en biologie fonctionnelle pour une médecine préventive et personnalisée.</description>
+      <pubDate>Fri, 15 May 2026 08:00:00 +0200</pubDate>
+      <author>Céline Lhoir — Cabinet Infirmier du Tournaisis</author>
+    </item>
+
+  </channel>
+</rss>

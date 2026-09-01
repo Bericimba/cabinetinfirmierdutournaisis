@@ -9,8 +9,21 @@ if (!is_file($serviceFile)) {
 
 require $serviceFile;
 
+$rateLimiterFile = dirname(__DIR__) . '/lib/RateLimiter.php';
+$httpResponderFile = dirname(__DIR__) . '/lib/HttpResponder.php';
+if (!is_file($rateLimiterFile) || !is_file($httpResponderFile)) {
+    fwrite(STDERR, "FAIL: la protection anti-spam et la réponse HTTP n'existent pas encore.\n");
+    exit(1);
+}
+
+require $rateLimiterFile;
+require $httpResponderFile;
+
 use function CitForm\buildConfirmation;
 use function CitForm\buildNotification;
+use function CitForm\handleRequest;
+use function CitForm\allowAttempt;
+use function CitForm\renderResponse;
 use function CitForm\routeFor;
 use function CitForm\validateSubmission;
 
@@ -63,6 +76,58 @@ function assertThrows(callable $operation): void
     }
 
     throw new RuntimeException('exception attendue mais absente');
+}
+
+function assertFileDoesNotContain(string $directory, string $needle): void
+{
+    foreach (glob($directory . '/*') ?: [] as $file) {
+        if (is_file($file) && str_contains((string) file_get_contents($file), $needle)) {
+            throw new RuntimeException("donnée technique stockée en clair : {$needle}");
+        }
+        if (str_contains(basename($file), $needle)) {
+            throw new RuntimeException("donnée technique présente dans un nom de fichier : {$needle}");
+        }
+    }
+}
+
+function removeTestDirectory(string $directory): void
+{
+    foreach (glob($directory . '/*') ?: [] as $file) {
+        if (is_file($file)) {
+            unlink($file);
+        }
+    }
+    if (is_dir($directory)) {
+        rmdir($directory);
+    }
+}
+
+function httpConfig(array $changes = []): array
+{
+    $directory = sys_get_temp_dir() . '/cit-http-' . bin2hex(random_bytes(6));
+    return array_replace([
+        'allowed_origins' => [
+            'https://cabinetinfirmierdutournaisis.be',
+            'https://www.cabinetinfirmierdutournaisis.be',
+        ],
+        'from' => 'formulaire@cabinetinfirmierdutournaisis.be',
+        'mail_enabled' => true,
+        'rate_dir' => $directory,
+        'rate_secret' => bin2hex(random_bytes(32)),
+        'rate_limit_attempts' => 5,
+        'rate_limit_window_seconds' => 900,
+        'rate_file_lifetime_seconds' => 3600,
+    ], $changes);
+}
+
+function validServer(array $changes = []): array
+{
+    return array_replace([
+        'REQUEST_METHOD' => 'POST',
+        'HTTP_ORIGIN' => 'https://cabinetinfirmierdutournaisis.be',
+        'HTTP_ACCEPT' => 'application/json',
+        'REMOTE_ADDR' => '192.0.2.10',
+    ], $changes);
 }
 
 function validPatient(array $changes = []): array
@@ -214,6 +279,166 @@ runTest('la confirmation professionnelle reste générique', function () use ($n
     assertContainsText('dans les meilleurs délais', $confirmation['body']);
     assertNotContainsText('Remplacement régulier', $confirmation['body']);
     assertNotContainsText('Disponibilités en septembre.', $confirmation['body']);
+});
+
+runTest('autorise cinq tentatives puis bloque la sixième pendant quinze minutes', function (): void {
+    $directory = sys_get_temp_dir() . '/cit-rate-' . bin2hex(random_bytes(6));
+    $secret = bin2hex(random_bytes(32));
+    $config = [
+        'rate_limit_attempts' => 5,
+        'rate_limit_window_seconds' => 900,
+        'rate_file_lifetime_seconds' => 3600,
+    ];
+
+    try {
+        for ($attempt = 0; $attempt < 5; $attempt++) {
+            assertSameValue(true, allowAttempt('192.0.2.10', $secret, $directory, 1788264000, $config));
+        }
+        assertSameValue(false, allowAttempt('192.0.2.10', $secret, $directory, 1788264000, $config));
+        assertSameValue(true, allowAttempt('192.0.2.10', $secret, $directory, 1788264961, $config));
+        assertFileDoesNotContain($directory, '192.0.2.10');
+    } finally {
+        removeTestDirectory($directory);
+    }
+});
+
+runTest('répond 204 à la préparation CORS du site CIT', function (): void {
+    $config = httpConfig();
+    try {
+        $response = handleRequest(
+            validServer(['REQUEST_METHOD' => 'OPTIONS']),
+            [],
+            $config,
+            fn(array $message): bool => true
+        );
+        assertSameValue(204, $response['status']);
+        assertSameValue(
+            'https://cabinetinfirmierdutournaisis.be',
+            $response['headers']['Access-Control-Allow-Origin']
+        );
+    } finally {
+        removeTestDirectory($config['rate_dir']);
+    }
+});
+
+runTest('refuse les méthodes autres que POST et OPTIONS', function (): void {
+    $config = httpConfig();
+    try {
+        $response = handleRequest(
+            validServer(['REQUEST_METHOD' => 'GET']),
+            [],
+            $config,
+            fn(array $message): bool => true
+        );
+        assertSameValue(405, $response['status']);
+    } finally {
+        removeTestDirectory($config['rate_dir']);
+    }
+});
+
+runTest('refuse une origine extérieure au site CIT', function (): void {
+    $config = httpConfig();
+    try {
+        $response = handleRequest(
+            validServer(['HTTP_ORIGIN' => 'https://attaquant.example']),
+            validPatient(['date_souhaitee' => '2099-01-01', 'started_at' => '']),
+            $config,
+            fn(array $message): bool => true
+        );
+        assertSameValue(403, $response['status']);
+    } finally {
+        removeTestDirectory($config['rate_dir']);
+    }
+});
+
+runTest('transmet une demande patient valide au transport injecté', function (): void {
+    $config = httpConfig();
+    $messages = [];
+    $mailer = function (array $message) use (&$messages): bool {
+        $messages[] = $message;
+        return true;
+    };
+
+    try {
+        $response = handleRequest(
+            validServer(),
+            validPatient(['date_souhaitee' => '2099-01-01', 'started_at' => '']),
+            $config,
+            $mailer
+        );
+        assertSameValue(200, $response['status']);
+        assertSameValue(true, $response['payload']['ok']);
+        assertSameValue(1, count($messages));
+        assertSameValue('info@cabinetinfirmierdutournaisis.be', $messages[0]['to']);
+    } finally {
+        removeTestDirectory($config['rate_dir']);
+    }
+});
+
+runTest('envoie une confirmation distincte uniquement avec un e-mail valide', function (): void {
+    $config = httpConfig();
+    $messages = [];
+    $mailer = function (array $message) use (&$messages): bool {
+        $messages[] = $message;
+        return true;
+    };
+
+    try {
+        $response = handleRequest(
+            validServer(),
+            validPatient([
+                'date_souhaitee' => '2099-01-01',
+                'started_at' => '',
+                'email' => 'marie@example.be',
+            ]),
+            $config,
+            $mailer
+        );
+        assertSameValue(200, $response['status']);
+        assertSameValue(2, count($messages));
+        assertSameValue('marie@example.be', $messages[1]['to']);
+        assertNotContainsText('Pansement / Plaie', $messages[1]['body']);
+        assertNotContainsText('Sonnez deux fois.', $messages[1]['body']);
+    } finally {
+        removeTestDirectory($config['rate_dir']);
+    }
+});
+
+runTest('bloque tout transport lorsque les e-mails sont désactivés', function (): void {
+    $config = httpConfig(['mail_enabled' => false]);
+    $calls = 0;
+
+    try {
+        $response = handleRequest(
+            validServer(),
+            validPatient(['date_souhaitee' => '2099-01-01', 'started_at' => '']),
+            $config,
+            function (array $message) use (&$calls): bool {
+                $calls++;
+                return true;
+            }
+        );
+        assertSameValue(503, $response['status']);
+        assertSameValue(0, $calls);
+    } finally {
+        removeTestDirectory($config['rate_dir']);
+    }
+});
+
+runTest('la réponse HTML de secours reste générique et indique le téléphone', function (): void {
+    $response = [
+        'status' => 500,
+        'headers' => [],
+        'payload' => [
+            'ok' => false,
+            'message' => "Votre demande n'a pas pu être envoyée. Appelez-nous au (+32) 069 30 41 33.",
+        ],
+    ];
+    $rendered = renderResponse($response, 'text/html');
+    assertSameValue('text/html; charset=UTF-8', $rendered['content_type']);
+    assertContainsText('(+32) 069 30 41 33', $rendered['body']);
+    assertNotContainsText('/home/', $rendered['body']);
+    assertNotContainsText('FormService.php', $rendered['body']);
 });
 
 fwrite(STDOUT, "\nRésultat : {$passed} test(s) réussi(s), {$failed} échec(s).\n");

@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteRule ^(?:lib|tests|var)(?:/|$) - [F,L]
+
+<FilesMatch "^(config|config\.local|config\.example\.local)\.php$">
+  Require all denied
+</FilesMatch>

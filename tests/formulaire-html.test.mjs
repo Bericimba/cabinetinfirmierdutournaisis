@@ -85,6 +85,11 @@ test('le résultat professionnel est accessible sans ancien bouton mailto', () =
   assert.match(replacement, /<script type="module" src="formulaire\.js"><\/script>/);
 });
 
+test('la grille professionnelle peut se réduire sur un smartphone étroit', () => {
+  assert.match(replacement, /\.contact-grid\s*>\s*\*\{[^}]*min-width:0/);
+  assert.match(replacement, /\.contact-grid a\{[^}]*overflow-wrap:anywhere/);
+});
+
 test('les hébergeurs du site et des formulaires sont nommés précisément', () => {
   assert.match(hostingSection, /GitHub Pages/);
   assert.match(hostingSection, /OVHcloud/);

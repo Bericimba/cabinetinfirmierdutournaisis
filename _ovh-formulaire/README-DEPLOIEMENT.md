@@ -2,6 +2,17 @@
 
 Ce guide installe uniquement la passerelle des formulaires sur le sous-domaine `formulaire.cabinetinfirmierdutournaisis.be`. Le site statique reste sur GitHub Pages et le WordPress vide présent sur OVHcloud ne doit pas être modifié.
 
+## État contrôlé le 1er septembre 2026
+
+- Sous-domaines actifs : `formulaire.cabinetinfirmierdutournaisis.be` et `www.formulaire.cabinetinfirmierdutournaisis.be`.
+- Dossier racine isolé : `formulaire-cit` ; le dossier principal `www` et WordPress sont intacts.
+- Diagnostics DNS A et AAAA : verts pour les deux sous-domaines.
+- Certificats Let's Encrypt : actifs pour les deux sous-domaines.
+- Version serveur observée : PHP 8.4.
+- Fichiers d'exécution transférés par SFTP ; `config.local.php` présent avec `mail_enabled=false`.
+- Contrôles distants : CORS CIT `204`, origine extérieure `403`, fichiers internes `403`, demande incomplète `422`.
+- Aucun e-mail réel envoyé et branche GitHub non publiée.
+
 ## Règles de sécurité
 
 - Ne jamais utiliser le dossier du domaine principal ou le dossier WordPress.
@@ -18,7 +29,7 @@ Ce guide installe uniquement la passerelle des formulaires sur le sous-domaine `
 3. Cliquer sur `Actions` > `Ajouter un domaine ou sous domaine`.
 4. Sélectionner `cabinetinfirmierdutournaisis.be`, puis saisir le sous-domaine `formulaire`.
 5. Choisir comme dossier racine un nouveau dossier réservé, par exemple `formulaire-cit`.
-6. Ne pas créer de sous-domaine `www.formulaire` et ne pas activer le CDN.
+6. Si OVHcloud ajoute automatiquement `www.formulaire`, vérifier qu'il pointe vers le même dossier isolé `formulaire-cit`. Ne jamais le faire pointer vers le dossier principal `www`.
 7. Activer SSL et, si OVHcloud le propose, utiliser la configuration DNS automatique.
 8. Valider puis attendre que le diagnostic A/AAAA soit vert.
 
@@ -131,4 +142,3 @@ En cas de problème :
 3. Revenir sur GitHub au dernier commit public validé avant les formulaires.
 4. Conserver temporairement le dossier isolé du sous-domaine pour le diagnostic ; ne le supprimer qu'après une décision séparée d'Éric.
 5. Vérifier que l'ancien site statique fonctionne toujours et que plus aucun nouveau message de formulaire n'est envoyé.
-

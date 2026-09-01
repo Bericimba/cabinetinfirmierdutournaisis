@@ -55,9 +55,9 @@
   --purple:#7B4FB5;--purple-light:#F0EAF8;--purple-mid:#9B72CC;
   --teal:#1A9E8F;--teal-light:#E0F5F3;--teal-mid:#3DBDAF;
   --warm:#FDF8FC;--text:#2C2A2B;--muted:#6B5F68;--border:#E8D8E4;--white:#fff;
-  --radius:12px;
+  --radius:14px;
 }
-body{font-family:'Segoe UI',sans-serif;color:var(--text);background:var(--white);font-size:16px;}
+body{font-family:'Segoe UI',Calibri,Arial,sans-serif;color:var(--text);background:var(--white);font-size:16px;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;}
 
@@ -189,8 +189,30 @@ h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .tarif-highlight p{font-size:.875rem;opacity:.9;line-height:1.75;margin-bottom:1.25rem;}
 .tarif-highlight .btn-white{background:#fff;color:var(--purple);padding:12px 24px;border-radius:25px;font-size:14px;font-weight:700;border:none;cursor:pointer;display:inline-block;width:100%;text-align:center;}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.contact-grid > *{min-width:0;}
+.contact-grid a{overflow-wrap:anywhere;}
+.professional-form{position:relative;background:var(--white);border-radius:var(--radius);padding:1.75rem;border:1px solid var(--border);}
+.professional-row{margin-bottom:1rem;}
+.professional-row label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:.4rem;}
+.professional-row input,.professional-row select,.professional-row textarea{width:100%;min-height:44px;padding:10px 12px;border-radius:8px;border:1.5px solid var(--border);font-family:inherit;font-size:16px;color:var(--text);background:#fff;}
+.professional-row textarea{resize:vertical;}
+.professional-row input:focus-visible,.professional-row select:focus-visible,.professional-row textarea:focus-visible,.professional-consent input:focus-visible{outline:3px solid var(--purple);outline-offset:2px;}
+.professional-help{font-size:12px;line-height:1.5;color:var(--purple);margin-top:.4rem;font-weight:600;}
+.professional-consent{display:flex;align-items:flex-start;gap:.65rem;margin:1rem 0;font-size:13px;line-height:1.5;color:var(--muted);}
+.professional-consent input{width:22px;height:22px;accent-color:var(--purple);flex:0 0 auto;}
+.professional-consent label{cursor:pointer;}
+.professional-consent a{text-decoration:underline;font-weight:700;color:var(--purple);}
+.professional-submit{width:100%;min-height:44px;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;padding:13px;border-radius:25px;font-size:15px;font-weight:700;border:none;cursor:pointer;}
+.professional-submit:focus-visible{outline:3px solid var(--purple);outline-offset:3px;box-shadow:0 0 0 5px #fff;}
+.professional-submit:disabled{opacity:.7;cursor:wait;}
+.form-result{margin-top:1rem;padding:.875rem 1rem;border-radius:14px;font-size:14px;line-height:1.55;font-weight:700;}
+.form-result[hidden]{display:none;}
+.form-result--success{background:var(--teal-light);border:1px solid #8DD8D0;color:#126C62;}
+.form-result--error{background:var(--pink-light);border:1px solid #F0B0D0;color:var(--pink-dark);}
+.form-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;}
 @media(max-width:768px){
   .contact-grid{grid-template-columns:1fr;gap:1.25rem;}
+  .professional-form{padding:1.25rem;}
 }
 
 /* PROFILS */
@@ -215,6 +237,9 @@ h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 /* CTA FLOAT */
 .cta-float{display:none;position:fixed;bottom:1.25rem;right:1.25rem;z-index:200;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:13px 18px;border-radius:30px;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(212,24,122,.4);align-items:center;gap:8px;border:none;cursor:pointer;}
 .cta-float svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.5;}
+body.cit-form-in-view .cta-float,
+body.cit-form-in-view #audio-player{opacity:0;visibility:hidden;pointer-events:none;}
+.cta-float,#audio-player{transition:opacity .2s ease,visibility .2s ease;}
 
 /* FOOTER */
 footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
@@ -563,38 +588,50 @@ footer a{color:var(--purple-mid);font-size:.825rem;}
     <h2>Parlons de votre besoin</h2>
     <p class="section-sub">Remplacement, tarification ou simple question — contactez-nous et nous vous répondons rapidement.</p>
     <div class="contact-grid">
-      <div style="background:var(--white);border-radius:var(--radius);padding:1.75rem;border:1px solid var(--border);">
-        <div style="margin-bottom:1rem;">
-          <label style="display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:.4rem;">Nom & prénom</label>
-          <input id="r-nom" type="text" placeholder="Marie Dupont" style="width:100%;padding:10px 12px;border-radius:8px;border:1.5px solid var(--border);font-size:14px;color:var(--text);"/>
+      <form class="professional-form" id="remplacement-form" action="https://formulaire.cabinetinfirmierdutournaisis.be/envoyer.php" method="post" data-cit-form>
+        <input type="hidden" name="form_id" value="professionnel"/>
+        <input type="hidden" name="started_at" value=""/>
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="r-website">Site web</label>
+          <input id="r-website" type="text" name="website" tabindex="-1" autocomplete="off"/>
         </div>
-        <div style="margin-bottom:1rem;">
-          <label style="display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:.4rem;">Téléphone</label>
-          <input id="r-tel" type="tel" placeholder="+32 69 30 41 33" style="width:100%;padding:10px 12px;border-radius:8px;border:1.5px solid var(--border);font-size:14px;color:var(--text);"/>
+        <div class="professional-row">
+          <label for="r-nom">Nom & prénom</label>
+          <input id="r-nom" type="text" name="nom" required minlength="2" maxlength="100" autocomplete="name" placeholder="Marie Dupont"/>
         </div>
-        <div style="margin-bottom:1rem;">
-          <label style="display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:.4rem;">Type de demande</label>
-          <select id="r-type" style="width:100%;padding:10px 12px;border-radius:8px;border:1.5px solid var(--border);font-size:14px;color:var(--text);">
-            <option>Remplacement d'urgence</option>
-            <option>Remplacement congé planifié</option>
-            <option>Remplacement régulier</option>
-            <option>Service de tarification INAMI</option>
-            <option>Autre</option>
+        <div class="professional-row">
+          <label for="r-tel">Téléphone</label>
+          <input id="r-tel" type="tel" name="telephone" required minlength="6" maxlength="30" autocomplete="tel" inputmode="tel" placeholder="+32 69 30 41 33"/>
+        </div>
+        <div class="professional-row">
+          <label for="r-email">Adresse e-mail (facultative)</label>
+          <input id="r-email" type="email" name="email" maxlength="254" autocomplete="email" inputmode="email" placeholder="infirmier@exemple.be"/>
+        </div>
+        <div class="professional-row">
+          <label for="r-type">Type de demande</label>
+          <select id="r-type" name="type_demande" required>
+            <option value="Remplacement d'urgence">Remplacement d'urgence</option>
+            <option value="Remplacement congé planifié">Remplacement congé planifié</option>
+            <option value="Remplacement régulier">Remplacement régulier</option>
+            <option value="Service de tarification INAMI">Service de tarification INAMI</option>
+            <option value="Autre">Autre</option>
           </select>
         </div>
-        <div style="margin-bottom:1.25rem;">
-          <label style="display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:.4rem;">Message</label>
-          <textarea id="r-msg" rows="4" placeholder="Décrivez votre situation, vos dates, votre patientèle…" style="width:100%;padding:10px 12px;border-radius:8px;border:1.5px solid var(--border);font-size:14px;color:var(--text);resize:vertical;"></textarea>
+        <div class="professional-row">
+          <label for="r-msg">Message (optionnel)</label>
+          <textarea id="r-msg" name="message" maxlength="1000" rows="4" aria-describedby="r-msg-help" placeholder="Décrivez votre situation et vos dates…"></textarea>
+          <p class="professional-help" id="r-msg-help">N'indiquez aucun nom de patient ni aucune information médicale dans ce champ.</p>
         </div>
-        <button onclick="
-          var nom=document.getElementById('r-nom').value;
-          var tel=document.getElementById('r-tel').value;
-          var type=document.getElementById('r-type').value;
-          var msg=document.getElementById('r-msg').value;
-          var body='Nom : '+nom+'%0ATéléphone : '+tel+'%0AType de demande : '+type+'%0AMessage : '+msg;
-          window.location.href='mailto:direction@cabinetinfirmierdutournaisis.be?subject=Demande remplacement / tarification - CIT&body='+body;
-        " style="width:100%;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;padding:13px;border-radius:25px;font-size:15px;font-weight:700;border:none;cursor:pointer;">Envoyer ma demande ✦</button>
-      </div>
+        <div class="professional-consent">
+          <input id="r-accord" type="checkbox" name="accord" value="1" required/>
+          <label for="r-accord">
+            J'accepte que mes données soient utilisées uniquement pour traiter ma demande professionnelle.
+            <a href="mentions.html#donnees">Protection des données</a>
+          </label>
+        </div>
+        <button class="professional-submit" type="submit">Envoyer ma demande ✦</button>
+        <div class="form-result" data-form-result tabindex="-1" role="status" hidden></div>
+      </form>
       <div style="display:flex;flex-direction:column;gap:1rem;">
         <div style="background:var(--white);border-radius:var(--radius);padding:1.25rem;border:1px solid var(--border);display:flex;gap:1rem;align-items:flex-start;">
           <span style="font-size:1.4rem;">📞</span>
@@ -670,6 +707,7 @@ document.addEventListener('click', function(e){
   }
 });
 </script>
+<script type="module" src="formulaire.js"></script>
 
 </body>
 </html>

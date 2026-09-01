@@ -75,9 +75,9 @@
   --purple:#7B4FB5;--purple-light:#F0EAF8;--purple-mid:#9B72CC;
   --teal:#1A9E8F;--teal-light:#E0F5F3;--teal-mid:#3DBDAF;
   --warm:#FDF8FC;--text:#2C2A2B;--muted:#6B5F68;--border:#E8D8E4;--white:#fff;
-  --radius:12px;
+  --radius:14px;
 }
-body{font-family:'Segoe UI',sans-serif;color:var(--text);background:var(--white);font-size:16px;}
+body{font-family:'Segoe UI',Calibri,Arial,sans-serif;color:var(--text);background:var(--white);font-size:16px;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;}
 
@@ -128,6 +128,9 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 /* CTA MOBILE */
 .cta-float{display:none;position:fixed;bottom:1.25rem;right:1.25rem;z-index:200;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:14px 20px;border-radius:30px;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(212,24,122,.4);align-items:center;gap:8px;border:none;cursor:pointer;}
 .cta-float svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.5;}
+body.cit-form-in-view .cta-float,
+body.cit-form-in-view #audio-player{opacity:0;visibility:hidden;pointer-events:none;}
+.cta-float,#audio-player{transition:opacity .2s ease,visibility .2s ease;}
 
 /* SECTIONS */
 section{padding:3.5rem 1.25rem;}
@@ -226,11 +229,27 @@ h2{font-size:1.7rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .rdv-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
 .rdv-form{background:rgba(255,255,255,.12);border-radius:var(--radius);padding:1.5rem;border:1px solid rgba(255,255,255,.25);}
 .form-row{margin-bottom:.875rem;}
-.form-row label{display:block;font-size:13px;margin-bottom:.35rem;opacity:.9;font-weight:500;}
-.form-row input,.form-row select,.form-row textarea{width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.18);color:#fff;font-size:14px;}
+.form-row label,.form-legend{display:block;font-size:13px;margin-bottom:.35rem;opacity:.95;font-weight:600;}
+.form-row input:not([type="checkbox"]),.form-row select,.form-row textarea{width:100%;min-height:44px;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.18);color:#fff;font-size:16px;}
 .form-row input::placeholder,.form-row textarea::placeholder{color:rgba(255,255,255,.55);}
 .form-row select option{color:var(--text);}
-.btn-white{background:#fff;color:var(--pink);padding:13px 24px;border-radius:25px;font-size:15px;font-weight:700;border:none;width:100%;cursor:pointer;}
+.form-row input:focus-visible,.form-row select:focus-visible,.form-row textarea:focus-visible,.form-choice input:focus-visible,.form-consent input:focus-visible{outline:3px solid #fff;outline-offset:2px;}
+.form-choice-fieldset{border:0;padding:0;margin:0;}
+.form-choices{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.25rem;}
+.form-choice{display:inline-flex!important;align-items:center;gap:.5rem;min-height:44px;margin:0!important;font-weight:500!important;cursor:pointer;}
+.form-choice input,.form-consent input{width:22px;height:22px;accent-color:var(--teal);flex:0 0 auto;}
+.form-help{font-size:12px;line-height:1.5;color:#fff;margin-top:.4rem;font-weight:600;}
+.form-consent{display:flex;align-items:flex-start;gap:.65rem;margin:1rem 0;font-size:13px;line-height:1.5;}
+.form-consent label{cursor:pointer;}
+.form-consent a{text-decoration:underline;font-weight:700;}
+.form-result{margin-top:1rem;padding:.875rem 1rem;border-radius:14px;font-size:14px;line-height:1.55;font-weight:700;}
+.form-result[hidden]{display:none;}
+.form-result--success{background:var(--teal-light);border:1px solid #8DD8D0;color:#126C62;}
+.form-result--error{background:var(--pink-light);border:1px solid #F0B0D0;color:var(--pink-dark);}
+.form-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;}
+.btn-white{background:#fff;color:var(--pink);min-height:44px;padding:13px 24px;border-radius:25px;font-size:15px;font-weight:700;border:none;width:100%;cursor:pointer;}
+.btn-white:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 5px var(--purple);}
+.btn-white:disabled{opacity:.7;cursor:wait;}
 .contact-info{display:flex;flex-direction:column;gap:.875rem;}
 .contact-item{display:flex;align-items:flex-start;gap:.875rem;background:rgba(255,255,255,.15);border-radius:12px;padding:.875rem 1rem;border:1px solid rgba(255,255,255,.2);}
 .contact-item svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px;}
@@ -266,6 +285,7 @@ footer a:hover{color:var(--pink-mid);}
   .cards-grid{grid-template-columns:1fr 1fr;}
   .team-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));}
   .remp-grid,.disp-grid,.esth-grid,.zone-grid,.rdv-grid{grid-template-columns:1fr;}
+  .biologie-grid{grid-template-columns:1fr!important;}
   .footer-grid{grid-template-columns:1fr;}
   .horaire-row{flex-direction:column;gap:.15rem;}
 }
@@ -525,7 +545,7 @@ footer a:hover{color:var(--pink-mid);}
     <span class="section-tag tag-purple">Nouveau service</span>
     <h2>Biologie fonctionnelle & nutritionnelle</h2>
     <p class="section-sub">Le cabinet propose des analyses avancées en biologie fonctionnelle et nutritionnelle, avec notre laboratoire partenaire — pour une médecine préventive, prédictive et personnalisée.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
+    <div class="biologie-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
       <div>
         <div style="background:var(--white);border-radius:var(--radius);padding:1.5rem;border:1px solid #C8A8E8;margin-bottom:1rem;">
           <p style="font-size:.875rem;font-weight:700;color:var(--purple);margin-bottom:.5rem;">🔬 Qu'est-ce que c'est ?</p>
@@ -659,53 +679,72 @@ footer a:hover{color:var(--pink-mid);}
     <h2>Prendre rendez-vous</h2>
     <p class="section-sub">Remplissez le formulaire ou appelez-nous directement.</p>
     <div class="rdv-grid">
-      <div class="rdv-form">
-        <div class="form-row"><label>Nom & prénom</label><input id="rdv-nom" type="text" placeholder="Marie Dupont"/></div>
-        <div class="form-row"><label>Téléphone</label><input id="rdv-tel" type="tel" placeholder="+32 69 30 41 33"/></div>
+      <form class="rdv-form" id="rdv-form" action="https://formulaire.cabinetinfirmierdutournaisis.be/envoyer.php" method="post" data-cit-form>
+        <input type="hidden" name="form_id" value="patient"/>
+        <input type="hidden" name="started_at" value=""/>
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="rdv-website">Site web</label>
+          <input id="rdv-website" type="text" name="website" tabindex="-1" autocomplete="off"/>
+        </div>
         <div class="form-row">
-          <label>Type de soin</label>
-          <select id="rdv-soin">
-            <option>Injection / Perfusion / Vaccin</option>
-            <option>Pansement / Plaie</option>
-            <option>Prise de sang</option>
-            <option>Suivi maladie chronique</option>
-            <option>Soins post-opératoires</option>
-            <option>Soins palliatifs</option>
-            <option>Soins esthétiques (Léa)</option>
-            <option>Remplacement infirmier</option>
-            <option>Tarification infirmière</option>
-            <option>Autre</option>
+          <label for="rdv-nom">Nom & prénom</label>
+          <input id="rdv-nom" type="text" name="nom" required minlength="2" maxlength="100" autocomplete="name" placeholder="Marie Dupont"/>
+        </div>
+        <div class="form-row">
+          <label for="rdv-tel">Téléphone</label>
+          <input id="rdv-tel" type="tel" name="telephone" required minlength="6" maxlength="30" autocomplete="tel" inputmode="tel" placeholder="+32 69 30 41 33"/>
+        </div>
+        <div class="form-row">
+          <label for="rdv-email">Adresse e-mail (facultative)</label>
+          <input id="rdv-email" type="email" name="email" maxlength="254" autocomplete="email" inputmode="email" placeholder="marie@exemple.be"/>
+        </div>
+        <div class="form-row">
+          <label for="rdv-soin">Type de soin</label>
+          <select id="rdv-soin" name="type_soin" required>
+            <option value="Injection / Perfusion / Vaccin">Injection / Perfusion / Vaccin</option>
+            <option value="Pansement / Plaie">Pansement / Plaie</option>
+            <option value="Prise de sang">Prise de sang</option>
+            <option value="Suivi maladie chronique">Suivi maladie chronique</option>
+            <option value="Soins post-opératoires">Soins post-opératoires</option>
+            <option value="Soins palliatifs">Soins palliatifs</option>
+            <option value="Soins esthétiques (Léa)">Soins esthétiques (Léa)</option>
+            <option value="Remplacement infirmier">Remplacement infirmier</option>
+            <option value="Tarification infirmière">Tarification infirmière</option>
+            <option value="Autre">Autre</option>
           </select>
         </div>
         <div class="form-row">
-          <label>Lieu du soin souhaité</label>
-          <div style="display:flex;gap:1.5rem;margin-top:.4rem;">
-            <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;cursor:pointer;">
-              <input id="rdv-domicile" type="checkbox" style="width:18px;height:18px;cursor:pointer;"/> Domicile
-            </label>
-            <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;cursor:pointer;">
-              <input id="rdv-dispensaire" type="checkbox" style="width:18px;height:18px;cursor:pointer;"/> Dispensaire
-            </label>
-          </div>
+          <fieldset class="form-choice-fieldset">
+            <legend class="form-legend">Lieu du soin souhaité</legend>
+            <div class="form-choices">
+              <label class="form-choice" for="rdv-domicile">
+                <input id="rdv-domicile" type="checkbox" name="lieu[]" value="Domicile"/> Domicile
+              </label>
+              <label class="form-choice" for="rdv-dispensaire">
+                <input id="rdv-dispensaire" type="checkbox" name="lieu[]" value="Dispensaire"/> Dispensaire
+              </label>
+            </div>
+          </fieldset>
         </div>
-        <div class="form-row"><label>Date souhaitée</label><input id="rdv-date" type="date"/></div>
-        <div class="form-row"><label>Message (optionnel)</label><textarea id="rdv-msg" rows="3" placeholder="Précisez votre demande ou votre adresse…"></textarea></div>
-        <button class="btn-white" onclick="
-                  var nom=document.getElementById('rdv-nom').value;
-                  var tel=document.getElementById('rdv-tel').value;
-                  var soin=document.getElementById('rdv-soin').value;
-                  var domicile=document.getElementById('rdv-domicile').checked;
-                  var dispensaire=document.getElementById('rdv-dispensaire').checked;
-                  var lieu=[];
-                  if(domicile) lieu.push('Domicile');
-                  if(dispensaire) lieu.push('Dispensaire');
-                  lieu=lieu.length? lieu.join(' + ') : 'Non précisé';
-                  var date=document.getElementById('rdv-date').value;
-                  var msg=document.getElementById('rdv-msg').value;
-                  var body='Nom : '+nom+'%0ATéléphone : '+tel+'%0AType de soin : '+soin+'%0ALieu souhaité : '+lieu+'%0ADate souhaitée : '+date+'%0AMessage : '+msg;
-                  window.location.href='mailto:info@cabinetinfirmierdutournaisis.be?subject=Demande de rendez-vous - CIT&body='+body;
-                ">Envoyer ma demande ✦</button>
-      </div>
+        <div class="form-row">
+          <label for="rdv-date">Date souhaitée</label>
+          <input id="rdv-date" type="date" name="date_souhaitee" required/>
+        </div>
+        <div class="form-row">
+          <label for="rdv-msg">Message (optionnel)</label>
+          <textarea id="rdv-msg" name="message" maxlength="500" rows="3" aria-describedby="rdv-msg-help" placeholder="Précisez votre demande ou votre adresse…"></textarea>
+          <p class="form-help" id="rdv-msg-help">N'indiquez aucune information médicale dans ce champ.</p>
+        </div>
+        <div class="form-consent">
+          <input id="rdv-accord" type="checkbox" name="accord" value="1" required/>
+          <label for="rdv-accord">
+            J'accepte que mes données soient utilisées uniquement pour traiter ma demande de soins.
+            <a href="mentions.html#donnees">Protection des données</a>
+          </label>
+        </div>
+        <button class="btn-white" type="submit">Envoyer ma demande ✦</button>
+        <div class="form-result" data-form-result tabindex="-1" role="status" hidden></div>
+      </form>
       <div class="contact-info">
         <div class="contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.95 5.95l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong>Téléphone</strong><span><a href="tel:+3269304133" style="color:rgba(255,255,255,.85);">(+32) 069.30.41.33</a></span></div></div>
         <div class="contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><strong>E-mail</strong><span>info@cabinetinfirmierdutournaisis.be</span></div></div>
@@ -854,5 +893,6 @@ document.addEventListener('click', function(e){
   }
 });
 </script>
+<script type="module" src="formulaire.js"></script>
 </body>
 </html>

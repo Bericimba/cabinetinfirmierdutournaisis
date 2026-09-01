@@ -265,6 +265,7 @@ runTest('la confirmation patient ne recopie aucune donnée médicale', function 
     $result = validateSubmission(validPatient(['email' => 'marie@example.be']), $now);
     $confirmation = buildConfirmation($result['clean']);
     assertSameValue('marie@example.be', $confirmation['to']);
+    assertSameValue('info@cabinetinfirmierdutournaisis.be', $confirmation['reply_to']);
     assertContainsText("contactera par téléphone dans l'heure", $confirmation['body']);
     assertContainsText('appelez le 112', $confirmation['body']);
     assertNotContainsText('Pansement / Plaie', $confirmation['body']);
@@ -276,6 +277,7 @@ runTest('la confirmation patient ne recopie aucune donnée médicale', function 
 runTest('la confirmation professionnelle reste générique', function () use ($now): void {
     $result = validateSubmission(validProfessional(['email' => 'jean@example.be']), $now);
     $confirmation = buildConfirmation($result['clean']);
+    assertSameValue('direction@cabinetinfirmierdutournaisis.be', $confirmation['reply_to']);
     assertContainsText('dans les meilleurs délais', $confirmation['body']);
     assertNotContainsText('Remplacement régulier', $confirmation['body']);
     assertNotContainsText('Disponibilités en septembre.', $confirmation['body']);

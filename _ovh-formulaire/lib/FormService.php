@@ -220,11 +220,12 @@ function buildConfirmation(array $clean): ?array
     $body = $clean['form_id'] === 'patient'
         ? "Votre demande a bien été reçue. Notre équipe vous contactera par téléphone dans l'heure. En cas d'urgence vitale, appelez le 112."
         : "Votre demande a bien été reçue. L'équipe responsable des remplacements et de la tarification vous répondra dans les meilleurs délais.";
+    $route = routeFor($clean['form_id']);
 
     return [
         'to' => $clean['email'],
         'subject' => 'CIT — Votre demande a bien été reçue',
         'body' => $body,
-        'reply_to' => null,
+        'reply_to' => $route['to'],
     ];
 }

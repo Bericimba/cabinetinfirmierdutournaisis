@@ -6,6 +6,9 @@ const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const patientSection = index.match(/<!-- RDV -->([\s\S]*?)<\/section>/)?.[1] ?? '';
 const replacement = readFileSync(new URL('../remplacement.html', import.meta.url), 'utf8');
 const professionalSection = replacement.match(/<!-- CTA CONTACT -->([\s\S]*?)<\/section>/)?.[1] ?? '';
+const mentions = readFileSync(new URL('../mentions.html', import.meta.url), 'utf8');
+const hostingSection = mentions.match(/id="hebergement"([\s\S]*?)id="propriete"/)?.[1] ?? '';
+const privacySection = mentions.match(/id="donnees"([\s\S]*?)id="droits"/)?.[1] ?? '';
 
 test('le formulaire patient dispose d’un secours HTML vers OVH', () => {
   assert.match(patientSection, /<form[^>]+id="rdv-form"/);
@@ -80,4 +83,26 @@ test('le résultat professionnel est accessible sans ancien bouton mailto', () =
   assert.match(professionalSection, /tabindex="-1"/);
   assert.doesNotMatch(professionalSection, /window\.location\.href='mailto:direction@/);
   assert.match(replacement, /<script type="module" src="formulaire\.js"><\/script>/);
+});
+
+test('les hébergeurs du site et des formulaires sont nommés précisément', () => {
+  assert.match(hostingSection, /GitHub Pages/);
+  assert.match(hostingSection, /OVHcloud/);
+  assert.doesNotMatch(hostingSection, /hébergé par un prestataire externe/);
+});
+
+test('les mentions décrivent exactement les données et le routage des formulaires', () => {
+  assert.match(privacySection, /adresse e-mail (?:est )?facultative/i);
+  assert.match(privacySection, /type de soin/i);
+  assert.match(privacySection, /info@cabinetinfirmierdutournaisis\.be/);
+  assert.match(privacySection, /direction@cabinetinfirmierdutournaisis\.be/);
+  assert.match(privacySection, /confirmation générique/i);
+});
+
+test('les mentions décrivent la protection anti-abus et la conservation réelle', () => {
+  assert.match(privacySection, /empreinte[^<]*adresse IP/i);
+  assert.match(privacySection, /une heure/i);
+  assert.match(privacySection, /aucune base de données/i);
+  assert.match(privacySection, /maximum 1 an/i);
+  assert.match(privacySection, /href="#droits"/);
 });

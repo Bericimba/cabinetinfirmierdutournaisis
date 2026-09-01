@@ -199,8 +199,9 @@ footer a:hover{color:var(--pink-mid);}
   <!-- 2. HÉBERGEMENT -->
   <div class="section-ml" id="hebergement">
     <h2>2. Hébergement du site</h2>
-    <p>Le présent site est hébergé par un prestataire externe. Pour toute question technique relative à l'hébergement, vous pouvez nous contacter à l'adresse <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a>.</p>
-    <p>Les vidéos présentes sur le site sont hébergées sur la plateforme <strong>Cloudinary</strong> (Cloudinary Ltd, 3400 Central Expressway, Santa Clara, CA 95051, USA). Les images sont hébergées sur des services tiers. Ces prestataires disposent de leurs propres politiques de confidentialité.</p>
+    <p>Les pages statiques et les images du présent site sont hébergées par <strong>GitHub Pages</strong>, un service de GitHub, Inc. La passerelle sécurisée qui reçoit les formulaires ainsi que les boîtes e-mail du cabinet sont hébergées par <strong>OVHcloud</strong>.</p>
+    <p>Les vidéos présentes sur le site sont hébergées sur la plateforme <strong>Cloudinary</strong> (Cloudinary Ltd, 3400 Central Expressway, Santa Clara, CA 95051, USA). Ces prestataires disposent de leurs propres politiques de confidentialité.</p>
+    <p>Pour toute question technique relative à l'hébergement, vous pouvez nous contacter à l'adresse <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a>.</p>
   </div>
 
   <!-- 3. PROPRIÉTÉ INTELLECTUELLE -->
@@ -224,20 +225,21 @@ footer a:hover{color:var(--pink-mid);}
     <p>Le Cabinet Infirmier du Tournaisis s'engage à protéger la vie privée de ses visiteurs et patients, conformément au <strong>Règlement (UE) 2016/679</strong> du 27 avril 2016 (RGPD) et à la <strong>loi belge du 30 juillet 2018</strong> relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel.</p>
 
     <h3>Quelles données collectons-nous ?</h3>
-    <p>Lorsque vous utilisez notre site, nous pouvons collecter les données suivantes :</p>
+    <p>Lorsque vous utilisez l'un de nos formulaires, le numéro de téléphone est obligatoire et l'<strong>adresse e-mail est facultative</strong>.</p>
     <ul>
-      <li>Via le <strong>formulaire de prise de rendez-vous</strong> : nom, numéro de téléphone, type de soin souhaité, date souhaitée et message libre.</li>
-      <li>Via le <strong>formulaire de contact</strong> (remplacements) : nom, téléphone et description de la demande.</li>
-      <li>Les données techniques collectées automatiquement par les serveurs (adresse IP, type de navigateur, pages visitées) à des fins statistiques anonymes.</li>
+      <li>Via le <strong>formulaire patient</strong> : nom et prénom, numéro de téléphone, adresse e-mail facultative, type de soin souhaité, lieu du soin, date souhaitée et message libre.</li>
+      <li>Via le <strong>formulaire professionnel</strong> : nom et prénom, numéro de téléphone, adresse e-mail facultative, type de demande et message libre.</li>
+      <li>Pour limiter les envois abusifs, la passerelle crée temporairement une empreinte irréversible de l'adresse IP. Elle ne conserve pas l'adresse IP en clair.</li>
     </ul>
 
     <h3>Finalités du traitement</h3>
     <p>Vos données personnelles sont utilisées exclusivement pour :</p>
     <ul>
-      <li>Répondre à vos demandes de rendez-vous ou de contact ;</li>
-      <li>Organiser et assurer le suivi des soins infirmiers ;</li>
-      <li>Respecter nos obligations légales (notamment vis-à-vis de l'INAMI) ;</li>
-      <li>Améliorer notre service (statistiques de fréquentation anonymisées).</li>
+      <li>Répondre à votre demande et vous rappeler par téléphone ;</li>
+      <li>Utiliser le type de soin et le lieu demandé pour orienter la demande vers l'infirmière la plus adéquate ;</li>
+      <li>Transmettre le formulaire patient à <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a> et le formulaire professionnel à <a href="mailto:direction@cabinetinfirmierdutournaisis.be">direction@cabinetinfirmierdutournaisis.be</a>, selon l'équipe chargée de la demande ;</li>
+      <li>Envoyer une confirmation générique, sans recopier le contenu de la demande, uniquement lorsque vous fournissez une adresse e-mail valide ;</li>
+      <li>Prévenir les envois automatisés et abusifs.</li>
     </ul>
 
     <h3>Base légale du traitement</h3>
@@ -250,7 +252,8 @@ footer a:hover{color:var(--pink-mid);}
 
     <h3>Durée de conservation</h3>
     <ul>
-      <li><strong>Données de contact (formulaires web) :</strong> conservées le temps nécessaire au traitement de votre demande, et au maximum 1 an.</li>
+      <li><strong>Données de contact (formulaires web) :</strong> conservées dans les boîtes e-mail du cabinet le temps nécessaire au traitement de votre demande, et au maximum 1 an.</li>
+      <li><strong>Protection anti-abus :</strong> l'empreinte temporaire de l'adresse IP ne sert plus au blocage après une heure. Son fichier est supprimé lors du prochain nettoyage automatique de la passerelle.</li>
       <li><strong>Dossiers de soins :</strong> conservés conformément à la législation belge relative aux dossiers médicaux (minimum 30 ans pour les dossiers patients adultes).</li>
       <li><strong>Données de facturation :</strong> conservées 7 ans conformément aux obligations comptables belges.</li>
     </ul>
@@ -265,7 +268,7 @@ footer a:hover{color:var(--pink-mid);}
 
     <div class="warning-box">
       <span style="font-size:1.2rem;flex-shrink:0;">ℹ️</span>
-      <p>Les formulaires de contact présents sur ce site transmettent vos données directement par e-mail à notre cabinet. Aucune base de données en ligne ne stocke ces informations.</p>
+      <p>Les formulaires transmettent vos données directement par e-mail à l'équipe concernée. Aucune base de données ne stocke leur contenu et la passerelle n'enregistre pas les messages dans ses journaux techniques. Consultez également la section <a href="#droits">Vos droits</a>.</p>
     </div>
   </div>
 

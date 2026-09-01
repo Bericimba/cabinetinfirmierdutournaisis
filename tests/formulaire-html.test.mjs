@@ -4,6 +4,8 @@ import { readFileSync } from 'node:fs';
 
 const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const patientSection = index.match(/<!-- RDV -->([\s\S]*?)<\/section>/)?.[1] ?? '';
+const replacement = readFileSync(new URL('../remplacement.html', import.meta.url), 'utf8');
+const professionalSection = replacement.match(/<!-- CTA CONTACT -->([\s\S]*?)<\/section>/)?.[1] ?? '';
 
 test('le formulaire patient dispose d’un secours HTML vers OVH', () => {
   assert.match(patientSection, /<form[^>]+id="rdv-form"/);
@@ -42,4 +44,40 @@ test('l’avertissement médical et le résultat accessible sont présents', () 
 test('le bouton patient ne déclenche plus de redirection mailto', () => {
   assert.doesNotMatch(patientSection, /window\.location\.href='mailto:info@/);
   assert.match(index, /<script type="module" src="formulaire\.js"><\/script>/);
+});
+
+test('le formulaire professionnel dispose du même secours HTML vers OVH', () => {
+  assert.match(professionalSection, /<form[^>]+id="remplacement-form"/);
+  assert.match(
+    professionalSection,
+    /action="https:\/\/formulaire\.cabinetinfirmierdutournaisis\.be\/envoyer\.php"/
+  );
+  assert.match(professionalSection, /method="post"/);
+  assert.match(professionalSection, /name="form_id"\s+value="professionnel"/);
+});
+
+test('le contact professionnel conserve téléphone obligatoire et e-mail facultatif', () => {
+  assert.match(professionalSection, /id="r-tel"[^>]+name="telephone"[^>]+required/);
+  assert.match(professionalSection, /id="r-email"[^>]+name="email"/);
+  assert.doesNotMatch(professionalSection, /id="r-email"[^>]+required/);
+  assert.match(professionalSection, /autocomplete="tel"/);
+  assert.match(professionalSection, /autocomplete="email"/);
+});
+
+test('la demande professionnelle et son accord sont encadrés', () => {
+  assert.match(professionalSection, /name="type_demande"[^>]+required/);
+  assert.match(professionalSection, /name="message"[^>]+maxlength="1000"/);
+  assert.match(professionalSection, /name="accord"[^>]+required/);
+  assert.match(professionalSection, /mentions\.html#donnees/);
+  assert.match(
+    professionalSection,
+    /N'indiquez aucun nom de patient ni aucune information médicale dans ce champ\./
+  );
+});
+
+test('le résultat professionnel est accessible sans ancien bouton mailto', () => {
+  assert.match(professionalSection, /data-form-result/);
+  assert.match(professionalSection, /tabindex="-1"/);
+  assert.doesNotMatch(professionalSection, /window\.location\.href='mailto:direction@/);
+  assert.match(replacement, /<script type="module" src="formulaire\.js"><\/script>/);
 });

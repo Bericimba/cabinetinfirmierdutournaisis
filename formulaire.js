@@ -19,6 +19,22 @@ export function applyResult(element, result) {
   element.focus();
 }
 
+export function setFormOverlayState(body, visible) {
+  body.classList.toggle('cit-form-in-view', visible);
+}
+
+function watchFormVisibility(form) {
+  if (typeof IntersectionObserver === 'undefined' || typeof document === 'undefined') {
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    setFormOverlayState(document.body, entries.some((entry) => entry.isIntersecting));
+  }, { threshold: 0.15 });
+
+  observer.observe(form);
+}
+
 function localDateValue(date = new Date()) {
   const localTime = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
   return localTime.toISOString().slice(0, 10);
@@ -86,6 +102,7 @@ export async function submitCitForm(form, fetchImpl = globalThis.fetch) {
 
 export function prepareCitForm(form) {
   refreshDynamicFields(form);
+  watchFormVisibility(form);
 
   for (const location of form.querySelectorAll('[name="lieu[]"]')) {
     location.addEventListener('change', () => validateCareLocation(form));

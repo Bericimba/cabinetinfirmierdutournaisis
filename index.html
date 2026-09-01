@@ -127,6 +127,9 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 /* CTA MOBILE */
 .cta-float{display:none;position:fixed;bottom:1.25rem;right:1.25rem;z-index:200;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:14px 20px;border-radius:30px;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(212,24,122,.4);align-items:center;gap:8px;border:none;cursor:pointer;}
 .cta-float svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.5;}
+body.cit-form-in-view .cta-float,
+body.cit-form-in-view #audio-player{opacity:0;visibility:hidden;pointer-events:none;}
+.cta-float,#audio-player{transition:opacity .2s ease,visibility .2s ease;}
 
 /* SECTIONS */
 section{padding:3.5rem 1.25rem;}

@@ -70,3 +70,19 @@ test('annonce une erreur sans dépendre uniquement de la couleur', async () => {
   assert.equal(attributes.get('role'), 'alert');
   assert.equal(element.textContent, 'Envoi impossible.');
 });
+
+test('masque les boutons flottants lorsque le formulaire est visible', async () => {
+  const { setFormOverlayState } = await loadFormModule();
+  const classes = new Set();
+  const body = {
+    classList: {
+      toggle: (name, active) => active ? classes.add(name) : classes.delete(name),
+    },
+  };
+
+  setFormOverlayState(body, true);
+  assert.equal(classes.has('cit-form-in-view'), true);
+
+  setFormOverlayState(body, false);
+  assert.equal(classes.has('cit-form-in-view'), false);
+});

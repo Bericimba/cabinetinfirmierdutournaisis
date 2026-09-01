@@ -13,7 +13,7 @@ Ce guide installe uniquement la passerelle des formulaires sur le sous-domaine `
 - Contrôles distants : CORS CIT `204`, origine extérieure `403`, fichiers internes `403`, demande incomplète `422`.
 - Redirection active : `formulaire@cabinetinfirmierdutournaisis.be` vers `direction@cabinetinfirmierdutournaisis.be`.
 - Tests contrôlés réussis : patient `200`, professionnel `200`, puis confirmation par Éric de `2` messages reçus sur `info@…` et `2` sur `direction@…`.
-- Aucune donnée réelle de patient utilisée et branche GitHub non publiée.
+- Aucune donnée réelle de patient utilisée ; branche GitHub publiée dans la Pull Request `#1`, mais non fusionnée dans `main`.
 
 ## Règles de sécurité
 
@@ -21,6 +21,7 @@ Ce guide installe uniquement la passerelle des formulaires sur le sous-domaine `
 - Créer un dossier neuf et vide réservé au sous-domaine, par exemple `formulaire-cit`.
 - Garder `mail_enabled=false` jusqu'à l'autorisation explicite d'Éric pour deux e-mails fictifs ; après activation, ne plus envoyer de test sans une nouvelle autorisation.
 - Ne jamais publier la branche GitHub avant la validation séparée d'Éric.
+- Ne jamais ajouter de fichier `.nojekyll` ni de déploiement GitHub Pages brut qui exposerait le dossier `_ovh-formulaire` ; après fusion, vérifier que son URL publique répond `404`.
 - Ne saisir aucune donnée réelle de patient pendant les tests.
 - Arrêter immédiatement si le dossier cible n'est pas vide, si PHP 8 n'est pas disponible ou si le HTTPS n'est pas actif.
 

@@ -89,9 +89,13 @@ function validateSubmission(array $input, DateTimeImmutable $now): array
     }
 
     $phoneLength = textLength($clean['telephone']);
+    $phoneDigits = preg_replace('/\D/u', '', $clean['telephone']) ?? '';
+    $phoneDigitCount = strlen($phoneDigits);
     if (
         $phoneLength < 6
         || $phoneLength > 30
+        || $phoneDigitCount < 8
+        || $phoneDigitCount > 15
         || preg_match('/^[0-9+().\/\s-]+$/u', $clean['telephone']) !== 1
     ) {
         $errors['telephone'] = 'Numéro de téléphone non valide.';
@@ -122,7 +126,7 @@ function validateSubmission(array $input, DateTimeImmutable $now): array
             $errors['formulaire'] = 'Votre demande ne peut pas être traitée.';
         } else {
             $formAge = $now->getTimestamp() - (int) $startedAt;
-            if ($formAge < 3 || $formAge > 7200) {
+            if ($formAge < 3) {
                 $errors['formulaire'] = 'Votre demande ne peut pas être traitée.';
             }
         }

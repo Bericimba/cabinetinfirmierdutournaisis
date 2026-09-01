@@ -107,13 +107,18 @@ function handleRequest(array $server, array $post, array $config, callable $mail
     }
 
     $confirmation = buildConfirmation($clean);
+    $confirmationFailed = false;
     if ($confirmation !== null) {
-        $mailer($confirmation);
+        $confirmationFailed = $mailer($confirmation) !== true;
     }
 
-    $message = $clean['form_id'] === 'patient'
-        ? "Votre demande a bien été reçue. Notre équipe vous contactera par téléphone dans l'heure."
-        : "Votre demande a bien été reçue. L'équipe concernée vous répondra dans les meilleurs délais.";
+    if ($confirmationFailed) {
+        $message = "Votre demande a bien été reçue, mais l'accusé de réception n'a pas pu être envoyé. Ne renvoyez pas le formulaire ; l'équipe concernée vous contactera.";
+    } else {
+        $message = $clean['form_id'] === 'patient'
+            ? "Votre demande a bien été reçue. Notre équipe vous contactera par téléphone dans l'heure."
+            : "Votre demande a bien été reçue. L'équipe concernée vous répondra dans les meilleurs délais.";
+    }
 
     return responsePayload(200, true, $message, $origin);
 }

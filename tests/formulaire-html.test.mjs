@@ -90,6 +90,11 @@ test('la grille professionnelle peut se réduire sur un smartphone étroit', () 
   assert.match(replacement, /\.contact-grid a\{[^}]*overflow-wrap:anywhere/);
 });
 
+test('la grille de biologie passe sur une colonne sur smartphone', () => {
+  assert.match(index, /class="biologie-grid"/);
+  assert.match(index, /\.biologie-grid\{[^}]*grid-template-columns:1fr!important/);
+});
+
 test('les hébergeurs du site et des formulaires sont nommés précisément', () => {
   assert.match(hostingSection, /GitHub Pages/);
   assert.match(hostingSection, /OVHcloud/);

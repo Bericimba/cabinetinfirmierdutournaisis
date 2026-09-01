@@ -210,6 +210,20 @@ runTest('refuse un téléphone trop court', function () use ($now): void {
     assertSameValue('Numéro de téléphone non valide.', $result['errors']['telephone']);
 });
 
+runTest('refuse un téléphone sans assez de chiffres', function () use ($now): void {
+    foreach (['++++++', '......', '12-34-56'] as $telephone) {
+        $result = validateSubmission(validPatient(['telephone' => $telephone]), $now);
+        assertSameValue('Numéro de téléphone non valide.', $result['errors']['telephone']);
+    }
+});
+
+runTest('accepte les numéros belges et internationaux usuels', function () use ($now): void {
+    foreach (['+32 (0)69 30 41 33', '+33 1 42 68 53 00'] as $telephone) {
+        $result = validateSubmission(validPatient(['telephone' => $telephone]), $now);
+        assertSameValue([], $result['errors']);
+    }
+});
+
 runTest('refuse une adresse e-mail invalide', function () use ($now): void {
     $result = validateSubmission(validPatient(['email' => 'adresse-invalide']), $now);
     assertSameValue('Adresse e-mail non valide.', $result['errors']['email']);
@@ -240,6 +254,11 @@ runTest('refuse une soumission remplie par un robot', function () use ($now): vo
 runTest('refuse une soumission JavaScript trop rapide', function () use ($now): void {
     $result = validateSubmission(validPatient(['started_at' => '1788263999']), $now);
     assertSameValue('Votre demande ne peut pas être traitée.', $result['errors']['formulaire']);
+});
+
+runTest('accepte un formulaire humain resté ouvert plus de deux heures', function () use ($now): void {
+    $result = validateSubmission(validPatient(['started_at' => '1788256799']), $now);
+    assertSameValue([], $result['errors']);
 });
 
 runTest('accepte le secours sans JavaScript sans horodatage', function () use ($now): void {
@@ -401,6 +420,35 @@ runTest('envoie une confirmation distincte uniquement avec un e-mail valide', fu
         assertSameValue('marie@example.be', $messages[1]['to']);
         assertNotContainsText('Pansement / Plaie', $messages[1]['body']);
         assertNotContainsText('Sonnez deux fois.', $messages[1]['body']);
+    } finally {
+        removeTestDirectory($config['rate_dir']);
+    }
+});
+
+runTest("signale l'échec de l'accusé sans inviter à renvoyer la demande", function (): void {
+    $config = httpConfig();
+    $calls = 0;
+    $mailer = function (array $message) use (&$calls): bool {
+        $calls++;
+        return $calls === 1;
+    };
+
+    try {
+        $response = handleRequest(
+            validServer(),
+            validPatient([
+                'date_souhaitee' => '2099-01-01',
+                'started_at' => '',
+                'email' => 'marie@example.be',
+            ]),
+            $config,
+            $mailer
+        );
+        assertSameValue(200, $response['status']);
+        assertSameValue(true, $response['payload']['ok']);
+        assertSameValue(2, $calls);
+        assertContainsText("l'accusé de réception n'a pas pu être envoyé", $response['payload']['message']);
+        assertContainsText('Ne renvoyez pas le formulaire', $response['payload']['message']);
     } finally {
         removeTestDirectory($config['rate_dir']);
     }

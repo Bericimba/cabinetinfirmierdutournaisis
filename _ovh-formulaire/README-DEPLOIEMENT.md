@@ -9,15 +9,17 @@ Ce guide installe uniquement la passerelle des formulaires sur le sous-domaine `
 - Diagnostics DNS A et AAAA : verts pour les deux sous-domaines.
 - Certificats Let's Encrypt : actifs pour les deux sous-domaines.
 - Version serveur observée : PHP 8.4.
-- Fichiers d'exécution transférés par SFTP ; `config.local.php` présent avec `mail_enabled=false`.
+- Fichiers d'exécution transférés par SFTP ; `config.local.php` présent avec `mail_enabled=true` après autorisation explicite d'Éric.
 - Contrôles distants : CORS CIT `204`, origine extérieure `403`, fichiers internes `403`, demande incomplète `422`.
-- Aucun e-mail réel envoyé et branche GitHub non publiée.
+- Redirection active : `formulaire@cabinetinfirmierdutournaisis.be` vers `direction@cabinetinfirmierdutournaisis.be`.
+- Tests contrôlés réussis : patient `200`, professionnel `200`, puis confirmation par Éric de `2` messages reçus sur `info@…` et `2` sur `direction@…`.
+- Aucune donnée réelle de patient utilisée et branche GitHub non publiée.
 
 ## Règles de sécurité
 
 - Ne jamais utiliser le dossier du domaine principal ou le dossier WordPress.
 - Créer un dossier neuf et vide réservé au sous-domaine, par exemple `formulaire-cit`.
-- Garder `mail_enabled=false` jusqu'à l'autorisation explicite d'Éric pour deux e-mails fictifs.
+- Garder `mail_enabled=false` jusqu'à l'autorisation explicite d'Éric pour deux e-mails fictifs ; après activation, ne plus envoyer de test sans une nouvelle autorisation.
 - Ne jamais publier la branche GitHub avant la validation séparée d'Éric.
 - Ne saisir aucune donnée réelle de patient pendant les tests.
 - Arrêter immédiatement si le dossier cible n'est pas vide, si PHP 8 n'est pas disponible ou si le HTTPS n'est pas actif.

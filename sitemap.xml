@@ -4,7 +4,7 @@
     <!-- Accueil -->
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/</loc>
-        <lastmod>2026-07-03</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -12,7 +12,7 @@
     <!-- Équipe -->
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/equipe.html</loc>
-        <lastmod>2026-06-11</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -20,7 +20,7 @@
     <!-- Dispensaire -->
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/dispensaire.html</loc>
-        <lastmod>2026-06-11</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -28,7 +28,7 @@
     <!-- Remplacement infirmier -->
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/remplacement.html</loc>
-        <lastmod>2026-06-11</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -36,7 +36,7 @@
     <!-- FAQ soins infirmiers -->
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/faq-soins-infirmiers.html</loc>
-        <lastmod>2026-06-11</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -44,7 +44,7 @@
     <!-- Blog -->
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/blog.html</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -52,56 +52,56 @@
     <!-- Articles de blog -->
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/blog-maltraitance-domicile.html</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/blog-diabete-soins-domicile.html</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/blog-oedeme-membres-inferieurs.html</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/blog-cystocath-sonde-urinaire.html</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/blog-fortes-chaleurs-conseils.html</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/blog-escarres-prevention.html</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/blog-prise-de-sang-domicile.html</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://cabinetinfirmierdutournaisis.be/blog-avantages-soins-domicile.html</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

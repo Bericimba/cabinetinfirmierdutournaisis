@@ -251,7 +251,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
             <a href="blog.html">Blog</a>
                   <a href="faq-soins-infirmiers.html">FAQ</a>
                 </div>
-                <button class="nav-btn"onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
+                <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
     <button type="button" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
@@ -291,11 +291,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 <!-- FILTRES -->
 <div class="filtres">
   <div class="filtres-inner">
-    <button class="filtre-btn active" onclick="filtrer('tous',this)">Tous</button>
-    <button class="filtre-btn" onclick="filtrer('infirmier',this)">Infirmiers</button>
-    <button class="filtre-btn" onclick="filtrer('auxiliaire',this)">Auxiliaires</button>
-    <button class="filtre-btn" onclick="filtrer('admin',this)">Administratif</button>
-    <button class="filtre-btn" onclick="filtrer('esthetique',this)">Bien-être</button>
+    <button type="button" class="filtre-btn active" aria-pressed="true" onclick="filtrer('tous',this)">Tous</button>
+    <button type="button" class="filtre-btn" aria-pressed="false" onclick="filtrer('infirmier',this)">Infirmiers</button>
+    <button type="button" class="filtre-btn" aria-pressed="false" onclick="filtrer('auxiliaire',this)">Auxiliaires</button>
+    <button type="button" class="filtre-btn" aria-pressed="false" onclick="filtrer('admin',this)">Administratif</button>
+    <button type="button" class="filtre-btn" aria-pressed="false" onclick="filtrer('esthetique',this)">Bien-être</button>
   </div>
 </div>
 
@@ -362,11 +362,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="celine-plus" onclick="
           var el=document.getElementById('celine-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Pour moi, un soin technique n'a de valeur que s'il reste profondément humain. »</div>
@@ -450,11 +450,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="louise-plus" onclick="
           var el=document.getElementById('louise-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Soigner le corps, respecter la personne et offrir un sourire quand le moment s'y prête. »</div>
@@ -516,11 +516,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="melissa-plus" onclick="
           var el=document.getElementById('melissa-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--teal),var(--teal-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Soigner sans faux-semblants. Être là, vraiment. »</div>
@@ -580,11 +580,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="jordan-plus" onclick="
           var el=document.getElementById('jordan-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--pink),var(--purple),var(--teal));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Une présence rassurante, une écoute attentive — toujours une approche originale. »</div>
@@ -638,11 +638,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="peter-plus" onclick="
           var el=document.getElementById('peter-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Un bon administratif, c'est aussi une façon de prendre soin des soignants. »</div>
@@ -704,11 +704,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="lea-plus" onclick="
           var el=document.getElementById('lea-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--pink),var(--pink-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Le plus beau résultat reste souvent la meilleure version de vous-même. »</div>
@@ -758,8 +758,9 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
 <script>
 function filtrer(cat, btn) {
-  document.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filtre-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
   btn.classList.add('active');
+  btn.setAttribute('aria-pressed','true');
   document.querySelectorAll('.membre-card').forEach(card => {
     if (cat === 'tous' || card.dataset.cat === cat) {
       card.style.display = 'grid';
@@ -775,13 +776,13 @@ function filtrer(cat, btn) {
   <audio id="bg-music" loop preload="none">
     <source src="https://res.cloudinary.com/drmwcbidz/video/upload/v1780844281/chill_background-lounge-20591_taoxo4.mp3" type="audio/mp3"/>
   </audio>
-  <button id="audio-btn" onclick="toggleMusic()" style="width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#D4187A,#7B4FB5);color:#fff;font-size:1.2rem;box-shadow:0 4px 16px rgba(212,24,122,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s;">🎵</button>
+  <button type="button" id="audio-btn" aria-label="Activer la musique" aria-pressed="false" onclick="toggleMusic()" style="width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#D4187A,#7B4FB5);color:#fff;font-size:1.2rem;box-shadow:0 4px 16px rgba(212,24,122,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s;">🎵</button>
   <div id="audio-label" style="position:absolute;left:56px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.95);color:#6B5F68;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.1);border:1px solid #E8D8E4;opacity:1;transition:opacity .3s;">Activer la musique</div>
 </div>
 <script>
 var music=document.getElementById('bg-music'),btn=document.getElementById('audio-btn'),label=document.getElementById('audio-label');
-function toggleMusic(){var p=!music.paused;if(!p){music.volume=0.35;music.play().catch(function(){});btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';localStorage.setItem('cit_music','on');}else{music.pause();btn.innerHTML='🎵';btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';localStorage.setItem('cit_music','off');}label.textContent=!p?'Musique activée':'Musique désactivée';label.style.opacity='1';setTimeout(function(){label.style.opacity='0';},2000);}
-window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
+function toggleMusic(){var p=!music.paused;if(!p){music.volume=0.35;music.play().catch(function(){});btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';localStorage.setItem('cit_music','on');}else{music.pause();btn.innerHTML='🎵';btn.setAttribute('aria-label','Activer la musique');btn.setAttribute('aria-pressed','false');btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';localStorage.setItem('cit_music','off');}label.textContent=!p?'Musique activée':'Musique désactivée';label.style.opacity='1';setTimeout(function(){label.style.opacity='0';},2000);}
+window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
 btn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';label.style.opacity='1';});
 btn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';setTimeout(function(){label.style.opacity='0';},1500);});
 </script>

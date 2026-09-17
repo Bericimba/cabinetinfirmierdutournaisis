@@ -20,6 +20,7 @@
 <meta property="og:locale" content="fr_BE"/>
 <!-- Canonical -->
 <link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/equipe.html"/>
+<link rel="alternate" type="application/rss+xml" title="Flux RSS du blog du Cabinet Infirmier du Tournaisis" href="https://cabinetinfirmierdutournaisis.be/rss.xml"/>
 <!-- Favicon -->
 <link rel="icon" type="image/png" sizes="32x31" href="favicon-32.png"/>
 <link rel="icon" type="image/png" sizes="48x47" href="favicon-48.png"/>
@@ -101,12 +102,14 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .logo-area img{width:44px;height:44px;object-fit:contain;}
 .logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
 .logo-sub{font-size:12px;color:var(--muted);}
+.skip-link{position:absolute;left:1rem;top:-5rem;z-index:2000;background:var(--text);color:#fff;padding:.75rem 1rem;border-radius:0 0 8px 8px;font-weight:700;}
+.skip-link:focus{top:0;}
 .nav-links{display:flex;gap:1.2rem;font-size:13px;}
 .nav-links a{color:var(--muted);transition:color .2s;}
 .nav-links a:hover{color:var(--pink);}
 .nav-links a.active{color:var(--pink);font-weight:600;}
 .nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;}
-.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
+.hamburger{background:none;border:0;padding:0;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
 .hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}
 .mobile-menu{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--border);padding:1rem 1.25rem;gap:.75rem;}
 .mobile-menu a{color:var(--text);font-size:15px;padding:.5rem 0;border-bottom:1px solid var(--border);}
@@ -141,7 +144,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .section-tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:1.5rem;letter-spacing:.06em;text-transform:uppercase;}
 .tag-pink{background:var(--pink-light);color:var(--pink);border:1px solid #F0B0D0;}
 .tag-purple{background:var(--purple-light);color:var(--purple);border:1px solid #C8A8E8;}
-.tag-teal{background:var(--teal-light);color:var(--teal);border:1px solid #8DD8D0;}
+.tag-teal{background:var(--teal-light);color:#0B6F65;border:1px solid #8DD8D0;}
 
 /* CARTE MEMBRE — format étendu */
 .membre-card{background:var(--white);border-radius:20px;border:1px solid var(--border);overflow:hidden;margin-bottom:2rem;display:grid;grid-template-columns:280px 1fr;transition:box-shadow .2s;}
@@ -158,7 +161,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .membre-role-badge{font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;text-align:center;}
 .rb-pink{background:var(--pink-light);color:var(--pink);}
 .rb-purple{background:var(--purple-light);color:var(--purple);}
-.rb-teal{background:var(--teal-light);color:var(--teal);}
+.rb-teal{background:var(--teal-light);color:#0B6F65;}
 .membre-content{padding:2rem 2.5rem;}
 .membre-content h2{font-size:1.5rem;font-weight:800;margin-bottom:.25rem;}
 .membre-content .sous-titre{font-size:.875rem;font-weight:600;margin-bottom:1.25rem;}
@@ -168,12 +171,12 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .membre-desc{font-size:.925rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;}
 .membre-desc strong{color:var(--text);}
 .competences{margin-bottom:1.25rem;}
-.competences h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:.6rem;}
+.competences h3{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:.6rem;}
 .comp-list{display:flex;flex-wrap:wrap;gap:.4rem;}
 .comp{font-size:12px;padding:4px 12px;border-radius:20px;font-weight:500;}
 .comp.p{background:var(--pink-light);color:var(--pink-dark);}
 .comp.v{background:var(--purple-light);color:var(--purple);}
-.comp.t{background:var(--teal-light);color:var(--teal);}
+.comp.t{background:var(--teal-light);color:#0B6F65;}
 .valeurs{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);}
 .valeur{display:flex;align-items:center;gap:.4rem;font-size:12px;color:var(--muted);}
 .valeur svg{width:14px;height:14px;stroke:var(--pink);fill:none;stroke-width:2;flex-shrink:0;}
@@ -219,6 +222,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
 <!-- TICKER -->
 <div class="ticker">
@@ -231,7 +235,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 <nav>
   <div class="nav-inner">
       <a href="index.html" class="logo-area">
-            <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis"/>
+            <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis" width="884" height="860" decoding="async"/>
             <div>
               <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
               <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
@@ -247,12 +251,12 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
             <a href="blog.html">Blog</a>
                   <a href="faq-soins-infirmiers.html">FAQ</a>
                 </div>
-                <button class="nav-btn"onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
-    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+                <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
+    <button type="button" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
-  <div class="mobile-menu">
+  <div class="mobile-menu" id="mobileMenu">
       <a href="index.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Accueil</a>
       <a href="equipe.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Équipe</a>
       <a href="dispensaire.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Dispensaire</a>
@@ -265,6 +269,8 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
       <a href="index.html#rdv" style="color:var(--pink);font-weight:700;">📅 Prendre RDV</a>
     </div>
 </nav>
+
+<main id="main-content" tabindex="-1">
 
 <!-- HERO -->
 <div class="hero-equipe">
@@ -285,11 +291,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 <!-- FILTRES -->
 <div class="filtres">
   <div class="filtres-inner">
-    <button class="filtre-btn active" onclick="filtrer('tous',this)">Tous</button>
-    <button class="filtre-btn" onclick="filtrer('infirmier',this)">Infirmiers</button>
-    <button class="filtre-btn" onclick="filtrer('auxiliaire',this)">Auxiliaires</button>
-    <button class="filtre-btn" onclick="filtrer('admin',this)">Administratif</button>
-    <button class="filtre-btn" onclick="filtrer('esthetique',this)">Bien-être</button>
+    <button type="button" class="filtre-btn active" aria-pressed="true" onclick="filtrer('tous',this)">Tous</button>
+    <button type="button" class="filtre-btn" aria-pressed="false" onclick="filtrer('infirmier',this)">Infirmiers</button>
+    <button type="button" class="filtre-btn" aria-pressed="false" onclick="filtrer('auxiliaire',this)">Auxiliaires</button>
+    <button type="button" class="filtre-btn" aria-pressed="false" onclick="filtrer('admin',this)">Administratif</button>
+    <button type="button" class="filtre-btn" aria-pressed="false" onclick="filtrer('esthetique',this)">Bien-être</button>
   </div>
 </div>
 
@@ -300,7 +306,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <!-- CÉLINE -->
     <div class="membre-card" data-cat="infirmier" id="celine">
       <div class="membre-photo">
-        <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--pink-light);margin-bottom:.5rem;"/>
+        <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--pink-light);margin-bottom:.5rem;" width="1123" height="1400" decoding="async"/>
         <div class="membre-name">Céline Lhoir</div>
         <div class="membre-role-badge rb-pink">Fondatrice & coordinatrice</div>
       </div>
@@ -318,7 +324,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
           </p>
 
           <div class="competences">
-            <h4>Spécialités</h4>
+            <h3>Spécialités</h3>
             <div class="comp-list">
               <span class="comp p">Pansements & injections</span>
               <span class="comp p">Prises de sang</span>
@@ -356,16 +362,16 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="celine-plus" onclick="
           var el=document.getElementById('celine-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Pour moi, un soin technique n'a de valeur que s'il reste profondément humain. »</div>
         <div class="competences">
-          <h4>Spécialités & formations</h4>
+          <h3>Spécialités & formations</h3>
           <div class="comp-list">
             <span class="comp p">Soins courants</span>
             <span class="comp p">Pathologies chroniques</span>
@@ -393,7 +399,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <!-- LOUISE -->
     <div class="membre-card reverse" data-cat="infirmier" id="louise">
       <div class="membre-photo" style="background:linear-gradient(135deg,#F0EAF8,#E8D8F8);">
-        <img src="louise-joiffroy.webp" alt="Louise Joiffroy, infirmière en chef spécialisée dans les soins complexes et chroniques à domicile sur Tournai, Quevaucamps, Beloeil" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--purple-light);margin-bottom:.5rem;"/>
+        <img src="louise-joiffroy.webp" alt="Louise Joiffroy, infirmière en chef spécialisée dans les soins complexes et chroniques à domicile sur Tournai, Quevaucamps, Beloeil" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--purple-light);margin-bottom:.5rem;" width="1024" height="1536" decoding="async" loading="lazy"/>
         <div class="membre-name">Louise Joiffroy</div>
         <div class="membre-role-badge rb-purple">Infirmière en chef</div>
       </div>
@@ -408,7 +414,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         <div id="louise-plus" style="display:none;">
 
           <div class="competences">
-            <h4>Parcours & compétences</h4>
+            <h3>Parcours & compétences</h3>
             <div class="comp-list">
               <span class="comp v">Soins à domicile</span>
               <span class="comp v">Patients chroniques</span>
@@ -444,11 +450,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="louise-plus" onclick="
           var el=document.getElementById('louise-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Soigner le corps, respecter la personne et offrir un sourire quand le moment s'y prête. »</div>
@@ -467,7 +473,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <!-- MÉLISSA -->
     <div class="membre-card" data-cat="auxiliaire" id="melissa">
       <div class="membre-photo" style="background:linear-gradient(135deg,#E0F5F3,#D0EDE9);">
-        <img src="melissa-devos.webp" alt="Mélissa Devos, auxiliaire de soins pour les soins à domicile et la gériatrie dans le Tournaisis, Quevaucamps, Beloeil" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--teal-light);margin-bottom:.5rem;"/>
+        <img src="melissa-devos.webp" alt="Mélissa Devos, auxiliaire de soins pour les soins à domicile et la gériatrie dans le Tournaisis, Quevaucamps, Beloeil" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--teal-light);margin-bottom:.5rem;" width="1402" height="1122" decoding="async" loading="lazy"/>
         <div class="membre-name">Mélissa Devos</div>
         <div class="membre-role-badge rb-teal">Auxiliaire de soins</div>
       </div>
@@ -482,7 +488,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         <div id="melissa-plus" style="display:none;">
 
           <div class="competences">
-            <h4>Compétences</h4>
+            <h3>Compétences</h3>
             <div class="comp-list">
               <span class="comp t">Aide au quotidien</span>
               <span class="comp t">Accompagnement personnalisé</span>
@@ -510,11 +516,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="melissa-plus" onclick="
           var el=document.getElementById('melissa-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--teal),var(--teal-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Soigner sans faux-semblants. Être là, vraiment. »</div>
@@ -533,7 +539,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <!-- JORDAN -->
     <div class="membre-card reverse" data-cat="infirmier" id="jordan">
       <div class="membre-photo" style="background:linear-gradient(135deg,#F0EAF8,#FDF0F7);">
-        <img src="jordan-daubie.webp" alt="Jordan Daubie, infirmier au Cabinet Infirmier du Tournaisis, Beloeil, Quevaucamps, Tournai" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--purple-light);margin-bottom:.5rem;"/>
+        <img src="jordan-daubie.webp" alt="Jordan Daubie, infirmier au Cabinet Infirmier du Tournaisis, Beloeil, Quevaucamps, Tournai" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--purple-light);margin-bottom:.5rem;" width="1086" height="1448" decoding="async" loading="lazy"/>
         <div class="membre-name">Jordan Daubie</div>
         <div class="membre-role-badge rb-purple">Infirmier</div>
       </div>
@@ -548,7 +554,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         <div id="jordan-plus" style="display:none;">
 
           <div class="competences">
-            <h4>Compétences</h4>
+            <h3>Compétences</h3>
             <div class="comp-list">
               <span class="comp p">Pansements complexes</span>
               <span class="comp p">Perfusions & injections</span>
@@ -574,11 +580,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="jordan-plus" onclick="
           var el=document.getElementById('jordan-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--pink),var(--purple),var(--teal));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Une présence rassurante, une écoute attentive — toujours une approche originale. »</div>
@@ -597,7 +603,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <!-- PETER -->
     <div class="membre-card" data-cat="admin" id="peter">
       <div class="membre-photo" style="background:linear-gradient(135deg,#F0EAF8,#E8D8F8);">
-        <img src="peter-andries.webp" alt="Peter Andries" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--purple-light);margin-bottom:.5rem;"/>
+        <img src="peter-andries.webp" alt="Peter Andries" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--purple-light);margin-bottom:.5rem;" width="1407" height="1118" decoding="async" loading="lazy"/>
         <div class="membre-name">Peter Andries</div>
         <div class="membre-role-badge rb-purple">Gestion administrative</div>
       </div>
@@ -612,7 +618,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         <div id="peter-plus" style="display:none;">
 
           <div class="competences">
-            <h4>Missions</h4>
+            <h3>Missions</h3>
             <div class="comp-list">
               <span class="comp v">Facturation INAMI</span>
               <span class="comp v">Encodage des prestations</span>
@@ -632,11 +638,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="peter-plus" onclick="
           var el=document.getElementById('peter-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Un bon administratif, c'est aussi une façon de prendre soin des soignants. »</div>
@@ -654,7 +660,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <!-- LÉA -->
     <div class="membre-card reverse" data-cat="esthetique" id="lea">
       <div class="membre-photo" style="background:linear-gradient(135deg,#FDF0F7,#FBEAF3);">
-        <img src="lea-beaufays.webp" alt="Léa Beaufays" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--pink-light);margin-bottom:.5rem;"/>
+        <img src="lea-beaufays.webp" alt="Léa Beaufays" style="width:130px;height:130px;object-fit:cover;object-position:center top;border-radius:50%;border:4px solid var(--pink-light);margin-bottom:.5rem;" width="1086" height="1448" decoding="async" loading="lazy"/>
         <div class="membre-name">Léa Beaufays</div>
         <div class="membre-role-badge rb-pink">Soins esthétiques à domicile</div>
       </div>
@@ -673,7 +679,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
           </p>
 
           <div class="competences">
-            <h4>Prestations</h4>
+            <h3>Prestations</h3>
             <div class="comp-list">
               <span class="comp p">Soins du visage</span>
               <span class="comp p">Nettoyage & hydratation</span>
@@ -698,11 +704,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
         </div>
 
         <!-- BOUTON PLUS / MOINS -->
-        <button onclick="
+        <button type="button" aria-expanded="false" aria-controls="lea-plus" onclick="
           var el=document.getElementById('lea-plus');
           var btn=this;
-          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';}
-          else{el.style.display='none';btn.textContent='En savoir plus ▼';}
+          if(el.style.display==='none'){el.style.display='block';btn.textContent='Moins ▲';btn.setAttribute('aria-expanded','true');}
+          else{el.style.display='none';btn.textContent='En savoir plus ▼';btn.setAttribute('aria-expanded','false');}
         " style="margin-top:1rem;background:linear-gradient(135deg,var(--pink),var(--pink-mid));color:#fff;border:none;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;">En savoir plus ▼</button>
 
         <div class="citation">« Le plus beau résultat reste souvent la meilleure version de vous-même. »</div>
@@ -729,6 +735,10 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 </div>
 
 <!-- FOOTER -->
+</main>
+
+<script src="accessibilite.js"></script>
+
 <footer>
   <div class="footer-inner">
     <div>
@@ -736,7 +746,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
       <p>Avenue de l'Europe, 68 · Quevaucamps 7972<br/>
       <a href="tel:+3269304133">(+32) 069.30.41.33</a> · <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a></p>
     </div>
-    <p style="color:#706070;font-size:.775rem;">© 2026 Cabinet Infirmier du Tournaisis · BCE BE0832.195.365 · <a href="mentions.html" style="color:#A898A4;">Mentions légales</a></p>
+    <p style="color:#B8A8B5;font-size:.775rem;">© 2026 Cabinet Infirmier du Tournaisis · BCE BE0832.195.365 · <a href="mentions.html" style="color:#A898A4;">Mentions légales</a></p>
   </div>
 </footer>
 
@@ -748,8 +758,9 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
 <script>
 function filtrer(cat, btn) {
-  document.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filtre-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
   btn.classList.add('active');
+  btn.setAttribute('aria-pressed','true');
   document.querySelectorAll('.membre-card').forEach(card => {
     if (cat === 'tous' || card.dataset.cat === cat) {
       card.style.display = 'grid';
@@ -762,16 +773,16 @@ function filtrer(cat, btn) {
 
 <!-- LECTEUR AUDIO FLOTTANT -->
 <div id="audio-player" style="position:fixed;bottom:5rem;left:1.25rem;z-index:300;">
-  <audio id="bg-music" loop>
+  <audio id="bg-music" loop preload="none">
     <source src="https://res.cloudinary.com/drmwcbidz/video/upload/v1780844281/chill_background-lounge-20591_taoxo4.mp3" type="audio/mp3"/>
   </audio>
-  <button id="audio-btn" onclick="toggleMusic()" style="width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#D4187A,#7B4FB5);color:#fff;font-size:1.2rem;box-shadow:0 4px 16px rgba(212,24,122,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s;">🎵</button>
+  <button type="button" id="audio-btn" aria-label="Activer la musique" aria-pressed="false" onclick="toggleMusic()" style="width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#D4187A,#7B4FB5);color:#fff;font-size:1.2rem;box-shadow:0 4px 16px rgba(212,24,122,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s;">🎵</button>
   <div id="audio-label" style="position:absolute;left:56px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.95);color:#6B5F68;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.1);border:1px solid #E8D8E4;opacity:1;transition:opacity .3s;">Activer la musique</div>
 </div>
 <script>
 var music=document.getElementById('bg-music'),btn=document.getElementById('audio-btn'),label=document.getElementById('audio-label');
-function toggleMusic(){var p=!music.paused;if(!p){music.volume=0.35;music.play().catch(function(){});btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';localStorage.setItem('cit_music','on');}else{music.pause();btn.innerHTML='🎵';btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';localStorage.setItem('cit_music','off');}label.textContent=!p?'Musique activée':'Musique désactivée';label.style.opacity='1';setTimeout(function(){label.style.opacity='0';},2000);}
-window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
+function toggleMusic(){var p=!music.paused;if(!p){music.volume=0.35;music.play().catch(function(){});btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';localStorage.setItem('cit_music','on');}else{music.pause();btn.innerHTML='🎵';btn.setAttribute('aria-label','Activer la musique');btn.setAttribute('aria-pressed','false');btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';localStorage.setItem('cit_music','off');}label.textContent=!p?'Musique activée':'Musique désactivée';label.style.opacity='1';setTimeout(function(){label.style.opacity='0';},2000);}
+window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
 btn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';label.style.opacity='1';});
 btn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';setTimeout(function(){label.style.opacity='0';},1500);});
 </script>

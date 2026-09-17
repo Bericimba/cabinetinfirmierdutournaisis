@@ -9,6 +9,7 @@
 <meta name="keywords" content="soins infirmiers diabète, IDEL diabète, glycémie à domicile, insuline infirmier, pied diabétique Tournai, diabète Quevaucamps"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/blog-diabete-soins-domicile.html"/>
+<link rel="alternate" type="application/rss+xml" title="Flux RSS du blog du Cabinet Infirmier du Tournaisis" href="https://cabinetinfirmierdutournaisis.be/rss.xml"/>
 
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://cabinetinfirmierdutournaisis.be/blog-diabete-soins-domicile.html"/>
@@ -34,6 +35,7 @@
     "logo": { "@type": "ImageObject", "url": "https://cabinetinfirmierdutournaisis.be/logo-cit.png" }
   },
   "datePublished": "2026-06-23",
+  "dateModified": "2026-09-17",
   "mainEntityOfPage": "https://cabinetinfirmierdutournaisis.be/blog-diabete-soins-domicile.html"
 }
 </script>
@@ -59,11 +61,13 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .logo-area img{width:44px;height:44px;object-fit:contain;}
 .logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
 .logo-sub{font-size:12px;color:var(--muted);}
+.skip-link{position:absolute;left:1rem;top:-5rem;z-index:2000;background:var(--text);color:#fff;padding:.75rem 1rem;border-radius:0 0 8px 8px;font-weight:700;}
+.skip-link:focus{top:0;}
 .nav-links{display:flex;gap:1.2rem;font-size:13px;}
 .nav-links a{color:var(--muted);transition:color .2s;}
 .nav-links a:hover{color:var(--pink);}
 .nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;}
-.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
+.hamburger{background:none;border:0;padding:0;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
 .hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}
 .mobile-menu{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--border);padding:1rem 1.25rem;gap:.75rem;}
 .mobile-menu a{color:var(--text);font-size:15px;padding:.5rem 0;border-bottom:1px solid var(--border);}
@@ -74,7 +78,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .breadcrumb span{margin:0 .5rem;opacity:.5;}
 .article-hero{background:linear-gradient(135deg,var(--teal-light),var(--purple-light));padding:3rem 1.25rem 2.5rem;}
 .article-wrap{max-width:760px;margin:auto;}
-.cat-badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;background:var(--teal-light);color:var(--teal);margin-bottom:1rem;}
+.cat-badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;background:var(--teal-light);color:#0B6F65;margin-bottom:1rem;}
 h1{font-size:2.1rem;font-weight:800;line-height:1.25;margin-bottom:1rem;color:var(--text);}
 .meta-row{display:flex;align-items:center;gap:.75rem;font-size:.85rem;color:var(--muted);}
 .meta-row img{width:40px;height:40px;border-radius:50%;object-fit:cover;}
@@ -94,7 +98,7 @@ h1{font-size:2.1rem;font-weight:800;line-height:1.25;margin-bottom:1rem;color:va
 .cta-box p.title{color:var(--teal);font-weight:700;margin-bottom:.5rem;}
 .cta-box p{font-size:.925rem;color:var(--muted);line-height:1.75;}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.5rem 0;}
-.tags span{background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;}
+.tags span{background:var(--teal-light);color:#0B6F65;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;}
 .contact-box{background:var(--warm);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-top:2rem;}
 .contact-box h3{font-size:1rem;margin-bottom:.75rem;color:var(--purple);}
 .contact-box p{font-size:.9rem;margin-bottom:.4rem;color:var(--text);}
@@ -106,7 +110,7 @@ footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
 .footer-cit{font-size:1.3rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 footer p{font-size:.825rem;color:#A898A4;line-height:1.7;}
 footer a{color:var(--teal-mid);font-size:.825rem;}
-.footer-bottom{width:100%;border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#706070;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+.footer-bottom{width:100%;border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#B8A8B5;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
 @media(max-width:768px){
   .nav-links,.nav-btn{display:none;}
   .hamburger{display:flex;}
@@ -117,6 +121,7 @@ footer a{color:var(--teal-mid);font-size:.825rem;}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
 <div class="ticker">
   <span class="ticker-inner">
@@ -127,7 +132,7 @@ footer a{color:var(--teal-mid);font-size:.825rem;}
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo-area">
-      <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis"/>
+      <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis" width="884" height="860" decoding="async"/>
       <div>
         <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
         <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
@@ -142,9 +147,9 @@ footer a{color:var(--teal-mid);font-size:.825rem;}
       <a href="faq-soins-infirmiers.html">FAQ</a>
     </div>
     <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
-    <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu mobile">
+    <button type="button" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Accueil</a>
@@ -158,13 +163,15 @@ footer a{color:var(--teal-mid);font-size:.825rem;}
   </div>
 </nav>
 
+<main id="main-content" tabindex="-1">
+
 <div class="article-hero">
   <div class="article-wrap">
     <div class="breadcrumb"><a href="index.html">Accueil</a><span>›</span><a href="blog.html">Blog</a><span>›</span>Diabète et soins infirmiers</div>
     <span class="cat-badge">Conseils santé</span>
     <h1>Diabète et soins infirmiers à domicile : un accompagnement vital au quotidien</h1>
     <div class="meta-row">
-      <img src="melissa-devos.webp" alt="Mélissa Devos, auxiliaire de soins pour les soins à domicile et la gériatrie dans le Tournaisis, Quevaucamps, Beloeil"/>
+      <img src="melissa-devos.webp" alt="Mélissa Devos, auxiliaire de soins pour les soins à domicile et la gériatrie dans le Tournaisis, Quevaucamps, Beloeil" width="1402" height="1122" decoding="async"/>
       <div>
         <strong>Mélissa Devos</strong>
         <span>Auxiliaire de soins · 23 Juin 2026 · ⏱ 6 min</span>
@@ -202,12 +209,11 @@ footer a{color:var(--teal-mid);font-size:.825rem;}
   </div>
 
   <div class="alert-box">
-    <p>🚨 Quand appeler son infirmier en urgence ?</p>
+    <p>🚨 Quand appeler le 112 ou demander un avis médical urgent ?</p>
     <ul>
-      <li>Glycémie anormalement haute avec présence d'acétone</li>
-      <li>Plaie au pied qui s'infecte ou ne cicatrise pas</li>
-      <li>Malaise, sueurs froides, sensation de perte de connaissance</li>
-      <li>Rougeur ou chaleur inhabituelle sur un membre</li>
+      <li><strong>Appelez immédiatement le 112</strong> en cas de perte de connaissance, de convulsions, de confusion importante ou si la personne ne peut pas avaler. Ne lui donnez rien à boire ni à manger.</li>
+      <li><strong>Demandez un avis médical urgent</strong> si la glycémie reste très élevée, si des cétones sont présentes, ou en cas de vomissements, de douleur abdominale ou de respiration anormale.</li>
+      <li>Une plaie du pied infectée, rouge, chaude ou qui ne cicatrise pas doit être évaluée rapidement par un professionnel de santé.</li>
     </ul>
   </div>
 
@@ -247,6 +253,10 @@ footer a{color:var(--teal-mid);font-size:.825rem;}
   <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.33 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.95 5.95l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
   Appeler
 </button>
+
+</main>
+
+<script src="accessibilite.js"></script>
 
 <footer>
   <div class="footer-inner">

@@ -27,6 +27,7 @@
 <meta name="twitter:image" content="https://cabinetinfirmierdutournaisis.be/logo-cit.png"/>
 <!-- Canonical -->
 <link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/"/>
+<link rel="alternate" type="application/rss+xml" title="Flux RSS du blog du Cabinet Infirmier du Tournaisis" href="https://cabinetinfirmierdutournaisis.be/rss.xml"/>
 <!-- Favicon -->
 <link rel="icon" type="image/png" sizes="32x31" href="favicon-32.png"/>
 <link rel="icon" type="image/png" sizes="48x47" href="favicon-48.png"/>
@@ -39,8 +40,8 @@
   "name": "Cabinet Infirmier du Tournaisis",
   "alternateName": "CIT",
   "url": "https://cabinetinfirmierdutournaisis.be",
-  "logo": "logo-cit.png",
-  "image": "logo-cit.png",
+  "logo": "https://cabinetinfirmierdutournaisis.be/logo-cit.png",
+  "image": "https://cabinetinfirmierdutournaisis.be/logo-cit.png",
   "description": "Cabinet infirmier à domicile et dispensaire ouvert 24h/24 7j/7 dans le Tournaisis. Soins infirmiers, pansements, injections, prises de sang, soins palliatifs. Conventionnés INAMI.",
   "telephone": "+3269304133",
   "email": "info@cabinetinfirmierdutournaisis.be",
@@ -93,11 +94,13 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .logo-area img{width:44px;height:44px;object-fit:contain;}
 .logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
 .logo-sub{font-size:12px;color:var(--muted);}
+.skip-link{position:absolute;left:1rem;top:-5rem;z-index:2000;background:var(--text);color:#fff;padding:.75rem 1rem;border-radius:0 0 8px 8px;font-weight:700;}
+.skip-link:focus{top:0;}
 .nav-links{display:flex;gap:1.2rem;font-size:13px;}
 .nav-links a{color:var(--muted);}
 .nav-links a:hover{color:var(--pink);}
 .nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;white-space:nowrap;}
-.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
+.hamburger{background:none;border:0;padding:0;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
 .hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}.mobile-menu{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--border);padding:1rem;gap:.75rem;}
 .mobile-menu a{color:var(--text);font-size:15px;padding:.5rem 0;border-bottom:1px solid var(--border);}
 .mobile-menu a:last-child{border:none;}
@@ -123,7 +126,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .stat-num{font-size:1.3rem;font-weight:800;background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .stat-label{font-size:10px;color:var(--muted);}
 .badge-row{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;}
-.badge{background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 9px;border-radius:20px;font-weight:500;}
+.badge{background:var(--teal-light);color:#0B6F65;font-size:11px;padding:3px 9px;border-radius:20px;font-weight:500;}
 
 /* CTA MOBILE */
 .cta-float{display:none;position:fixed;bottom:1.25rem;right:1.25rem;z-index:200;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:14px 20px;border-radius:30px;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(212,24,122,.4);align-items:center;gap:8px;border:none;cursor:pointer;}
@@ -138,7 +141,7 @@ section{padding:3.5rem 1.25rem;}
 .section-tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:.75rem;letter-spacing:.06em;text-transform:uppercase;}
 .tag-pink{background:var(--pink-light);color:var(--pink);border:1px solid #F0B0D0;}
 .tag-purple{background:var(--purple-light);color:var(--purple);border:1px solid #C8A8E8;}
-.tag-teal{background:var(--teal-light);color:var(--teal);border:1px solid #8DD8D0;}
+.tag-teal{background:var(--teal-light);color:#0B6F65;border:1px solid #8DD8D0;}
 h2{font-size:1.7rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .section-sub{color:var(--muted);font-size:.925rem;line-height:1.7;margin-bottom:2rem;max-width:680px;}
 
@@ -220,7 +223,7 @@ h2{font-size:1.7rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .commune{font-size:12px;padding:4px 11px;border-radius:20px;font-weight:600;}
 .c1{background:var(--pink-light);color:var(--pink-dark);border:1px solid #F0B0D0;}
 .c2{background:var(--purple-light);color:var(--purple);border:1px solid #C8A8E8;}
-.c3{background:var(--teal-light);color:var(--teal);border:1px solid #8DD8D0;}
+.c3{background:var(--teal-light);color:#0B6F65;border:1px solid #8DD8D0;}
 
 /* RDV */
 .rdv{background:linear-gradient(135deg,var(--pink) 0%,var(--purple) 50%,var(--teal) 100%);color:#fff;}
@@ -260,12 +263,12 @@ h2{font-size:1.7rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
 .footer-inner{max-width:1100px;margin:auto;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;margin-bottom:2rem;}
-footer h4{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+footer h2{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 footer p,footer li,footer a{font-size:.825rem;line-height:1.8;color:#A898A4;}
 footer ul{list-style:none;}
 footer a:hover{color:var(--pink-mid);}
 .footer-cit{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem;}
-.footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#706070;flex-wrap:wrap;gap:.5rem;}
+.footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#B8A8B5;flex-wrap:wrap;gap:.5rem;}
 .social-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--pink-mid);font-size:.825rem;margin-top:.5rem;}
 
 /* RESPONSIVE */
@@ -288,6 +291,9 @@ footer a:hover{color:var(--pink-mid);}
   .biologie-grid{grid-template-columns:1fr!important;}
   .footer-grid{grid-template-columns:1fr;}
   .horaire-row{flex-direction:column;gap:.15rem;}
+  #esthetique > div{grid-template-columns:1fr!important;}
+  #esthetique > div > div:first-child{min-height:280px;}
+  #esthetique > div > div:last-child{padding:2rem 1.25rem!important;}
 }
 @media(max-width:420px){
   .cards-grid{grid-template-columns:1fr;}
@@ -296,6 +302,7 @@ footer a:hover{color:var(--pink-mid);}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
 
 
@@ -310,7 +317,7 @@ footer a:hover{color:var(--pink-mid);}
 <nav>
   <div class="nav-inner">
     <div class="logo-area">
-        <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis"/>
+        <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis" width="884" height="860" decoding="async"/>
       <div>
         <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
         <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
@@ -327,12 +334,12 @@ footer a:hover{color:var(--pink-mid);}
       <a href="blog.html">Blog</a>
             <a href="faq-soins-infirmiers.html">FAQ</a>
           </div>
-          <button class="nav-btn"onclick="document.getElementById('rdv').scrollIntoView({behavior:'smooth'})">Prendre RDV</button>
-    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+          <button class="nav-btn" onclick="document.getElementById('rdv').scrollIntoView({behavior:'smooth'})">Prendre RDV</button>
+    <button type="button" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
-  <div class="mobile-menu">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="#prestations" onclick="this.closest('.mobile-menu').classList.remove('open')">Nos soins</a>
     <a href="equipe.html" onclick="this.closest('.mobile-menu').classList.remove('open')">L'équipe</a>
     <a href="dispensaire.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Dispensaire</a>
@@ -343,6 +350,8 @@ footer a:hover{color:var(--pink-mid);}
     <a href="#rdv" onclick="this.closest('.mobile-menu').classList.remove('open')" style="color:var(--pink);font-weight:700;">📅 Prendre RDV</a>
   </div>
 </nav>
+
+<main id="main-content" tabindex="-1">
 
 <!-- BOUTON FLOTTANT -->
 <button class="cta-float" onclick="window.location.href='tel:+3269304133'">
@@ -363,7 +372,7 @@ footer a:hover{color:var(--pink-mid);}
       </div>
     </div>
     <div class="hero-card">
-        <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis" class="hero-logo-big"/>
+        <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis" class="hero-logo-big" width="884" height="860" decoding="async"/>
       <div class="hero-card-name">Cabinet Infirmier du Tournaisis</div>
       <div class="hero-card-addr">Avenue de l'Europe, 68 — Quevaucamps 7972</div>
       <div class="hero-card-tel">(+32) 069.30.41.33</div>
@@ -406,42 +415,42 @@ footer a:hover{color:var(--pink-mid);}
     <p class="section-sub">Professionnels, investis, créatifs — réunis autour d'une conviction simple : les soins méritent autant de compétence que d'humanité.</p>
     <div class="team-grid">
       <div class="team-card">
-        <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil"/>
+        <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" width="1123" height="1400" decoding="async" loading="lazy"/>
         <h3>Céline Lhoir</h3>
         <div class="role role-pink">Fondatrice & coordinatrice</div>
         <p>Infirmière, gestionnaire et directrice de MR.</p>
         <a href="equipe.html#celine" class="voir-plus">Voir le profil →</a>
       </div>
       <div class="team-card">
-        <img src="louise-joiffroy.webp" alt="Louise Joiffroy, infirmière en chef spécialisée dans les soins complexes et chroniques à domicile sur Tournai, Quevaucamps, Beloeil"/>
+        <img src="louise-joiffroy.webp" alt="Louise Joiffroy, infirmière en chef spécialisée dans les soins complexes et chroniques à domicile sur Tournai, Quevaucamps, Beloeil" width="1024" height="1536" decoding="async" loading="lazy"/>
         <h3>Louise Joiffroy</h3>
         <div class="role role-purple">Infirmière en chef</div>
         <p>10 ans d'expérience. Soins complexes et chroniques.</p>
         <a href="equipe.html#louise" class="voir-plus">Voir le profil →</a>
       </div>
       <div class="team-card">
-        <img src="melissa-devos.webp" alt="Mélissa Devos, auxiliaire de soins pour les soins à domicile et la gériatrie dans le Tournaisis, Quevaucamps, Beloeil"/>
+        <img src="melissa-devos.webp" alt="Mélissa Devos, auxiliaire de soins pour les soins à domicile et la gériatrie dans le Tournaisis, Quevaucamps, Beloeil" width="1402" height="1122" decoding="async" loading="lazy"/>
         <h3>Mélissa Devos</h3>
         <div class="role role-teal">Auxiliaire de soins</div>
         <p>Franche, directe et investie. Soins à domicile et gériatrie.</p>
         <a href="equipe.html#melissa" class="voir-plus">Voir le profil →</a>
       </div>
       <div class="team-card">
-        <img src="jordan-daubie.webp" alt="Jordan Daubie, infirmier au Cabinet Infirmier du Tournaisis, Beloeil, Quevaucamps, Tournai"/>
+        <img src="jordan-daubie.webp" alt="Jordan Daubie, infirmier au Cabinet Infirmier du Tournaisis, Beloeil, Quevaucamps, Tournai" width="1086" height="1448" decoding="async" loading="lazy"/>
         <h3>Jordan Daubie</h3>
         <div class="role role-purple">Infirmier</div>
         <p>Présence calme, approche originale et humaine.</p>
         <a href="equipe.html#jordan" class="voir-plus">Voir le profil →</a>
       </div>
       <div class="team-card">
-        <img src="peter-andries.webp" alt="Peter Andries, gestion administrative et facturation INAMI au Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil"/>
+        <img src="peter-andries.webp" alt="Peter Andries, gestion administrative et facturation INAMI au Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" width="1407" height="1118" decoding="async" loading="lazy"/>
         <h3>Peter Andries</h3>
         <div class="role role-purple">Gestion administrative</div>
         <p>Facturation INAMI, encodage et tarification infirmière.</p>
         <a href="equipe.html#peter" class="voir-plus">Voir le profil →</a>
       </div>
       <div class="team-card">
-        <img src="lea-beaufays.webp" alt="Léa Beaufays, spécialisée en soins esthétiques à domicile à Quevaucamps, Tournai, Beloeil"/>
+        <img src="lea-beaufays.webp" alt="Léa Beaufays, spécialisée en soins esthétiques à domicile à Quevaucamps, Tournai, Beloeil" width="1086" height="1448" decoding="async" loading="lazy"/>
         <h3>Léa Beaufays</h3>
         <div class="role role-pink">Soins esthétiques</div>
         <p>Soins bien-être à domicile.</p>
@@ -585,11 +594,11 @@ footer a:hover{color:var(--pink-mid);}
   <div style="display:grid;grid-template-columns:1fr 1fr;min-height:520px;">
     <!-- PHOTO -->
     <div style="position:relative;overflow:hidden;min-height:400px;">
-      <img src="soins-esthetiques-lea.webp" alt="Soins esthétiques à domicile par Léa Beaufays - Cabinet Infirmier du Tournaisis, Quevaucamps, Beloeil" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"/>
+      <img src="soins-esthetiques-lea.webp" alt="Soins esthétiques à domicile par Léa Beaufays - Cabinet Infirmier du Tournaisis, Quevaucamps, Beloeil" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" width="1536" height="1024" decoding="async" loading="lazy"/>
       <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,24,122,.25),rgba(123,79,181,.2));"></div>
       <div style="position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(255,255,255,.92);border-radius:12px;padding:.875rem 1.25rem;backdrop-filter:blur(8px);border:1px solid #F0C8E0;">
         <div style="display:flex;align-items:center;gap:.75rem;">
-          <img src="lea-beaufays.webp" alt="Léa Beaufays" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--pink-light);"/>
+          <img src="lea-beaufays.webp" alt="Léa Beaufays" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--pink-light);" width="1086" height="1448" decoding="async" loading="lazy"/>
           <div>
             <p style="font-size:.875rem;font-weight:700;color:var(--pink);line-height:1.2;">Léa Beaufays</p>
             <p style="font-size:.775rem;color:var(--muted);">Soins esthétiques à domicile</p>
@@ -620,14 +629,6 @@ footer a:hover{color:var(--pink-mid);}
       <a href="equipe.html#lea" style="display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:12px 22px;border-radius:25px;font-size:14px;font-weight:700;width:fit-content;">Voir le profil de Léa →</a>
     </div>
   </div>
-  <!-- RESPONSIVE mobile -->
-  <style>
-    @media(max-width:768px){
-      #esthetique > div{grid-template-columns:1fr!important;}
-      #esthetique > div > div:first-child{min-height:280px;}
-      #esthetique > div > div:last-child{padding:2rem 1.25rem!important;}
-    }
-  </style>
 </section>
 
 <!-- ZONE -->
@@ -658,13 +659,13 @@ footer a:hover{color:var(--pink-mid);}
           <circle cx="210" cy="100" r="8" fill="#FBEAF3" stroke="#D4187A" stroke-width="1.5"/><text x="210" y="104" text-anchor="middle" fill="#9A0F57" font-size="7">Péruwelz</text>
           <circle cx="200" cy="165" r="8" fill="#F0EAF8" stroke="#7B4FB5" stroke-width="1.5"/><text x="200" y="169" text-anchor="middle" fill="#7B4FB5" font-size="7">Celles</text>
           <circle cx="85" cy="160" r="8" fill="#F0EAF8" stroke="#7B4FB5" stroke-width="1.5"/><text x="85" y="164" text-anchor="middle" fill="#7B4FB5" font-size="7">Rumes</text>
-          <circle cx="72" cy="115" r="8" fill="#E0F5F3" stroke="#1A9E8F" stroke-width="1.5"/><text x="72" y="119" text-anchor="middle" fill="#1A9E8F" font-size="7">Pecq</text>
-          <circle cx="62" cy="145" r="8" fill="#E0F5F3" stroke="#1A9E8F" stroke-width="1.5"/><text x="62" y="149" text-anchor="middle" fill="#1A9E8F" font-size="7">Estaimpuis</text>
+          <circle cx="72" cy="115" r="8" fill="#E0F5F3" stroke="#0B6F65" stroke-width="1.5"/><text x="72" y="119" text-anchor="middle" fill="#0B6F65" font-size="7">Pecq</text>
+          <circle cx="62" cy="145" r="8" fill="#E0F5F3" stroke="#0B6F65" stroke-width="1.5"/><text x="62" y="149" text-anchor="middle" fill="#0B6F65" font-size="7">Estaimpuis</text>
           <circle cx="168" cy="72" r="8" fill="#FBEAF3" stroke="#D4187A" stroke-width="1.5"/><text x="168" y="76" text-anchor="middle" fill="#9A0F57" font-size="7">Leuze</text>
           <circle cx="232" cy="142" r="8" fill="#F0EAF8" stroke="#7B4FB5" stroke-width="1.5"/><text x="232" y="146" text-anchor="middle" fill="#7B4FB5" font-size="7">Brunehaut</text>
-          <circle cx="155" cy="168" r="10" fill="#E0F5F3" stroke="#1A9E8F" stroke-width="2"/>
-          <text x="155" y="172" text-anchor="middle" fill="#1A9E8F" font-size="7" font-weight="800">Quevaucamps</text>
-          <circle cx="268" cy="118" r="8" fill="#E0F5F3" stroke="#1A9E8F" stroke-width="1.5"/><text x="268" y="122" text-anchor="middle" fill="#1A9E8F" font-size="7">Beloeil</text>
+          <circle cx="155" cy="168" r="10" fill="#E0F5F3" stroke="#0B6F65" stroke-width="2"/>
+          <text x="155" y="172" text-anchor="middle" fill="#0B6F65" font-size="7" font-weight="800">Quevaucamps</text>
+          <circle cx="268" cy="118" r="8" fill="#E0F5F3" stroke="#0B6F65" stroke-width="1.5"/><text x="268" y="122" text-anchor="middle" fill="#0B6F65" font-size="7">Beloeil</text>
           <circle cx="248" cy="88" r="8" fill="#FBEAF3" stroke="#D4187A" stroke-width="1.5"/><text x="248" y="92" text-anchor="middle" fill="#9A0F57" font-size="7">Bernissart</text>
         </svg>
       </div>
@@ -701,6 +702,7 @@ footer a:hover{color:var(--pink-mid);}
         <div class="form-row">
           <label for="rdv-soin">Type de soin</label>
           <select id="rdv-soin" name="type_soin" required>
+            <option value="" selected disabled>Choisissez un type de soin</option>
             <option value="Injection / Perfusion / Vaccin">Injection / Perfusion / Vaccin</option>
             <option value="Pansement / Plaie">Pansement / Plaie</option>
             <option value="Prise de sang">Prise de sang</option>
@@ -758,10 +760,10 @@ footer a:hover{color:var(--pink-mid);}
 
 <!-- LECTEUR AUDIO FLOTTANT -->
 <div id="audio-player" style="position:fixed;bottom:5rem;left:1.25rem;z-index:300;">
-  <audio id="bg-music" loop>
+  <audio id="bg-music" loop preload="none">
     <source src="https://res.cloudinary.com/drmwcbidz/video/upload/v1780844281/chill_background-lounge-20591_taoxo4.mp3" type="audio/mp3"/>
   </audio>
-  <button id="audio-btn" onclick="toggleMusic()" style="
+  <button type="button" id="audio-btn" aria-label="Activer la musique" aria-pressed="false" onclick="toggleMusic()" style="
     width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;
     background:linear-gradient(135deg,var(--pink),var(--purple));
     color:#fff;font-size:1.2rem;
@@ -787,12 +789,12 @@ function setPlaying(state){
   if(state){
     music.volume = 0.35;
     music.play().catch(function(){});
-    btn.innerHTML = '🔊';
+    btn.innerHTML = '🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');
     btn.style.background = 'linear-gradient(135deg,#1A9E8F,#7B4FB5)';
     localStorage.setItem('cit_music','on');
   } else {
     music.pause();
-    btn.innerHTML = '🎵';
+    btn.innerHTML = '🎵';btn.setAttribute('aria-label','Activer la musique');btn.setAttribute('aria-pressed','false');
     btn.style.background = 'linear-gradient(135deg,#D4187A,#7B4FB5)';
     localStorage.setItem('cit_music','off');
   }
@@ -813,14 +815,14 @@ window.addEventListener('load', function(){
     // Petite astuce : on attend une interaction utilisateur minimale
     music.volume = 0.35;
     music.play().then(function(){
-      btn.innerHTML = '🔊';
+      btn.innerHTML = '🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');
       btn.style.background = 'linear-gradient(135deg,#1A9E8F,#7B4FB5)';
     }).catch(function(){
       // Navigateur bloque l'autoplay → on attend un clic
       document.addEventListener('click', function startMusic(){
         if(localStorage.getItem('cit_music')==='on'){
           music.play();
-          btn.innerHTML = '🔊';
+          btn.innerHTML = '🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');
           btn.style.background = 'linear-gradient(135deg,#1A9E8F,#7B4FB5)';
         }
         document.removeEventListener('click', startMusic);
@@ -840,12 +842,16 @@ btn.addEventListener('mouseleave', function(){
   setTimeout(function(){ label.style.opacity='0'; }, 1500);
 });
 </script>
+</main>
+
+<script src="accessibilite.js"></script>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
       <div>
         <div class="footer-cit">C.I.T</div>
-        <h4>Cabinet Infirmier du Tournaisis</h4>
+        <h2>Cabinet Infirmier du Tournaisis</h2>
         <p>Soins infirmiers à domicile et au dispensaire dans le grand Tournaisis. Conventionnés INAMI · Tiers payant.</p>
         <p style="margin-top:.5rem;">BCE : BE0832.195.365</p>
         <a href="https://www.facebook.com/p/Cabinet-Infirmier-du-Tournaisis-61558686962236/" class="social-link">
@@ -854,7 +860,7 @@ btn.addEventListener('mouseleave', function(){
         </a>
       </div>
       <div>
-        <h4>Navigation</h4>
+        <h2>Navigation</h2>
         <ul>
           <li><a href="#prestations">Nos soins</a></li>
           <li><a href="equipe.html">L'équipe</a></li>
@@ -869,7 +875,7 @@ btn.addEventListener('mouseleave', function(){
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <p>Avenue de l'Europe, 68<br/>Quevaucamps 7972<br/>Belgique</p>
         <p style="margin-top:.5rem;"><a href="tel:+3269304133">(+32) 069.30.41.33</a></p>
         <p><a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a></p>

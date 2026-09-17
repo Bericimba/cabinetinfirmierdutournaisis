@@ -10,7 +10,7 @@ Le Cabinet Infirmier du Tournaisis regroupe une équipe de 6 soignants (infirmie
 - [Équipe](https://cabinetinfirmierdutournaisis.be/equipe.html): profils détaillés des 6 membres de l'équipe
 - [Dispensaire](https://cabinetinfirmierdutournaisis.be/dispensaire.html): soins courants au cabinet, sans inscription préalable
 - [Remplacements infirmiers](https://cabinetinfirmierdutournaisis.be/remplacement.html): service de remplacement pour infirmiers indépendants
-- [FAQ](https://cabinetinfirmierdutournaisis.be/faq-soins-infirmiers.html): 14 questions-réponses sur les soins infirmiers, le remboursement INAMI, le tiers payant
+- [FAQ](https://cabinetinfirmierdutournaisis.be/faq-soins-infirmiers.html): 16 questions-réponses sur les soins infirmiers, le remboursement INAMI, le tiers payant
 - [Blog](https://cabinetinfirmierdutournaisis.be/blog.html): articles rédigés par l'équipe soignante
 - [Mentions légales](https://cabinetinfirmierdutournaisis.be/mentions.html)
 

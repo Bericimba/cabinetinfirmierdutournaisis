@@ -9,6 +9,7 @@
 <meta name="keywords" content="maltraitance personnes âgées domicile, signaler maltraitance infirmier, dignité patient domicile, bientraitance Tournai, soins infirmiers Quevaucamps"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/blog-maltraitance-domicile.html"/>
+<link rel="alternate" type="application/rss+xml" title="Flux RSS du blog du Cabinet Infirmier du Tournaisis" href="https://cabinetinfirmierdutournaisis.be/rss.xml"/>
 
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://cabinetinfirmierdutournaisis.be/blog-maltraitance-domicile.html"/>
@@ -38,6 +39,7 @@
     "logo": { "@type": "ImageObject", "url": "https://cabinetinfirmierdutournaisis.be/logo-cit.png" }
   },
   "datePublished": "2026-06-29",
+  "dateModified": "2026-09-17",
   "mainEntityOfPage": "https://cabinetinfirmierdutournaisis.be/blog-maltraitance-domicile.html"
 }
 </script>
@@ -67,11 +69,13 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .logo-area img{width:44px;height:44px;object-fit:contain;}
 .logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
 .logo-sub{font-size:12px;color:var(--muted);}
+.skip-link{position:absolute;left:1rem;top:-5rem;z-index:2000;background:var(--text);color:#fff;padding:.75rem 1rem;border-radius:0 0 8px 8px;font-weight:700;}
+.skip-link:focus{top:0;}
 .nav-links{display:flex;gap:1.2rem;font-size:13px;}
 .nav-links a{color:var(--muted);transition:color .2s;}
 .nav-links a:hover{color:var(--pink);}
 .nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;}
-.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
+.hamburger{background:none;border:0;padding:0;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
 .hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}
 .mobile-menu{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--border);padding:1rem 1.25rem;gap:.75rem;}
 .mobile-menu a{color:var(--text);font-size:15px;padding:.5rem 0;border-bottom:1px solid var(--border);}
@@ -121,7 +125,7 @@ footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
 .footer-cit{font-size:1.3rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 footer p{font-size:.825rem;color:#A898A4;line-height:1.7;}
 footer a{color:var(--pink-mid);font-size:.825rem;}
-.footer-bottom{width:100%;border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#706070;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+.footer-bottom{width:100%;border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#B8A8B5;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
 
 /* RESPONSIVE */
 @media(max-width:768px){
@@ -134,6 +138,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
 <!-- TICKER -->
 <div class="ticker">
@@ -146,7 +151,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo-area">
-      <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis"/>
+      <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis" width="884" height="860" decoding="async"/>
       <div>
         <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
         <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
@@ -161,9 +166,9 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
       <a href="faq-soins-infirmiers.html">FAQ</a>
     </div>
     <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
-    <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu mobile">
+    <button type="button" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Accueil</a>
@@ -177,6 +182,8 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
   </div>
 </nav>
 
+<main id="main-content" tabindex="-1">
+
 <!-- ARTICLE -->
 <div class="article-hero">
   <div class="article-wrap">
@@ -184,7 +191,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <span class="cat-badge">Actualités cabinet</span>
     <h1>La maltraitance à domicile existe. Osons en parler.</h1>
     <div class="meta-row">
-      <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil"/>
+      <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" width="1123" height="1400" decoding="async"/>
       <div>
         <strong>Céline Lhoir</strong>
         <span>Infirmière coordinatrice · 29 Juin 2026 · ⏱ 4 min</span>
@@ -216,7 +223,8 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <ul>
       <li><strong>Dialoguez</strong> : parlez avec le service concerné ou le responsable de l'équipe</li>
       <li><strong>Consultez</strong> : informez le médecin traitant de la situation</li>
-      <li><strong>Signalez</strong> : contactez les autorités compétentes si la situation persiste ou s'aggrave</li>
+      <li><strong>Demandez conseil</strong> : contactez Respect Seniors au <a href="tel:080030330">0800 30 330</a>, gratuitement et confidentiellement en Wallonie</li>
+      <li><strong>Danger immédiat</strong> : appelez le 112 sans attendre</li>
     </ul>
   </div>
 
@@ -258,6 +266,10 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 </button>
 
 <!-- FOOTER -->
+</main>
+
+<script src="accessibilite.js"></script>
+
 <footer>
   <div class="footer-inner">
     <div>

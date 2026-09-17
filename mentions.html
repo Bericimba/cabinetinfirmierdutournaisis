@@ -7,6 +7,7 @@
 <meta name="description" content="Mentions légales et politique de confidentialité du Cabinet Infirmier du Tournaisis. Informations sur le traitement des données personnelles conformément au RGPD."/>
 <meta name="robots" content="noindex, nofollow"/>
 <link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/mentions.html"/>
+<link rel="alternate" type="application/rss+xml" title="Flux RSS du blog du Cabinet Infirmier du Tournaisis" href="https://cabinetinfirmierdutournaisis.be/rss.xml"/>
 <link rel="icon" type="image/png" sizes="32x31" href="favicon-32.png"/>
 <link rel="icon" type="image/png" sizes="48x47" href="favicon-48.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png"/>
@@ -35,11 +36,13 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .logo-area img{width:44px;height:44px;object-fit:contain;}
 .logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
 .logo-sub{font-size:12px;color:var(--muted);}
+.skip-link{position:absolute;left:1rem;top:-5rem;z-index:2000;background:var(--text);color:#fff;padding:.75rem 1rem;border-radius:0 0 8px 8px;font-weight:700;}
+.skip-link:focus{top:0;}
 .nav-links{display:flex;gap:1.2rem;font-size:13px;}
 .nav-links a{color:var(--muted);transition:color .2s;}
 .nav-links a:hover{color:var(--pink);}
 .nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;}
-.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
+.hamburger{background:none;border:0;padding:0;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
 .hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}.mobile-menu{display:none;flex-direction:column;gap:0;background:var(--white);border-top:1px solid var(--border);}
 .mobile-menu.open{display:flex;}
 .mobile-menu a{padding:.75rem 1.25rem;font-size:14px;color:var(--muted);border-bottom:1px solid var(--border);}
@@ -77,18 +80,18 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .toc a{color:var(--purple);}
 .toc a:hover{color:var(--pink);}
 
-.update-badge{display:inline-block;background:var(--teal-light);color:var(--teal);font-size:.8rem;font-weight:600;padding:3px 12px;border-radius:20px;border:1px solid #8DD8D0;margin-bottom:2rem;}
+.update-badge{display:inline-block;background:var(--teal-light);color:#0B6F65;font-size:.8rem;font-weight:600;padding:3px 12px;border-radius:20px;border:1px solid #8DD8D0;margin-bottom:2rem;}
 
 /* FOOTER */
 footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
 .footer-inner{max-width:1100px;margin:auto;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;margin-bottom:2rem;}
-footer h4{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+footer h2{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 footer p,footer li,footer a{font-size:.825rem;line-height:1.8;color:#A898A4;}
 footer ul{list-style:none;}
 footer a:hover{color:var(--pink-mid);}
 .footer-cit{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem;}
-.footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#706070;flex-wrap:wrap;gap:.5rem;}
+.footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#B8A8B5;flex-wrap:wrap;gap:.5rem;}
 .social-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--pink-mid);font-size:.825rem;margin-top:.5rem;}
 
 /* BOUTON FLOTTANT */
@@ -105,6 +108,7 @@ footer a:hover{color:var(--pink-mid);}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
 <!-- TICKER -->
 <div class="ticker">
@@ -117,7 +121,7 @@ footer a:hover{color:var(--pink-mid);}
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo-area">
-      <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis"/>
+      <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis" width="884" height="860" decoding="async"/>
       <div>
         <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
         <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
@@ -132,11 +136,11 @@ footer a:hover{color:var(--pink-mid);}
       <a href="blog.html">Blog</a>
     </div>
     <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
-    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+    <button type="button" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
-  <div class="mobile-menu">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="index.html#prestations">Nos soins</a>
     <a href="equipe.html">L'équipe</a>
     <a href="dispensaire.html">Dispensaire</a>
@@ -146,6 +150,8 @@ footer a:hover{color:var(--pink-mid);}
     <a href="index.html#rdv" style="color:var(--pink);font-weight:700;">📅 Prendre RDV</a>
   </div>
 </nav>
+
+<main id="main-content" tabindex="-1">
 
 <!-- BOUTON FLOTTANT -->
 <button class="cta-float" onclick="window.location.href='tel:+3269304133'">
@@ -332,6 +338,10 @@ footer a:hover{color:var(--pink-mid);}
 </div><!-- /page-inner -->
 
 <!-- FOOTER -->
+</main>
+
+<script src="accessibilite.js"></script>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -346,7 +356,7 @@ footer a:hover{color:var(--pink-mid);}
         </a>
       </div>
       <div>
-        <h4>Navigation</h4>
+        <h2>Navigation</h2>
         <ul>
           <li><a href="index.html#prestations">Nos soins</a></li>
           <li><a href="equipe.html">L'équipe</a></li>
@@ -358,7 +368,7 @@ footer a:hover{color:var(--pink-mid);}
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <p>Avenue de l'Europe, 68<br/>Quevaucamps 7972<br/>Belgique</p>
         <p style="margin-top:.5rem;"><a href="tel:+3269304133">(+32) 069.30.41.33</a></p>
         <p><a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a></p>

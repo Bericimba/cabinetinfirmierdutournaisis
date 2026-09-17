@@ -22,6 +22,7 @@
 <meta property="og:locale" content="fr_BE"/>
 
 <link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/faq-soins-infirmiers.html"/>
+<link rel="alternate" type="application/rss+xml" title="Flux RSS du blog du Cabinet Infirmier du Tournaisis" href="https://cabinetinfirmierdutournaisis.be/rss.xml"/>
 <link rel="icon" type="image/png" sizes="32x31" href="favicon-32.png"/>
 <link rel="icon" type="image/png" sizes="48x47" href="favicon-48.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png"/>
@@ -192,11 +193,13 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .logo-area img{width:44px;height:44px;object-fit:contain;}
 .logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
 .logo-sub{font-size:12px;color:var(--muted);}
+.skip-link{position:absolute;left:1rem;top:-5rem;z-index:2000;background:var(--text);color:#fff;padding:.75rem 1rem;border-radius:0 0 8px 8px;font-weight:700;}
+.skip-link:focus{top:0;}
 .nav-links{display:flex;gap:1.2rem;font-size:13px;}
 .nav-links a{color:var(--muted);transition:color .2s;}
 .nav-links a:hover,.nav-links a.active{color:var(--pink);font-weight:700;}
 .nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;border:none;cursor:pointer;}
-.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
+.hamburger{background:none;border:0;padding:0;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
 .hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}
 .mobile-menu{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--border);padding:1rem 1.25rem;gap:.75rem;}
 .mobile-menu a{color:var(--text);font-size:15px;padding:.5rem 0;border-bottom:1px solid var(--border);}
@@ -220,7 +223,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .hero-card h2{font-size:1.25rem;margin-bottom:1rem;}
 .hero-list{list-style:none;display:flex;flex-direction:column;gap:.75rem;}
 .hero-list li{display:flex;gap:.75rem;align-items:flex-start;font-size:.9rem;color:var(--muted);}
-.check{width:22px;height:22px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;font-size:13px;}
+.check{width:22px;height:22px;border-radius:50%;background:var(--teal-light);color:#0B6F65;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;font-size:13px;}
 
 /* SECTIONS */
 section{padding:3.5rem 1.25rem;}
@@ -228,7 +231,7 @@ section{padding:3.5rem 1.25rem;}
 .section-tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:.75rem;letter-spacing:.06em;text-transform:uppercase;}
 .tag-pink{background:var(--pink-light);color:var(--pink);border:1px solid #F0B0D0;}
 .tag-purple{background:var(--purple-light);color:var(--purple);border:1px solid #C8A8E8;}
-.tag-teal{background:var(--teal-light);color:var(--teal);border:1px solid #8DD8D0;}
+.tag-teal{background:var(--teal-light);color:#0B6F65;border:1px solid #8DD8D0;}
 h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .section-sub{color:var(--muted);font-size:.95rem;line-height:1.7;margin-bottom:2rem;max-width:750px;}
 
@@ -265,12 +268,12 @@ h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
 .footer-inner{max-width:1100px;margin:auto;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;margin-bottom:2rem;}
-footer h4{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+footer h2{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 footer p,footer li,footer a{font-size:.825rem;line-height:1.8;color:#A898A4;}
 footer ul{list-style:none;}
 footer a:hover{color:var(--pink-mid);}
 .footer-cit{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem;}
-.footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#706070;flex-wrap:wrap;gap:.5rem;}
+.footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#B8A8B5;flex-wrap:wrap;gap:.5rem;}
 .social-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--pink-mid);font-size:.825rem;margin-top:.5rem;}
 
 /* CTA FLOTTANT */
@@ -292,6 +295,7 @@ footer a:hover{color:var(--pink-mid);}
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
 <!-- TICKER -->
 <div class="ticker">
@@ -304,7 +308,7 @@ footer a:hover{color:var(--pink-mid);}
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo-area">
-      <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis"/>
+      <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis" width="884" height="860" decoding="async"/>
       <div>
         <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
         <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
@@ -319,9 +323,9 @@ footer a:hover{color:var(--pink-mid);}
       <a href="faq-soins-infirmiers.html" class="active">FAQ</a>
     </div>
     <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
-    <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu mobile">
+    <button type="button" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Accueil</a>
@@ -334,6 +338,8 @@ footer a:hover{color:var(--pink-mid);}
     <a href="index.html#rdv" style="color:var(--pink);font-weight:700;">📅 Prendre RDV</a>
   </div>
 </nav>
+
+<main id="main-content" tabindex="-1">
 
 <!-- HERO -->
 <header class="hero">
@@ -392,8 +398,8 @@ footer a:hover{color:var(--pink-mid);}
           <h3>Questions générales</h3>
 
           <div class="faq-item open">
-            <button class="faq-question">Quels soins propose le Cabinet Infirmier du Tournaisis ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-1" aria-expanded="true" aria-controls="faq-answer-1">Quels soins propose le Cabinet Infirmier du Tournaisis ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
               Le cabinet propose des soins infirmiers à domicile et au dispensaire : prises de sang,
               pansements, injections, soins post-opératoires, soins palliatifs, surveillance de traitement,
               accompagnement des patients chroniques et soins de confort.
@@ -401,16 +407,16 @@ footer a:hover{color:var(--pink-mid);}
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Dans quelles communes intervenez-vous ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">Dans quelles communes intervenez-vous ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
               Le cabinet intervient notamment à Quevaucamps, Tournai, Beloeil, Péruwelz, Antoing,
               Leuze-en-Hainaut, Brunehaut, Rumes, Bernissart et dans les communes voisines du Tournaisis.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Comment prendre rendez-vous ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">Comment prendre rendez-vous ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
               Vous pouvez contacter directement le Cabinet Infirmier du Tournaisis par téléphone.
               Lors de l'appel, précisez votre commune, le type de soin demandé, vos disponibilités
               et si vous disposez déjà d'une prescription médicale.
@@ -423,8 +429,8 @@ footer a:hover{color:var(--pink-mid);}
           <h3>Soins infirmiers à domicile</h3>
 
           <div class="faq-item">
-            <button class="faq-question">Une infirmière peut-elle venir à domicile ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4">Une infirmière peut-elle venir à domicile ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
               Oui, l'équipe assure les soins infirmiers à domicile pour les patients qui ne peuvent pas
               ou ne souhaitent pas se déplacer. Les passages sont organisés selon les besoins médicaux,
               la prescription et les tournées disponibles.
@@ -432,8 +438,8 @@ footer a:hover{color:var(--pink-mid);}
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Intervenez-vous le week-end et les jours fériés ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-5" aria-expanded="false" aria-controls="faq-answer-5">Intervenez-vous le week-end et les jours fériés ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" hidden>
               Les soins nécessaires peuvent être organisés tous les jours selon les besoins du patient.
               Pour les soins réguliers ou urgents, il est recommandé de contacter le cabinet afin de confirmer
               les possibilités de passage.
@@ -441,8 +447,8 @@ footer a:hover{color:var(--pink-mid);}
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Peut-on organiser un retour d'hospitalisation ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-6" aria-expanded="false" aria-controls="faq-answer-6">Peut-on organiser un retour d'hospitalisation ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" hidden>
               Oui, le cabinet peut accompagner un retour à domicile après hospitalisation :
               pansements, injections, surveillance, soins post-opératoires, coordination avec le médecin
               et accompagnement du patient.
@@ -455,24 +461,24 @@ footer a:hover{color:var(--pink-mid);}
           <h3>Dispensaire infirmier à Quevaucamps</h3>
 
           <div class="faq-item">
-            <button class="faq-question">Disposez-vous d'un dispensaire infirmier ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-7" aria-expanded="false" aria-controls="faq-answer-7">Disposez-vous d'un dispensaire infirmier ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-7" role="region" aria-labelledby="faq-question-7" hidden>
               Oui, le Cabinet Infirmier du Tournaisis dispose d'un dispensaire à Quevaucamps.
               Il permet de recevoir certains soins directement sur place, sans déplacement à domicile.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Quels soins peut-on recevoir au dispensaire ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-8" aria-expanded="false" aria-controls="faq-answer-8">Quels soins peut-on recevoir au dispensaire ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-8" role="region" aria-labelledby="faq-question-8" hidden>
               Selon la situation, le dispensaire peut accueillir des patients pour des prises de sang,
               pansements, injections, soins simples ou suivis infirmiers nécessitant un environnement adapté.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Faut-il prendre rendez-vous pour le dispensaire ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-9" aria-expanded="false" aria-controls="faq-answer-9">Faut-il prendre rendez-vous pour le dispensaire ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-9" role="region" aria-labelledby="faq-question-9" hidden>
               Les deux possibilités existent : vous pouvez téléphoner pour organiser votre soin au dispensaire ou vous présenter directement et utiliser le visiophone pour joindre l’équipe. Si vous avez rendez-vous, le visiophone permet également de signaler votre arrivée.
             </div>
           </div>
@@ -483,8 +489,8 @@ footer a:hover{color:var(--pink-mid);}
           <h3>Types de soins infirmiers</h3>
 
           <div class="faq-item">
-            <button class="faq-question">Réalisez-vous les prises de sang à domicile ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-10" aria-expanded="false" aria-controls="faq-answer-10">Réalisez-vous les prises de sang à domicile ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-10" role="region" aria-labelledby="faq-question-10" hidden>
               Oui, les prises de sang peuvent être réalisées à domicile ou au dispensaire, généralement
               sur prescription médicale. Pensez à préparer votre prescription, votre carte d'identité
               et vos informations de mutuelle.
@@ -492,8 +498,8 @@ footer a:hover{color:var(--pink-mid);}
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Prenez-vous en charge les pansements complexes ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-11" aria-expanded="false" aria-controls="faq-answer-11">Prenez-vous en charge les pansements complexes ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-11" role="region" aria-labelledby="faq-question-11" hidden>
               Oui, l'équipe peut assurer le suivi des pansements simples ou complexes :
               plaies post-opératoires, plaies chroniques, soins de cicatrisation, surveillance
               de l'évolution et coordination avec le médecin si nécessaire.
@@ -501,16 +507,16 @@ footer a:hover{color:var(--pink-mid);}
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Réalisez-vous les injections ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-12" aria-expanded="false" aria-controls="faq-answer-12">Réalisez-vous les injections ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-12" role="region" aria-labelledby="faq-question-12" hidden>
               Oui, les injections prescrites peuvent être réalisées par l'équipe infirmière :
               injections sous-cutanées, intramusculaires ou autres soins selon la prescription médicale.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Accompagnez-vous les patients en soins palliatifs ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-13" aria-expanded="false" aria-controls="faq-answer-13">Accompagnez-vous les patients en soins palliatifs ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-13" role="region" aria-labelledby="faq-question-13" hidden>
               Oui, l'équipe peut accompagner les patients en soins palliatifs avec une approche humaine,
               respectueuse et coordonnée avec les proches, le médecin traitant et les autres intervenants.
             </div>
@@ -522,24 +528,24 @@ footer a:hover{color:var(--pink-mid);}
           <h3>Prescription, mutuelle et remboursement</h3>
 
           <div class="faq-item">
-            <button class="faq-question">Faut-il une prescription médicale ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-14" aria-expanded="false" aria-controls="faq-answer-14">Faut-il une prescription médicale ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-14" role="region" aria-labelledby="faq-question-14" hidden>
               Pour la plupart des soins techniques, une prescription médicale est nécessaire :
               prises de sang, pansements, injections, perfusions, soins de plaies ou soins post-opératoires.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Les soins infirmiers sont-ils remboursés ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-15" aria-expanded="false" aria-controls="faq-answer-15">Les soins infirmiers sont-ils remboursés ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-15" role="region" aria-labelledby="faq-question-15" hidden>
               La majorité des soins prescrits peuvent être pris en charge selon les conditions de votre mutuelle
               et de la réglementation INAMI. Le cabinet peut vous orienter selon votre situation.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Quels documents faut-il préparer ? <span>+</span></button>
-            <div class="faq-answer">
+            <button class="faq-question" id="faq-question-16" aria-expanded="false" aria-controls="faq-answer-16">Quels documents faut-il préparer ? <span aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq-answer-16" role="region" aria-labelledby="faq-question-16" hidden>
               Préparez idéalement votre prescription médicale, votre carte d'identité, vos informations de mutuelle,
               la liste de vos traitements et les consignes éventuelles transmises par votre médecin ou l'hôpital.
             </div>
@@ -599,6 +605,10 @@ footer a:hover{color:var(--pink-mid);}
 </button>
 
 <!-- FOOTER -->
+</main>
+
+<script src="accessibilite.js"></script>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -613,7 +623,7 @@ footer a:hover{color:var(--pink-mid);}
         </a>
       </div>
       <div>
-        <h4>Navigation</h4>
+        <h2>Navigation</h2>
         <ul>
           <li><a href="index.html#prestations">Nos soins</a></li>
           <li><a href="equipe.html">L'équipe</a></li>
@@ -626,7 +636,7 @@ footer a:hover{color:var(--pink-mid);}
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <p>Avenue de l'Europe, 68<br/>Quevaucamps 7972<br/>Belgique</p>
         <p style="margin-top:.5rem;"><a href="tel:+3269304133">(+32) 069.30.41.33</a></p>
         <p><a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a></p>
@@ -643,7 +653,11 @@ footer a:hover{color:var(--pink-mid);}
 document.querySelectorAll('.faq-question').forEach(function(button){
   button.addEventListener('click', function(){
     const item = button.parentElement;
-    item.classList.toggle('open');
+    const answer = document.getElementById(button.getAttribute('aria-controls'));
+    const isOpen = !item.classList.contains('open');
+    item.classList.toggle('open', isOpen);
+    button.setAttribute('aria-expanded', String(isOpen));
+    answer.hidden = !isOpen;
   });
 });
 </script>

@@ -18,6 +18,7 @@
 <meta property="og:image" content="https://cabinetinfirmierdutournaisis.be/logo-cit.png"/>
 <meta property="og:locale" content="fr_BE"/>
 <link rel="canonical" href="https://cabinetinfirmierdutournaisis.be/blog.html"/>
+<link rel="alternate" type="application/rss+xml" title="Flux RSS du blog du Cabinet Infirmier du Tournaisis" href="https://cabinetinfirmierdutournaisis.be/rss.xml"/>
 <link rel="icon" type="image/png" sizes="32x31" href="favicon-32.png"/>
 <link rel="icon" type="image/png" sizes="48x47" href="favicon-48.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png"/>
@@ -100,7 +101,7 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://cabinetinfirmierdutournaisis.be/index.html" },
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://cabinetinfirmierdutournaisis.be/" },
     { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://cabinetinfirmierdutournaisis.be/blog.html" }
   ]
 }
@@ -130,12 +131,14 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .logo-area img{width:44px;height:44px;object-fit:contain;}
 .logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
 .logo-sub{font-size:12px;color:var(--muted);}
+.skip-link{position:absolute;left:1rem;top:-5rem;z-index:2000;background:var(--text);color:#fff;padding:.75rem 1rem;border-radius:0 0 8px 8px;font-weight:700;}
+.skip-link:focus{top:0;}
 .nav-links{display:flex;gap:1.2rem;font-size:13px;}
 .nav-links a{color:var(--muted);transition:color .2s;}
 .nav-links a:hover{color:var(--pink);}
 .nav-links a.active{color:var(--pink);font-weight:700;}
 .nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;}
-.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
+.hamburger{background:none;border:0;padding:0;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
 .hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}
 .mobile-menu{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--border);padding:1rem 1.25rem;gap:.75rem;}
 .mobile-menu a{color:var(--text);font-size:15px;padding:.5rem 0;border-bottom:1px solid var(--border);}
@@ -164,7 +167,7 @@ section{padding:3.5rem 1.25rem;}
 .section-tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:.75rem;letter-spacing:.06em;text-transform:uppercase;}
 .tag-pink{background:var(--pink-light);color:var(--pink);border:1px solid #F0B0D0;}
 .tag-purple{background:var(--purple-light);color:var(--purple);border:1px solid #C8A8E8;}
-.tag-teal{background:var(--teal-light);color:var(--teal);border:1px solid #8DD8D0;}
+.tag-teal{background:var(--teal-light);color:#0B6F65;border:1px solid #8DD8D0;}
 h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .section-sub{color:var(--muted);font-size:.95rem;line-height:1.7;margin-bottom:2rem;}
 
@@ -174,10 +177,10 @@ h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .une-img{background:linear-gradient(135deg,var(--pink-light),var(--purple-light));display:flex;align-items:center;justify-content:center;font-size:5rem;min-height:300px;}
 .une-content{padding:2.5rem;}
 .cat-badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:.75rem;}
-.cb-sante{background:var(--teal-light);color:var(--teal);}
+.cb-sante{background:var(--teal-light);color:#0B6F65;}
 .cb-actu{background:var(--purple-light);color:var(--purple);}
 .une-date{font-size:12px;color:var(--muted);margin-bottom:.75rem;display:block;}
-.une-content h3{font-size:1.5rem;font-weight:800;line-height:1.3;margin-bottom:.75rem;}
+.une-content h2{font-size:1.5rem;font-weight:800;line-height:1.3;margin-bottom:.75rem;}
 .une-content p{font-size:.925rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;}
 .btn-lire{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:10px 20px;border-radius:20px;font-size:13px;font-weight:700;}
 .auteur-row{display:flex;align-items:center;gap:.75rem;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border);}
@@ -215,7 +218,7 @@ footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
 .footer-cit{font-size:1.3rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 footer p{font-size:.825rem;color:#A898A4;line-height:1.7;}
 footer a{color:var(--pink-mid);font-size:.825rem;}
-.footer-bottom{width:100%;border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#706070;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+.footer-bottom{width:100%;border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#B8A8B5;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
 
 /* RESPONSIVE */
 @media(max-width:768px){
@@ -236,6 +239,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
 <!-- TICKER -->
 <div class="ticker">
@@ -248,7 +252,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 <nav>
   <div class="nav-inner">
       <a href="index.html" class="logo-area">
-            <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis"/>
+            <img src="logo-cit.webp" alt="Logo Cabinet Infirmier du Tournaisis" width="884" height="860" decoding="async"/>
             <div>
               <div class="logo-name">Cabinet Infirmier du Tournaisis</div>
               <div class="logo-sub">Soins à domicile & dispensaire · Quevaucamps</div>
@@ -263,11 +267,11 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
             <a href="faq-soins-infirmiers.html">FAQ</a>
           </div>
           <button class="nav-btn" onclick="window.location.href='index.html#rdv'">Prendre RDV</button>
-    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+    <button type="button" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
-  <div class="mobile-menu">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="index.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Accueil</a>
     <a href="equipe.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Équipe</a>
     <a href="dispensaire.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Dispensaire</a>
@@ -276,6 +280,8 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <a href="index.html#rdv" style="color:var(--pink);font-weight:700;">📅 Prendre RDV</a>
   </div>
 </nav>
+
+<main id="main-content" tabindex="-1">
 
 <!-- BOUTON FLOTTANT -->
 <button class="cta-float" onclick="window.location.href='tel:+3269304133'">
@@ -291,25 +297,27 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
     <h1>Le blog <span class="grad">du CIT</span></h1>
     <p>Conseils santé, prévention et actualités du cabinet — rédigés par notre équipe infirmière pour prendre soin de vous au quotidien.</p>
     <div class="cat-btns">
-      <button class="cat-btn all" onclick="filtrer('tous',this)">Tous les articles</button>
-      <button class="cat-btn sante" onclick="filtrer('sante',this)">🩺 Conseils santé</button>
-      <button class="cat-btn actu" onclick="filtrer('actu',this)">📢 Actualités cabinet</button>
+      <button type="button" class="cat-btn all" aria-pressed="true" onclick="filtrer('tous',this)">Tous les articles</button>
+      <button type="button" class="cat-btn sante" aria-pressed="false" onclick="filtrer('sante',this)">🩺 Conseils santé</button>
+      <button type="button" class="cat-btn actu" aria-pressed="false" onclick="filtrer('actu',this)">📢 Actualités cabinet</button>
     </div>
   </div>
 </div>
 
 <!-- ARTICLE À LA UNE -->
+<section class="featured-article">
+  <div class="section-inner">
     <div class="une-card" data-cat="sante">
       <div class="une-img" style="background:linear-gradient(135deg,var(--teal-light),var(--pink-light));">☀️</div>
       <div class="une-content">
         <span class="cat-badge cb-sante">Conseils santé</span>
         <span class="une-date">📅 21 Juin 2026</span>
-        <h3>Fortes chaleurs : les bons réflexes pour protéger votre santé</h3>
+        <h2>Fortes chaleurs : les bons réflexes pour protéger votre santé</h2>
         <p>Les fortes températures peuvent rapidement provoquer déshydratation, malaise ou aggravation d'une maladie chronique, notamment chez les personnes âgées, les enfants et les patients fragilisés. Découvrez les gestes simples pour rester hydraté, garder son logement frais, reconnaître les signes d'alerte et savoir quand demander une aide médicale.</p>
         <a href="blog-fortes-chaleurs-conseils.html" class="btn-lire">Lire l'article →</a>
 
         <div class="auteur-row">
-          <img src="louise-joiffroy.webp" alt="Louise Joiffroy, infirmière en chef spécialisée dans les soins complexes et chroniques à domicile sur Tournai, Quevaucamps, Beloeil"/>
+          <img src="louise-joiffroy.webp" alt="Louise Joiffroy, infirmière en chef spécialisée dans les soins complexes et chroniques à domicile sur Tournai, Quevaucamps, Beloeil" width="1024" height="1536" decoding="async"/>
           <div><strong>Louise Joiffroy</strong><span>Infirmière en chef · Cabinet Infirmier du Tournaisis</span></div>
         </div>
       </div>
@@ -345,7 +353,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
     <div class="article-footer" style="margin-top:1rem;">
       <div style="display:flex;align-items:center;gap:.5rem;">
-        <img src="louise-joiffroy.webp" alt="Louise Joiffroy, infirmière en chef spécialisée dans les soins complexes et chroniques à domicile sur Tournai, Quevaucamps, Beloeil"/>
+        <img src="louise-joiffroy.webp" alt="Louise Joiffroy, infirmière en chef spécialisée dans les soins complexes et chroniques à domicile sur Tournai, Quevaucamps, Beloeil" width="1024" height="1536" decoding="async" loading="lazy"/>
         <span class="auteur-name">Louise Joiffroy</span>
       </div>
       <span class="read-time">⏱ 5 min</span>
@@ -371,7 +379,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
                 <div class="article-footer" style="margin-top:1rem;">
                   <div style="display:flex;align-items:center;gap:.5rem;">
-                    <img src="jordan-daubie.webp" alt="Jordan Daubie, infirmier au Cabinet Infirmier du Tournaisis, Beloeil, Quevaucamps, Tournai"/>
+                    <img src="jordan-daubie.webp" alt="Jordan Daubie, infirmier au Cabinet Infirmier du Tournaisis, Beloeil, Quevaucamps, Tournai" width="1086" height="1448" decoding="async" loading="lazy"/>
                     <span class="auteur-name">Jordan Daubie</span>
                   </div>
                   <span class="read-time">⏱ 6 min</span>
@@ -394,7 +402,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
           <a href="dispensaire.html" class="btn-lire" style="margin-bottom:1rem;">Découvrir le dispensaire →</a>
           <div class="article-footer">
             <div style="display:flex;align-items:center;gap:.5rem;">
-              <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil"/>
+              <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" width="1123" height="1400" decoding="async" loading="lazy"/>
               <span class="auteur-name">Céline Lhoir</span>
             </div>
           </div>
@@ -419,7 +427,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
           <div class="article-footer" style="margin-top:1rem;">
             <div style="display:flex;align-items:center;gap:.5rem;">
-              <img src="melissa-devos.webp" alt="Mélissa Devos, auxiliaire de soins pour les soins à domicile et la gériatrie dans le Tournaisis, Quevaucamps, Beloeil"/>
+              <img src="melissa-devos.webp" alt="Mélissa Devos, auxiliaire de soins pour les soins à domicile et la gériatrie dans le Tournaisis, Quevaucamps, Beloeil" width="1402" height="1122" decoding="async" loading="lazy"/>
               <span class="auteur-name">Mélissa Devos</span>
             </div>
             <span class="read-time">⏱ 6 min</span>
@@ -442,7 +450,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
           <a href="index.html#biologie" class="btn-lire" style="margin-bottom:1rem;">Découvrir ce service →</a>
           <div class="article-footer">
             <div style="display:flex;align-items:center;gap:.5rem;">
-              <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil"/>
+              <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" width="1123" height="1400" decoding="async" loading="lazy"/>
               <span class="auteur-name">Céline Lhoir</span>
             </div>
           </div>
@@ -464,7 +472,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
           <a href="index.html#esthetique" class="btn-lire" style="margin-bottom:1rem;">Découvrir les soins esthétiques →</a>
           <div class="article-footer">
             <div style="display:flex;align-items:center;gap:.5rem;">
-              <img src="lea-beaufays.webp" alt="Léa Beaufays, spécialisée en soins esthétiques à domicile à Quevaucamps, Tournai, Beloeil"/>
+              <img src="lea-beaufays.webp" alt="Léa Beaufays, spécialisée en soins esthétiques à domicile à Quevaucamps, Tournai, Beloeil" width="1086" height="1448" decoding="async" loading="lazy"/>
               <span class="auteur-name">Léa Beaufays</span>
             </div>
           </div>
@@ -485,7 +493,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
           <div class="article-footer" style="margin-top:1rem;">
             <div style="display:flex;align-items:center;gap:.5rem;">
-              <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil"/>
+              <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" width="1123" height="1400" decoding="async" loading="lazy"/>
               <span class="auteur-name">Céline Lhoir</span>
             </div>
             <span class="read-time">⏱ 4 min</span>
@@ -507,7 +515,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
                 <div class="article-footer" style="margin-top:1rem;">
                   <div style="display:flex;align-items:center;gap:.5rem;">
-                    <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil"/>
+                    <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" width="1123" height="1400" decoding="async" loading="lazy"/>
                     <span class="auteur-name">Céline Lhoir</span>
                   </div>
                   <span class="read-time">⏱ 4 min</span>
@@ -529,7 +537,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
           <div class="article-footer" style="margin-top:1rem;">
             <div style="display:flex;align-items:center;gap:.5rem;">
-              <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil"/>
+              <img 	src="celine-lhoir.webp" alt="Céline Lhoir, infirmière fondatrice et coordinatrice du Cabinet Infirmier du Tournaisis à Quevaucamps, Tournai, Beloeil" width="1123" height="1400" decoding="async" loading="lazy"/>
               <span class="auteur-name">Céline Lhoir</span>
             </div>
             <span class="read-time">⏱ 4 min</span>
@@ -551,7 +559,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
                       <div class="article-footer" style="margin-top:1rem;">
                         <div style="display:flex;align-items:center;gap:.5rem;">
-                          <img src="jordan-daubie.webp" alt="Jordan Daubie, infirmier au Cabinet Infirmier du Tournaisis, Beloeil, Quevaucamps, Tournai"/>
+                          <img src="jordan-daubie.webp" alt="Jordan Daubie, infirmier au Cabinet Infirmier du Tournaisis, Beloeil, Quevaucamps, Tournai" width="1086" height="1448" decoding="async" loading="lazy"/>
                           <span class="auteur-name">Jordan Daubie</span>
                         </div>
                         <span class="read-time">⏱ 4 min</span>
@@ -572,6 +580,10 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
 
 <!-- FOOTER -->
+</main>
+
+<script src="accessibilite.js"></script>
+
 <footer>
   <div class="footer-inner">
     <div>
@@ -592,10 +604,10 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
 <!-- LECTEUR AUDIO FLOTTANT -->
 <div id="audio-player" style="position:fixed;bottom:5rem;left:1.25rem;z-index:300;">
-  <audio id="bg-music" loop>
+  <audio id="bg-music" loop preload="none">
     <source src="https://res.cloudinary.com/drmwcbidz/video/upload/v1780844281/chill_background-lounge-20591_taoxo4.mp3" type="audio/mp3"/>
   </audio>
-  <button id="audio-btn" onclick="toggleMusic()" style="width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#D4187A,#7B4FB5);color:#fff;font-size:1.2rem;box-shadow:0 4px 16px rgba(212,24,122,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s;">🎵</button>
+  <button type="button" id="audio-btn" aria-label="Activer la musique" aria-pressed="false" onclick="toggleMusic()" style="width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#D4187A,#7B4FB5);color:#fff;font-size:1.2rem;box-shadow:0 4px 16px rgba(212,24,122,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s;">🎵</button>
   <div id="audio-label" style="position:absolute;left:56px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.95);color:#6B5F68;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.1);border:1px solid #E8D8E4;opacity:1;transition:opacity .3s;">Activer la musique</div>
 </div>
 
@@ -603,9 +615,10 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 // Filtres
 function filtrer(cat, btn) {
   document.querySelectorAll('.cat-btn').forEach(b => {
-    b.style.background=''; b.style.color=''; b.style.borderColor='';
+    b.style.background=''; b.style.color=''; b.style.borderColor=''; b.setAttribute('aria-pressed','false');
   });
   if(cat==='tous') btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';
+  btn.setAttribute('aria-pressed','true');
 
   var cards = document.querySelectorAll('.article-card, .une-card');
   var visible = 0;
@@ -618,8 +631,8 @@ function filtrer(cat, btn) {
 
 // Musique
 var music=document.getElementById('bg-music'),btn=document.getElementById('audio-btn'),label=document.getElementById('audio-label');
-function toggleMusic(){var p=!music.paused;if(!p){music.volume=0.35;music.play().catch(function(){});btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';localStorage.setItem('cit_music','on');}else{music.pause();btn.innerHTML='🎵';btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';localStorage.setItem('cit_music','off');}label.textContent=!p?'Musique activée':'Musique désactivée';label.style.opacity='1';setTimeout(function(){label.style.opacity='0';},2000);}
-window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
+function toggleMusic(){var p=!music.paused;if(!p){music.volume=0.35;music.play().catch(function(){});btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';localStorage.setItem('cit_music','on');}else{music.pause();btn.innerHTML='🎵';btn.setAttribute('aria-label','Activer la musique');btn.setAttribute('aria-pressed','false');btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';localStorage.setItem('cit_music','off');}label.textContent=!p?'Musique activée':'Musique désactivée';label.style.opacity='1';setTimeout(function(){label.style.opacity='0';},2000);}
+window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
 btn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';label.style.opacity='1';});
 btn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';setTimeout(function(){label.style.opacity='0';},1500);});
 </script>

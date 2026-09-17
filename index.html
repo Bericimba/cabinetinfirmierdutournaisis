@@ -93,11 +93,13 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .logo-area img{width:44px;height:44px;object-fit:contain;}
 .logo-name{font-size:14px;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
 .logo-sub{font-size:12px;color:var(--muted);}
+.skip-link{position:absolute;left:1rem;top:-5rem;z-index:2000;background:var(--text);color:#fff;padding:.75rem 1rem;border-radius:0 0 8px 8px;font-weight:700;}
+.skip-link:focus{top:0;}
 .nav-links{display:flex;gap:1.2rem;font-size:13px;}
 .nav-links a{color:var(--muted);}
 .nav-links a:hover{color:var(--pink);}
 .nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:none;white-space:nowrap;}
-.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
+.hamburger{background:none;border:0;padding:0;display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;width:44px;height:44px;}
 .hamburger span{width:24px;height:2px;background:var(--pink);border-radius:2px;display:block;}.mobile-menu{display:none;flex-direction:column;background:var(--white);border-bottom:1px solid var(--border);padding:1rem;gap:.75rem;}
 .mobile-menu a{color:var(--text);font-size:15px;padding:.5rem 0;border-bottom:1px solid var(--border);}
 .mobile-menu a:last-child{border:none;}
@@ -296,6 +298,7 @@ footer a:hover{color:var(--pink-mid);}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
 
 
@@ -328,11 +331,11 @@ footer a:hover{color:var(--pink-mid);}
             <a href="faq-soins-infirmiers.html">FAQ</a>
           </div>
           <button class="nav-btn"onclick="document.getElementById('rdv').scrollIntoView({behavior:'smooth'})">Prendre RDV</button>
-    <div class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+    <button type="button" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
-  <div class="mobile-menu">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="#prestations" onclick="this.closest('.mobile-menu').classList.remove('open')">Nos soins</a>
     <a href="equipe.html" onclick="this.closest('.mobile-menu').classList.remove('open')">L'équipe</a>
     <a href="dispensaire.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Dispensaire</a>
@@ -343,6 +346,8 @@ footer a:hover{color:var(--pink-mid);}
     <a href="#rdv" onclick="this.closest('.mobile-menu').classList.remove('open')" style="color:var(--pink);font-weight:700;">📅 Prendre RDV</a>
   </div>
 </nav>
+
+<main id="main-content" tabindex="-1">
 
 <!-- BOUTON FLOTTANT -->
 <button class="cta-float" onclick="window.location.href='tel:+3269304133'">
@@ -840,6 +845,10 @@ btn.addEventListener('mouseleave', function(){
   setTimeout(function(){ label.style.opacity='0'; }, 1500);
 });
 </script>
+</main>
+
+<script src="accessibilite.js"></script>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">

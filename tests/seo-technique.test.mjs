@@ -44,7 +44,10 @@ test('le sitemap contient les quatorze pages indexables avec une date exacte', a
     .map((match) => ({ url: match[1], lastmod: match[2] }));
   const expected = files.filter((name) => name !== 'mentions.html').map((name) => name === 'index.html' ? base : `${base}${name}`).sort();
   assert.deepEqual(entries.map((entry) => entry.url).sort(), expected);
-  assert.ok(entries.every((entry) => entry.lastmod === '2026-09-17'));
+  for (const entry of entries) {
+    const expectedLastmod = entry.url.startsWith(`${base}blog-`) ? '2026-09-19' : '2026-09-17';
+    assert.equal(entry.lastmod, expectedLastmod, entry.url);
+  }
 });
 
 test('les données structurées utilisent des URL absolues et datent les articles modifiés', async () => {
@@ -61,7 +64,7 @@ test('les données structurées utilisent des URL absolues et datent les article
     }
     if (name.startsWith('blog-')) {
       const article = schemas.find((schema) => schema['@type'] === 'Article');
-      assert.equal(article?.dateModified, '2026-09-17', name);
+      assert.equal(article?.dateModified, '2026-09-19', name);
     }
   }
 });

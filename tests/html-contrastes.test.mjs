@@ -78,6 +78,7 @@ test('les textes colorés du dispensaire gardent un contraste suffisant', async 
   assert.ok(contrast('#0B6F65', '#E0F5F3') >= 4.5);
   assert.ok(contrast('#0B6F65', '#FFFFFF') >= 4.5);
   assert.match(dispensary, /\.tag-pink\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(dispensary, /\.nav-links a\.active\{color:#0B6F65;/);
   assert.match(dispensary, /\.btn-white\{[^}]*color:#0B6F65;/);
   assert.match(dispensary, /<h3 style="color:#0B6F65;">📦 Centre de dépôt<\/h3>/);
 });

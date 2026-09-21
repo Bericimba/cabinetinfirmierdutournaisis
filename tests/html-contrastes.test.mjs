@@ -59,8 +59,8 @@ test('les petits textes turquoise et du pied de page atteignent le contraste req
   }
 });
 
-test('les quinze pages gardent une structure HTML équilibrée', async () => {
-  assert.equal(files.length, 15);
+test('les seize pages gardent une structure HTML équilibrée', async () => {
+  assert.equal(files.length, 16);
   for (const name of files) {
     assert.deepEqual(structuralErrors(await page(name)), [], name);
   }

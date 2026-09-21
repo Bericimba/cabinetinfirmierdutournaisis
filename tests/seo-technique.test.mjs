@@ -5,6 +5,9 @@ import test from 'node:test';
 const root = new URL('../', import.meta.url);
 const base = 'https://cabinetinfirmierdutournaisis.be/';
 const files = (await readdir(root)).filter((name) => name.endsWith('.html')).sort();
+const legacyRedirect = 'blog-cystocath-sonde-urienne.html';
+const cystocathArticle = `${base}blog-cystocath-sonde-urinaire.html`;
+const indexableFiles = files.filter((name) => !['mentions.html', legacyRedirect].includes(name));
 
 async function page(name) {
   return readFile(new URL(name, root), 'utf8');
@@ -26,23 +29,34 @@ function nodes(value) {
 }
 
 test('chaque page publie une canonique unique et annonce le flux RSS', async () => {
-  assert.equal(files.length, 15);
+  assert.equal(files.length, 16);
   for (const name of files) {
     const html = await page(name);
     const canonicals = [...html.matchAll(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi)];
     const feeds = [...html.matchAll(/<link\b[^>]*rel=["']alternate["'][^>]*type=["']application\/rss\+xml["'][^>]*>/gi)];
     assert.equal(canonicals.length, 1, `${name}: canonique`);
-    assert.equal(attribute(canonicals[0][0], 'href'), name === 'index.html' ? base : `${base}${name}`, name);
-    assert.equal(feeds.length, 1, `${name}: annonce RSS`);
-    assert.equal(attribute(feeds[0][0], 'href'), `${base}rss.xml`, name);
+    const expectedCanonical = name === 'index.html' ? base : name === legacyRedirect ? cystocathArticle : `${base}${name}`;
+    assert.equal(attribute(canonicals[0][0], 'href'), expectedCanonical, name);
+    assert.equal(feeds.length, name === legacyRedirect ? 0 : 1, `${name}: annonce RSS`);
+    if (feeds.length) assert.equal(attribute(feeds[0][0], 'href'), `${base}rss.xml`, name);
   }
+});
+
+test('l ancienne URL Cystocath redirige les visiteurs vers l article canonique', async () => {
+  const html = await page(legacyRedirect);
+  const refresh = html.match(/<meta\b[^>]*http-equiv=["']refresh["'][^>]*>/i)?.[0];
+  const fallback = html.match(/<a\b[^>]*href=["'][^"']+["'][^>]*>/i)?.[0];
+
+  assert.ok(refresh, 'redirection automatique absente');
+  assert.equal(attribute(refresh, 'content'), `0; url=${cystocathArticle}`);
+  assert.equal(attribute(fallback ?? '', 'href'), cystocathArticle);
 });
 
 test('le sitemap contient les quatorze pages indexables avec une date exacte', async () => {
   const xml = await readFile(new URL('sitemap.xml', root), 'utf8');
   const entries = [...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>[\s\S]*?<\/url>/g)]
     .map((match) => ({ url: match[1], lastmod: match[2] }));
-  const expected = files.filter((name) => name !== 'mentions.html').map((name) => name === 'index.html' ? base : `${base}${name}`).sort();
+  const expected = indexableFiles.map((name) => name === 'index.html' ? base : `${base}${name}`).sort();
   assert.deepEqual(entries.map((entry) => entry.url).sort(), expected);
   for (const entry of entries) {
     const expectedLastmod = entry.url.startsWith(`${base}blog-`) ? '2026-09-19' : '2026-09-17';
@@ -62,7 +76,7 @@ test('les données structurées utilisent des URL absolues et datent les article
         }
       }
     }
-    if (name.startsWith('blog-')) {
+    if (name.startsWith('blog-') && name !== legacyRedirect) {
       const article = schemas.find((schema) => schema['@type'] === 'Article');
       assert.equal(article?.dateModified, '2026-09-19', name);
     }

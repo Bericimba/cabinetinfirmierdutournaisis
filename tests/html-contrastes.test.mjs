@@ -95,6 +95,13 @@ test('les textes et contacts de l equipe restent accessibles', async () => {
   assert.equal([...team.matchAll(/href="mailto:(?:direction|inficeline)@[^\"]+" style="[^\"]*min-height:28px;/g)].length, 2);
 });
 
+test('le libelle des engagements du remplacement reste accessible', async () => {
+  const replacement = await page('remplacement.html');
+
+  assert.ok(contrast('#9A0F57', '#FBEAF3') >= 4.5);
+  assert.match(replacement, /\.tag-pink\{[^}]*color:var\(--pink-dark\)/);
+});
+
 test('les seize pages gardent une structure HTML équilibrée', async () => {
   assert.equal(files.length, 16);
   for (const name of files) {

@@ -83,6 +83,18 @@ test('les textes colorés du dispensaire gardent un contraste suffisant', async 
   assert.match(dispensary, /<h3 style="color:#0B6F65;">📦 Centre de dépôt<\/h3>/);
 });
 
+test('les textes et contacts de l equipe restent accessibles', async () => {
+  const team = await page('equipe.html');
+
+  assert.ok(contrast('#9A0F57', '#FBEAF3') >= 4.5);
+  assert.ok(contrast('#0B6F65', '#FFFFFF') >= 4.5);
+  assert.match(team, /\.hero-tag\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(team, /\.filtre-btn:hover,\.filtre-btn\.active\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(team, /\.rb-pink\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(team, /\.sc-teal\{color:#0B6F65;\}/);
+  assert.equal([...team.matchAll(/href="mailto:(?:direction|inficeline)@[^\"]+" style="[^\"]*min-height:28px;/g)].length, 2);
+});
+
 test('les seize pages gardent une structure HTML équilibrée', async () => {
   assert.equal(files.length, 16);
   for (const name of files) {

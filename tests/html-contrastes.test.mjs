@@ -71,6 +71,17 @@ test('les petits textes et les liens tactiles de l accueil restent accessibles',
   assert.match(index, /footer li a\{display:inline-flex;align-items:center;min-height:28px;\}/);
 });
 
+test('les textes colorés du dispensaire gardent un contraste suffisant', async () => {
+  const dispensary = await page('dispensaire.html');
+
+  assert.ok(contrast('#9A0F57', '#FBEAF3') >= 4.5);
+  assert.ok(contrast('#0B6F65', '#E0F5F3') >= 4.5);
+  assert.ok(contrast('#0B6F65', '#FFFFFF') >= 4.5);
+  assert.match(dispensary, /\.tag-pink\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(dispensary, /\.btn-white\{[^}]*color:#0B6F65;/);
+  assert.match(dispensary, /<h3 style="color:#0B6F65;">📦 Centre de dépôt<\/h3>/);
+});
+
 test('les seize pages gardent une structure HTML équilibrée', async () => {
   assert.equal(files.length, 16);
   for (const name of files) {

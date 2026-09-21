@@ -59,6 +59,18 @@ test('les petits textes turquoise et du pied de page atteignent le contraste req
   }
 });
 
+test('les petits textes et les liens tactiles de l accueil restent accessibles', async () => {
+  const index = await page('index.html');
+
+  assert.ok(contrast('#9A0F57', '#FBEAF3') >= 4.5);
+  assert.ok(contrast('#0B6F65', '#FFFFFF') >= 4.5);
+  assert.match(index, /\.hero-tag\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(index, /\.tag-pink\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(index, /\.role-teal\{color:#0B6F65;\}/);
+  assert.match(index, /\.horaire-row \.time\{[^}]*color:#0B6F65;/);
+  assert.match(index, /footer li a\{display:inline-flex;align-items:center;min-height:28px;\}/);
+});
+
 test('les seize pages gardent une structure HTML équilibrée', async () => {
   assert.equal(files.length, 16);
   for (const name of files) {

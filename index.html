@@ -109,7 +109,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 /* HERO */
 .hero{background:linear-gradient(135deg,#FDF0F7 0%,#F0EAF8 50%,#E0F5F3 100%);padding:3rem 1.25rem 2.5rem;}
 .hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--pink-light);color:var(--pink);padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:1rem;border:1px solid #F0B0D0;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--pink-light);color:var(--pink-dark);padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:1rem;border:1px solid #F0B0D0;}
 .hero h1{font-size:2.2rem;font-weight:800;line-height:1.15;margin-bottom:1rem;}
 .hero h1 .cit{background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .hero p{font-size:.95rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;}
@@ -139,7 +139,7 @@ body.cit-form-in-view #audio-player{opacity:0;visibility:hidden;pointer-events:n
 section{padding:3.5rem 1.25rem;}
 .section-inner{max-width:1100px;margin:auto;}
 .section-tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:.75rem;letter-spacing:.06em;text-transform:uppercase;}
-.tag-pink{background:var(--pink-light);color:var(--pink);border:1px solid #F0B0D0;}
+.tag-pink{background:var(--pink-light);color:var(--pink-dark);border:1px solid #F0B0D0;}
 .tag-purple{background:var(--purple-light);color:var(--purple);border:1px solid #C8A8E8;}
 .tag-teal{background:var(--teal-light);color:#0B6F65;border:1px solid #8DD8D0;}
 h2{font-size:1.7rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
@@ -170,7 +170,7 @@ h2{font-size:1.7rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .team-card .role{font-size:.75rem;font-weight:700;margin-bottom:.4rem;}
 .role-pink{color:var(--pink);}
 .role-purple{color:var(--purple);}
-.role-teal{color:var(--teal);}
+.role-teal{color:#0B6F65;}
 .team-card p{font-size:.775rem;color:var(--muted);line-height:1.5;}
 .voir-plus{display:inline-block;margin-top:.75rem;font-size:12px;font-weight:600;color:var(--pink);border:1px solid var(--pink);padding:4px 12px;border-radius:20px;}
 .voir-plus:hover{background:var(--pink-light);}
@@ -196,7 +196,7 @@ h2{font-size:1.7rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .horaire-row{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.85rem;gap:.5rem;}
 .horaire-row:last-child{border:none;}
 .horaire-row .day{color:var(--muted);}
-.horaire-row .time{font-weight:700;color:var(--teal);white-space:nowrap;}
+.horaire-row .time{font-weight:700;color:#0B6F65;white-space:nowrap;}
 
 /* FACTURATION */
 .facturation{background:var(--warm);}
@@ -266,6 +266,7 @@ footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
 footer h2{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 footer p,footer li,footer a{font-size:.825rem;line-height:1.8;color:#A898A4;}
 footer ul{list-style:none;}
+footer li a{display:inline-flex;align-items:center;min-height:28px;}
 footer a:hover{color:var(--pink-mid);}
 .footer-cit{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem;}
 .footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#B8A8B5;flex-wrap:wrap;gap:.5rem;}
@@ -517,7 +518,7 @@ footer a:hover{color:var(--pink-mid);}
         </div>
       </div>
       <div class="disp-box">
-        <h3 style="margin-bottom:1rem;font-size:.975rem;font-weight:800;color:var(--teal);">Horaires d'ouverture</h3>
+        <h3 style="margin-bottom:1rem;font-size:.975rem;font-weight:800;color:#0B6F65;">Horaires d'ouverture</h3>
         <div class="horaire-row"><span class="day">Lundi – Dimanche</span><span class="time">24h/24 – 7j/7</span></div>
         <div class="horaire-row"><span class="day">Jours fériés</span><span class="time">Ouvert</span></div>
         <div style="margin-top:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,var(--pink-light),var(--purple-light));border-radius:8px;border:1px solid #E0B8D8;display:flex;gap:.75rem;align-items:flex-start;">
@@ -562,7 +563,7 @@ footer a:hover{color:var(--pink-mid);}
           <p style="font-size:.875rem;color:var(--text);line-height:1.75;margin-top:.75rem;">Les résultats incluent une <strong>représentation graphique</strong> des paramètres et une interprétation médicale détaillée, avec un support scientifique à disposition des médecins.</p>
         </div>
         <div style="background:var(--white);border-radius:var(--radius);padding:1.5rem;border:1px solid #8DD8D0;">
-          <p style="font-size:.875rem;font-weight:700;color:var(--teal);margin-bottom:.75rem;">🧬 Domaines analysés</p>
+          <p style="font-size:.875rem;font-weight:700;color:#0B6F65;margin-bottom:.75rem;">🧬 Domaines analysés</p>
           <div style="display:flex;flex-direction:column;gap:.5rem;">
             <div style="display:flex;gap:.6rem;font-size:.85rem;"><span style="color:var(--purple);font-weight:700;flex-shrink:0;">•</span>Risques cardiovasculaires</div>
             <div style="display:flex;gap:.6rem;font-size:.85rem;"><span style="color:var(--purple);font-weight:700;flex-shrink:0;">•</span>Vieillissement & longévité</div>

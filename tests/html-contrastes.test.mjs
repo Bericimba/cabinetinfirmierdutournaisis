@@ -128,6 +128,11 @@ test('la FAQ garde des contrastes, des cibles tactiles et des liens explicites',
   assert.match(faq, /<a href="#dispensaire" aria-label="Questions sur le dispensaire">Dispensaire<\/a>/);
 });
 
+test('les liens du pied de page des mentions gardent une cible accessible', async () => {
+  const mentions = await page('mentions.html');
+  assert.match(mentions, /footer li a\{display:inline-flex;align-items:center;min-height:32px;\}/);
+});
+
 test('les seize pages gardent une structure HTML équilibrée', async () => {
   assert.equal(files.length, 16);
   for (const name of files) {

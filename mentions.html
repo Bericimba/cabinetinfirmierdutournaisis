@@ -89,6 +89,7 @@ footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
 footer h2{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 footer p,footer li,footer a{font-size:.825rem;line-height:1.8;color:#A898A4;}
 footer ul{list-style:none;}
+footer li a{display:inline-flex;align-items:center;min-height:32px;}
 footer a:hover{color:var(--pink-mid);}
 .footer-cit{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem;}
 .footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#B8A8B5;flex-wrap:wrap;gap:.5rem;}
@@ -169,7 +170,7 @@ footer a:hover{color:var(--pink-mid);}
 <!-- CONTENU PRINCIPAL -->
 <div class="page-inner">
 
-  <span class="update-badge">Dernière mise à jour : juin 2025</span>
+  <span class="update-badge">Dernière mise à jour : septembre 2026</span>
 
   <!-- TABLE DES MATIÈRES -->
   <div class="toc">
@@ -181,7 +182,7 @@ footer a:hover{color:var(--pink-mid);}
       <li><a href="#responsabilite">Limitation de responsabilité</a></li>
       <li><a href="#donnees">Protection des données personnelles (RGPD)</a></li>
       <li><a href="#droits">Vos droits</a></li>
-      <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#cookies">Stockage local</a></li>
       <li><a href="#contact-dpo">Contact pour les données personnelles</a></li>
     </ol>
   </div>
@@ -192,9 +193,12 @@ footer a:hover{color:var(--pink-mid);}
     <div class="info-box">
       <p>
         <strong>Dénomination :</strong> Cabinet Infirmier du Tournaisis (CIT)<br/>
-        <strong>Forme juridique :</strong> Entreprise individuelle / Cabinet infirmier indépendant<br/>
-        <strong>Numéro BCE :</strong> BE0832.195.365<br/>
-        <strong>Adresse :</strong> Avenue de l'Europe, 68 — 7972 Quevaucamps, Belgique<br/>
+        <strong>Forme juridique :</strong> Société à responsabilité limitée (SRL)<br/>
+        <strong>Numéro d'entreprise BCE :</strong> 0832.195.365<br/>
+        <strong>Numéro de TVA :</strong> BE0832.195.365<br/>
+        <strong>Siège social :</strong> Rue du Banc de Pierre (Bas), 78 — 7971 Beloeil, Belgique<br/>
+        <strong>Établissement de Quevaucamps :</strong> Avenue de l'Europe, 68 — 7972 Quevaucamps, Belgique<br/>
+        <strong>Administratrice :</strong> Céline Lhoir<br/>
         <strong>Téléphone :</strong> <a href="tel:+3269304133">(+32) 069.30.41.33</a><br/>
         <strong>E-mail :</strong> <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a><br/>
         <strong>Site web :</strong> <a href="https://cabinetinfirmierdutournaisis.be">https://cabinetinfirmierdutournaisis.be</a><br/>
@@ -250,19 +254,20 @@ footer a:hover{color:var(--pink-mid);}
     </ul>
 
     <h3>Base légale du traitement</h3>
-    <p>Le traitement de vos données repose sur :</p>
+    <p>Selon la finalité, le traitement repose sur :</p>
     <ul>
-      <li>Votre <strong>consentement</strong> lors de la soumission d'un formulaire ;</li>
-      <li>L'<strong>exécution d'un contrat</strong> ou de mesures précontractuelles (prise en charge de soins) ;</li>
-      <li>Le respect d'une <strong>obligation légale</strong> (facturation INAMI, dossier patient).</li>
+      <li>Les mesures précontractuelles prises à votre demande et l'exécution de la prise en charge (article 6, paragraphe 1, point b du RGPD) ;</li>
+      <li>Le respect des obligations légales du cabinet (article 6, paragraphe 1, point c du RGPD) ;</li>
+      <li>Pour les données relatives à la santé nécessaires à l'organisation ou à la réalisation des soins, la prise en charge sanitaire par des professionnels soumis au secret professionnel (article 9, paragraphe 2, point h du RGPD) ;</li>
+      <li>Lorsqu'un consentement est demandé pour un traitement facultatif, ce consentement (articles 6, paragraphe 1, point a et 9, paragraphe 2, point a du RGPD). Il peut être retiré à tout moment, sans remettre en cause les traitements déjà effectués.</li>
     </ul>
 
     <h3>Durée de conservation</h3>
     <ul>
       <li><strong>Données de contact (formulaires web) :</strong> conservées dans les boîtes e-mail du cabinet le temps nécessaire au traitement de votre demande, et au maximum 1 an.</li>
-      <li><strong>Protection anti-abus :</strong> l'empreinte temporaire de l'adresse IP ne sert plus au blocage après une heure. Son fichier est supprimé lors du prochain nettoyage automatique de la passerelle.</li>
-      <li><strong>Dossiers de soins :</strong> conservés conformément à la législation belge relative aux dossiers médicaux (minimum 30 ans pour les dossiers patients adultes).</li>
-      <li><strong>Données de facturation :</strong> conservées 7 ans conformément aux obligations comptables belges.</li>
+      <li><strong>Protection anti-abus :</strong> l'empreinte temporaire de l'adresse IP sert à limiter les tentatives pendant une fenêtre de 15 minutes. Le fichier technique devient éligible à la suppression après une heure et est effacé lors d'un nettoyage automatique ultérieur.</li>
+      <li><strong>Dossiers de soins :</strong> conservés pendant au minimum 30 ans et au maximum 50 ans à compter du dernier contact avec le patient, conformément à la législation belge.</li>
+      <li><strong>Données de facturation :</strong> conservées 10 ans conformément aux obligations fiscales belges.</li>
     </ul>
 
     <h3>Partage des données</h3>
@@ -304,20 +309,20 @@ footer a:hover{color:var(--pink-mid);}
     </div>
   </div>
 
-  <!-- 7. COOKIES -->
+  <!-- 7. STOCKAGE LOCAL -->
   <div class="section-ml" id="cookies">
-    <h2>7. Cookies</h2>
-    <p>Ce site utilise un nombre limité de cookies techniques, strictement nécessaires à son bon fonctionnement.</p>
+    <h2>7. Stockage local</h2>
+    <p>Le code du site ne dépose aucun cookie de suivi, de publicité ou d'analyse comportementale.</p>
 
-    <h3>Cookies utilisés</h3>
+    <h3>Préférence enregistrée</h3>
     <ul>
-      <li><strong>Cookie de préférence musicale</strong> (<code>cit_music</code>) : mémorise si vous avez activé ou désactivé la musique de fond. Ce cookie ne contient aucune donnée personnelle et expire à la fermeture du navigateur.</li>
+      <li><strong>Préférence musicale</strong> (<code>cit_music</code>) : enregistrée dans le stockage local du navigateur (<code>localStorage</code>) afin de mémoriser votre choix. Elle reste enregistrée jusqu'à ce que vous supprimiez les données du site dans votre navigateur.</li>
     </ul>
 
-    <p>Ce site <strong>n'utilise pas</strong> de cookies de suivi, de publicité ou d'analyse comportementale (pas de Google Analytics, pas de Facebook Pixel, ni aucun cookie tiers de traçage).</p>
+    <p>Aucun outil Google Analytics, Facebook Pixel ou autre dispositif de traçage comportemental n'est intégré au site.</p>
 
-    <h3>Gestion des cookies</h3>
-    <p>Vous pouvez à tout moment supprimer les cookies stockés via les paramètres de votre navigateur. Cela n'affectera pas votre expérience de navigation sur ce site.</p>
+    <h3>Gestion du stockage local</h3>
+    <p>Vous pouvez supprimer cette préférence depuis les paramètres de votre navigateur. Le lecteur musical reviendra alors à son état initial.</p>
   </div>
 
   <!-- 8. CONTACT DPO -->
@@ -332,7 +337,7 @@ footer a:hover{color:var(--pink-mid);}
         <strong>Téléphone :</strong> <a href="tel:+3269304133">(+32) 069.30.41.33</a>
       </p>
     </div>
-    <p style="font-size:.825rem;color:var(--muted);margin-top:1rem;">Page mise à jour en juin 2025. Le Cabinet Infirmier du Tournaisis se réserve le droit de modifier ces mentions légales à tout moment. Nous vous invitons à les consulter régulièrement.</p>
+    <p style="font-size:.825rem;color:var(--muted);margin-top:1rem;">Page mise à jour en septembre 2026. Le Cabinet Infirmier du Tournaisis se réserve le droit de modifier ces mentions légales à tout moment. Nous vous invitons à les consulter régulièrement.</p>
   </div>
 
 </div><!-- /page-inner -->
@@ -375,7 +380,7 @@ footer a:hover{color:var(--pink-mid);}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Cabinet Infirmier du Tournaisis</span>
+      <span>© 2026 Cabinet Infirmier du Tournaisis</span>
       <span>Tous droits réservés · Belgique</span>
     </div>
   </div>

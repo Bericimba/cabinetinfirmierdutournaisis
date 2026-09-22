@@ -116,6 +116,18 @@ test('la page blog garde des contrastes et des liens explicites', async () => {
   assert.equal(new Set(articleLabels).size, 8);
 });
 
+test('la FAQ garde des contrastes, des cibles tactiles et des liens explicites', async () => {
+  const faq = await page('faq-soins-infirmiers.html');
+
+  assert.ok(contrast('#9A0F57', '#FBEAF3') >= 4.5);
+  assert.ok(contrast('#0B6F65', '#FFFFFF') >= 4.5);
+  assert.match(faq, /\.hero-tag\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(faq, /\.tag-pink\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(faq, /\.local-card h3\{[^}]*color:#0B6F65;/);
+  assert.match(faq, /footer li a\{display:inline-flex;align-items:center;min-height:32px;\}/);
+  assert.match(faq, /<a href="#dispensaire" aria-label="Questions sur le dispensaire">Dispensaire<\/a>/);
+});
+
 test('les seize pages gardent une structure HTML équilibrée', async () => {
   assert.equal(files.length, 16);
   for (const name of files) {

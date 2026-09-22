@@ -90,3 +90,29 @@ test('les fichiers locaux et anti-abus du formulaire OVH restent exclus de Git',
   assert.match(ignore, /^var\/rate-\*$/m);
   assert.match(ignore, /^var\/rate-secret$/m);
 });
+
+test('les mentions légales décrivent l entreprise et les traitements réels', async () => {
+  const mentions = await file('mentions.html');
+
+  assert.match(mentions, /<strong>Forme juridique :<\/strong> Société à responsabilité limitée \(SRL\)/);
+  assert.match(mentions, /<strong>Numéro d'entreprise BCE :<\/strong> 0832\.195\.365/);
+  assert.match(mentions, /<strong>Numéro de TVA :<\/strong> BE0832\.195\.365/);
+  assert.match(mentions, /<strong>Siège social :<\/strong> Rue du Banc de Pierre \(Bas\), 78 — 7971 Beloeil, Belgique/);
+  assert.match(mentions, /<strong>Établissement de Quevaucamps :<\/strong> Avenue de l'Europe, 68 — 7972 Quevaucamps, Belgique/);
+  assert.match(mentions, /<strong>Administratrice :<\/strong> Céline Lhoir/);
+  assert.doesNotMatch(mentions, /Entreprise individuelle \/ Cabinet infirmier indépendant/);
+
+  assert.match(mentions, /article 9, paragraphe 2, point h du RGPD/);
+  assert.match(mentions, /articles 6, paragraphe 1, point a et 9, paragraphe 2, point a du RGPD/);
+  assert.match(mentions, /fenêtre de 15 minutes/);
+  assert.match(mentions, /au minimum 30 ans et au maximum 50 ans à compter du dernier contact/);
+  assert.match(mentions, /<strong>Données de facturation :<\/strong> conservées 10 ans/);
+  assert.doesNotMatch(mentions, /conservées 7 ans/);
+
+  assert.match(mentions, /<h2>7\. Stockage local<\/h2>/);
+  assert.match(mentions, /stockage local du navigateur \(<code>localStorage<\/code>\)/);
+  assert.doesNotMatch(mentions, /Cookie de préférence musicale/);
+  assert.match(mentions, /Dernière mise à jour : septembre 2026/);
+  assert.match(mentions, /Page mise à jour en septembre 2026/);
+  assert.match(mentions, /© 2026 Cabinet Infirmier du Tournaisis/);
+});

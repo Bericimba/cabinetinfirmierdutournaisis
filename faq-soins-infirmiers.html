@@ -145,7 +145,7 @@
       "name": "Faut-il une prescription médicale ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pour la plupart des soins techniques, une prescription médicale est nécessaire : prises de sang, pansements, injections, perfusions, soins de plaies ou soins post-opératoires."
+        "text": "Une prescription est nécessaire pour les actes qui l’exigent légalement. Elle n’est plus exigée pour les soins de plaies remboursables, sauf pour certains actes connexes qui restent soumis à prescription. Contactez le cabinet pour vérifier les documents requis pour votre soin."
       }
     },
     {
@@ -153,7 +153,7 @@
       "name": "Les soins infirmiers sont-ils remboursés ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La majorité des soins prescrits peuvent être pris en charge selon les conditions de votre mutuelle et de la réglementation INAMI. Le cabinet peut vous orienter selon votre situation."
+        "text": "Les prestations infirmières reprises dans la nomenclature de l’INAMI et réalisées selon ses conditions sont remboursées par l’assurance obligatoire soins de santé. Selon le soin, une part peut rester à charge du patient. Le cabinet peut vérifier votre situation avec votre mutualité."
       }
     },
     {
@@ -212,7 +212,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:1.5rem;}
 .breadcrumb a{color:var(--pink);}
 .breadcrumb span{margin:0 .5rem;opacity:.5;}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--pink-light);color:var(--pink);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:1rem;border:1px solid #F0B0D0;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--pink-light);color:var(--pink-dark);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:1rem;border:1px solid #F0B0D0;}
 .hero h1{font-size:2.6rem;font-weight:800;line-height:1.15;margin-bottom:1rem;}
 .hero h1 .grad{background:linear-gradient(135deg,var(--pink),var(--purple),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .hero p{font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;}
@@ -229,7 +229,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 section{padding:3.5rem 1.25rem;}
 .section-inner{max-width:1100px;margin:auto;}
 .section-tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:.75rem;letter-spacing:.06em;text-transform:uppercase;}
-.tag-pink{background:var(--pink-light);color:var(--pink);border:1px solid #F0B0D0;}
+.tag-pink{background:var(--pink-light);color:var(--pink-dark);border:1px solid #F0B0D0;}
 .tag-purple{background:var(--purple-light);color:var(--purple);border:1px solid #C8A8E8;}
 .tag-teal{background:var(--teal-light);color:#0B6F65;border:1px solid #8DD8D0;}
 h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
@@ -255,7 +255,7 @@ h2{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:.5rem;}
 .local-seo{background:linear-gradient(135deg,var(--teal-light),var(--purple-light));}
 .local-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
 .local-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;}
-.local-card h3{font-size:.95rem;margin-bottom:.5rem;color:var(--teal);}
+.local-card h3{font-size:.95rem;margin-bottom:.5rem;color:#0B6F65;}
 .local-card p{font-size:.85rem;color:var(--muted);line-height:1.6;}
 
 /* CTA */
@@ -271,6 +271,7 @@ footer{background:#1E1A1D;color:#C8B8C4;padding:2.5rem 1.25rem 1.5rem;}
 footer h2{font-size:.875rem;font-weight:700;margin-bottom:.75rem;background:linear-gradient(90deg,var(--pink-mid),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 footer p,footer li,footer a{font-size:.825rem;line-height:1.8;color:#A898A4;}
 footer ul{list-style:none;}
+footer li a{display:inline-flex;align-items:center;min-height:32px;}
 footer a:hover{color:var(--pink-mid);}
 .footer-cit{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--pink-mid),var(--purple-mid),var(--teal-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem;}
 .footer-bottom{border-top:1px solid #332830;padding-top:1rem;display:flex;justify-content:space-between;font-size:.775rem;color:#B8A8B5;flex-wrap:wrap;gap:.5rem;}
@@ -387,7 +388,7 @@ footer a:hover{color:var(--pink-mid);}
         <strong>Catégories</strong>
         <a href="#general">Questions générales</a>
         <a href="#domicile">Soins à domicile</a>
-        <a href="#dispensaire">Dispensaire</a>
+        <a href="#dispensaire" aria-label="Questions sur le dispensaire">Dispensaire</a>
         <a href="#soins">Types de soins</a>
         <a href="#remboursement">Prescription & remboursement</a>
       </aside>
@@ -530,16 +531,14 @@ footer a:hover{color:var(--pink-mid);}
           <div class="faq-item">
             <button class="faq-question" id="faq-question-14" aria-expanded="false" aria-controls="faq-answer-14">Faut-il une prescription médicale ? <span aria-hidden="true">+</span></button>
             <div class="faq-answer" id="faq-answer-14" role="region" aria-labelledby="faq-question-14" hidden>
-              Pour la plupart des soins techniques, une prescription médicale est nécessaire :
-              prises de sang, pansements, injections, perfusions, soins de plaies ou soins post-opératoires.
+              Une prescription est nécessaire pour les actes qui l’exigent légalement. Elle n’est plus exigée pour les soins de plaies remboursables, sauf pour certains actes connexes qui restent soumis à prescription. Contactez le cabinet pour vérifier les documents requis pour votre soin.
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" id="faq-question-15" aria-expanded="false" aria-controls="faq-answer-15">Les soins infirmiers sont-ils remboursés ? <span aria-hidden="true">+</span></button>
             <div class="faq-answer" id="faq-answer-15" role="region" aria-labelledby="faq-question-15" hidden>
-              La majorité des soins prescrits peuvent être pris en charge selon les conditions de votre mutuelle
-              et de la réglementation INAMI. Le cabinet peut vous orienter selon votre situation.
+              Les prestations infirmières reprises dans la nomenclature de l’INAMI et réalisées selon ses conditions sont remboursées par l’assurance obligatoire soins de santé. Selon le soin, une part peut rester à charge du patient. Le cabinet peut vérifier votre situation avec votre mutualité.
             </div>
           </div>
 

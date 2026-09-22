@@ -73,6 +73,17 @@ test('le résumé destiné aux assistants correspond aux seize questions de la F
   assert.doesNotMatch(llms, /14 questions-réponses/);
 });
 
+test('la FAQ décrit correctement les prescriptions et remboursements belges', async () => {
+  const faq = await file('faq-soins-infirmiers.html');
+  const prescription = 'Une prescription est nécessaire pour les actes qui l’exigent légalement. Elle n’est plus exigée pour les soins de plaies remboursables, sauf pour certains actes connexes qui restent soumis à prescription. Contactez le cabinet pour vérifier les documents requis pour votre soin.';
+  const reimbursement = 'Les prestations infirmières reprises dans la nomenclature de l’INAMI et réalisées selon ses conditions sont remboursées par l’assurance obligatoire soins de santé. Selon le soin, une part peut rester à charge du patient. Le cabinet peut vérifier votre situation avec votre mutualité.';
+
+  assert.equal(faq.split(prescription).length - 1, 2);
+  assert.equal(faq.split(reimbursement).length - 1, 2);
+  assert.doesNotMatch(faq, /pansements, injections, perfusions, soins de plaies ou soins post-opératoires/);
+  assert.doesNotMatch(faq, /La majorité des soins prescrits peuvent être pris en charge/);
+});
+
 test('les fichiers locaux et anti-abus du formulaire OVH restent exclus de Git', async () => {
   const ignore = await file('_ovh-formulaire/.gitignore');
   assert.match(ignore, /^config\.local\.php$/m);

@@ -102,6 +102,20 @@ test('le libelle des engagements du remplacement reste accessible', async () => 
   assert.match(replacement, /\.tag-pink\{[^}]*color:var\(--pink-dark\)/);
 });
 
+test('la page blog garde des contrastes et des liens explicites', async () => {
+  const blog = await page('blog.html');
+
+  assert.ok(contrast('#9A0F57', '#FBEAF3') >= 4.5);
+  assert.ok(contrast('#0B6F65', '#FFFFFF') >= 4.5);
+  assert.match(blog, /\.hero-tag\{[^}]*color:var\(--pink-dark\)/);
+  assert.match(blog, /\.cat-btn\.sante\{[^}]*color:#0B6F65;[^}]*border-color:#0B6F65;/);
+
+  const articleLabels = [...blog.matchAll(/<a href="blog-[^"]+\.html" class="btn-lire" aria-label="(Lire l'article : [^"]+)">Lire l'article →<\/a>/g)]
+    .map((match) => match[1]);
+  assert.equal(articleLabels.length, 8);
+  assert.equal(new Set(articleLabels).size, 8);
+});
+
 test('les seize pages gardent une structure HTML équilibrée', async () => {
   assert.equal(files.length, 16);
   for (const name of files) {

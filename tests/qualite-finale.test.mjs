@@ -114,5 +114,5 @@ test('les mentions légales décrivent l entreprise et les traitements réels', 
   assert.doesNotMatch(mentions, /Cookie de préférence musicale/);
   assert.match(mentions, /Dernière mise à jour : septembre 2026/);
   assert.match(mentions, /Page mise à jour en septembre 2026/);
-  assert.match(mentions, /© 2026 Cabinet Infirmier du Tournaisis/);
+  assert.match(mentions, /© <span id="annee-actuelle"><\/span> Cabinet Infirmier du Tournaisis/);
 });

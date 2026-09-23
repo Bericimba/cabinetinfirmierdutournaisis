@@ -9,7 +9,7 @@ const legacyRedirect = 'blog-cystocath-sonde-urienne.html';
 const cystocathArticle = `${base}blog-cystocath-sonde-urinaire.html`;
 const indexableFiles = files.filter((name) => !['mentions.html', legacyRedirect].includes(name));
 const sitemapLastmod = new Map([
-  ['index.html', '2026-09-21'],
+  ['index.html', '2026-09-23'],
   ['equipe.html', '2026-09-21'],
   ['dispensaire.html', '2026-09-21'],
   ['remplacement.html', '2026-09-21'],

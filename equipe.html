@@ -220,6 +220,7 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
   .membre-content h2{font-size:1.25rem;}
 }
 </style>
+<link rel="stylesheet" href="footer.css"/>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Aller au contenu principal</a>
@@ -739,16 +740,49 @@ footer a{color:var(--pink-mid);font-size:.825rem;}
 
 <script src="accessibilite.js"></script>
 
-<footer>
+<footer class="site-footer">
   <div class="footer-inner">
-    <div>
-      <div class="footer-cit">C.I.T</div>
-      <p>Avenue de l'Europe, 68 · Quevaucamps 7972<br/>
-      <a href="tel:+3269304133">(+32) 069.30.41.33</a> · <a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a></p>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-cit">C.I.T</div>
+        <h2>Cabinet Infirmier du Tournaisis</h2>
+        <p>Soins infirmiers à domicile et au dispensaire dans le grand Tournaisis. Conventionnés INAMI · Tiers payant.</p>
+        <p style="margin-top:.5rem;">BCE : BE0832.195.365</p>
+        <a href="https://www.facebook.com/p/Cabinet-Infirmier-du-Tournaisis-61558686962236/" class="social-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          Suivez-nous sur Facebook
+        </a>
+      </div>
+      <div>
+        <h2>Navigation</h2>
+        <ul>
+          <li><a href="index.html#prestations">Nos soins</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+          <li><a href="dispensaire.html">Dispensaire</a></li>
+          <li><a href="index.html#facturation">Facturation</a></li>
+          <li><a href="index.html#remplacement">Remplacements</a></li>
+          <li><a href="index.html#zone">Zone</a></li>
+          <li><a href="index.html#biologie">Prélèvement</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq-soins-infirmiers.html">FAQ</a></li>
+          <li><a href="index.html#rdv">Prendre RDV</a></li>
+          <li><a href="mentions.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p>Avenue de l'Europe, 68<br/>Quevaucamps 7972<br/>Belgique</p>
+        <p style="margin-top:.5rem;"><a href="tel:+3269304133">(+32) 069.30.41.33</a></p>
+        <p><a href="mailto:info@cabinetinfirmierdutournaisis.be">info@cabinetinfirmierdutournaisis.be</a></p>
+      </div>
     </div>
-    <p style="color:#B8A8B5;font-size:.775rem;">© 2026 Cabinet Infirmier du Tournaisis · BCE BE0832.195.365 · <a href="mentions.html" style="color:#A898A4;">Mentions légales</a></p>
+    <div class="footer-bottom">
+      <span>© <span id="annee-actuelle"></span> Cabinet Infirmier du Tournaisis</span>
+      <span>Tous droits réservés · Belgique</span>
+    </div>
   </div>
 </footer>
+<script>document.getElementById("annee-actuelle").textContent = new Date().getFullYear();</script>
 
 <!-- BOUTON FLOTTANT MOBILE -->
 <button class="cta-float" onclick="window.location.href='tel:+3269304133'">

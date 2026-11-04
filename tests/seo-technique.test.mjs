@@ -144,7 +144,7 @@ test('tous les liens internes et leurs ancres existent', async () => {
       const href = match[1];
       if (/^(?:https?:|mailto:|tel:)/i.test(href)) continue;
       const [path, fragment] = href.split('#');
-      const target = path || name;
+      const target = path === '/' ? 'index.html' : path.startsWith('/') ? path.slice(1) : path || name;
       assert.ok(contents[target], `${name}: fichier absent ${href}`);
       if (fragment) assert.ok(ids[target].has(fragment), `${name}: ancre absente ${href}`);
     }

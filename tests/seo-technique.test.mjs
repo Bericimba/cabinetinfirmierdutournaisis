@@ -9,9 +9,9 @@ const legacyRedirect = 'blog-cystocath-sonde-urienne.html';
 const cystocathArticle = `${base}blog-cystocath-sonde-urinaire.html`;
 const indexableFiles = files.filter((name) => !['mentions.html', legacyRedirect].includes(name));
 const sitemapLastmod = new Map([
-  ['index.html', '2026-09-23'],
+  ['index.html', '2026-11-04'],
   ['equipe.html', '2026-09-21'],
-  ['dispensaire.html', '2026-09-21'],
+  ['dispensaire.html', '2026-11-04'],
   ['remplacement.html', '2026-09-21'],
   ['faq-soins-infirmiers.html', '2026-09-22'],
   ['blog.html', '2026-09-22'],
@@ -21,7 +21,7 @@ const sitemapLastmod = new Map([
   ['blog-cystocath-sonde-urinaire.html', '2026-09-19'],
   ['blog-fortes-chaleurs-conseils.html', '2026-09-19'],
   ['blog-escarres-prevention.html', '2026-09-19'],
-  ['blog-prise-de-sang-domicile.html', '2026-09-19'],
+  ['blog-prise-de-sang-domicile.html', '2026-11-04'],
   ['blog-avantages-soins-domicile.html', '2026-09-19'],
 ]);
 
@@ -140,7 +140,8 @@ test('les données structurées utilisent des URL absolues et datent les article
     }
     if (name.startsWith('blog-') && name !== legacyRedirect) {
       const article = schemas.find((schema) => schema['@type'] === 'Article');
-      assert.equal(article?.dateModified, '2026-09-19', name);
+      const expectedDateModified = name === 'blog-prise-de-sang-domicile.html' ? '2026-11-04' : '2026-09-19';
+      assert.equal(article?.dateModified, expectedDateModified, name);
     }
   }
 });

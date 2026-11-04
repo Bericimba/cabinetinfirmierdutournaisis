@@ -58,6 +58,21 @@ test('chaque page publie une canonique unique et annonce le flux RSS', async () 
   }
 });
 
+test('l accueil cible les recherches locales prioritaires avec un extrait concis', async () => {
+  const html = await page('index.html');
+  const title = html.match(/<title>([^<]+)<\/title>/i)?.[1];
+  const descriptionTag = html.match(/<meta\b[^>]*name=["']description["'][^>]*>/i)?.[0];
+  const description = attribute(descriptionTag ?? '', 'content');
+
+  assert.equal(title, 'Infirmiers à domicile à Tournai et dans le Tournaisis | CIT');
+  assert.ok(title.length <= 60, `titre trop long : ${title.length}`);
+  assert.equal(description, 'Besoin d’une infirmière à domicile à Tournai, Beloeil ou Quevaucamps ? Soins, pansements et prises de sang 24h/24 par une équipe conventionnée INAMI.');
+  assert.ok(description.length <= 160, `description trop longue : ${description.length}`);
+  assert.match(html, /<h1>Infirmières et infirmiers à domicile<br><span class="cit">à Tournai et dans le Tournaisis<\/span><\/h1>/);
+  assert.match(html, /<p>Notre équipe d’infirmières et d’infirmiers assure vos soins à domicile à Tournai, Quevaucamps, Basècles, Beloeil et dans tout le Tournaisis\. Nous sommes disponibles 24h\/24 et 7j\/7 pour les pansements, injections, prises de sang et autres soins prescrits\.<\/p>/);
+  assert.doesNotMatch(html, /Soignez, votre quotidien/);
+});
+
 test('l ancienne URL Cystocath redirige les visiteurs vers l article canonique', async () => {
   const html = await page(legacyRedirect);
   const refresh = html.match(/<meta\b[^>]*http-equiv=["']refresh["'][^>]*>/i)?.[0];

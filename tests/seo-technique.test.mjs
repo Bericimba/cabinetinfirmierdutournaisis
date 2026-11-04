@@ -73,6 +73,19 @@ test('l accueil cible les recherches locales prioritaires avec un extrait concis
   assert.doesNotMatch(html, /Soignez, votre quotidien/);
 });
 
+test('le dispensaire présente un extrait local concis sans modifier son titre visible', async () => {
+  const html = await page('dispensaire.html');
+  const title = html.match(/<title>([^<]+)<\/title>/i)?.[1];
+  const descriptionTag = html.match(/<meta\b[^>]*name=["']description["'][^>]*>/i)?.[0];
+  const description = attribute(descriptionTag ?? '', 'content');
+
+  assert.equal(title, 'Dispensaire infirmier à Quevaucamps, près de Basècles | CIT');
+  assert.ok(title.length <= 60, `titre trop long : ${title.length}`);
+  assert.equal(description, 'Dispensaire infirmier ouvert 24h/24 à Quevaucamps, près de Basècles et Beloeil. Pansements, injections, prises de sang et centre de prélèvement.');
+  assert.ok(description.length <= 160, `description trop longue : ${description.length}`);
+  assert.match(html, /<h1>Dispensaire de soins<br><span class="grad">de Quevaucamps<\/span><\/h1>/);
+});
+
 test('l ancienne URL Cystocath redirige les visiteurs vers l article canonique', async () => {
   const html = await page(legacyRedirect);
   const refresh = html.match(/<meta\b[^>]*http-equiv=["']refresh["'][^>]*>/i)?.[0];

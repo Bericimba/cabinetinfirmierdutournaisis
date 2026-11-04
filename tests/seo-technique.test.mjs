@@ -86,6 +86,24 @@ test('le dispensaire présente un extrait local concis sans modifier son titre v
   assert.match(html, /<h1>Dispensaire de soins<br><span class="grad">de Quevaucamps<\/span><\/h1>/);
 });
 
+test('l article prise de sang renforce son intention locale sans perdre sa structure éditoriale', async () => {
+  const html = await page('blog-prise-de-sang-domicile.html');
+  const title = html.match(/<title>([^<]+)<\/title>/i)?.[1];
+  const descriptionTag = html.match(/<meta\b[^>]*name=["']description["'][^>]*>/i)?.[0];
+  const description = attribute(descriptionTag ?? '', 'content');
+
+  assert.equal(title, 'Prise de sang à domicile – Tournai et Tournaisis | CIT');
+  assert.ok(title.length <= 60, `titre trop long : ${title.length}`);
+  assert.equal(description, 'Prise de sang à domicile à Tournai, Quevaucamps, Basècles et Beloeil. Prélèvement par une infirmière du CIT, sur prescription et sur rendez-vous.');
+  assert.ok(description.length <= 160, `description trop longue : ${description.length}`);
+  assert.match(html, /<h1>Comment se déroule une prise de sang à domicile \?<\/h1>/);
+  assert.match(html, /Le Cabinet Infirmier du Tournaisis réalise vos prises de sang à domicile à Tournai, Quevaucamps, Basècles, Beloeil et dans les communes voisines\./);
+  assert.match(html, /Le prélèvement est effectué sur prescription et sur rendez-vous, puis les échantillons sont identifiés et acheminés vers le laboratoire pour analyse\./);
+  assert.match(html, /Besoin d’une prise de sang à domicile \?/);
+  assert.match(html, /Notre équipe intervient à Tournai, Quevaucamps, Basècles, Beloeil et dans le Tournaisis\./);
+  assert.match(html, /"headline": "Comment se déroule une prise de sang à domicile \?"/);
+});
+
 test('l ancienne URL Cystocath redirige les visiteurs vers l article canonique', async () => {
   const html = await page(legacyRedirect);
   const refresh = html.match(/<meta\b[^>]*http-equiv=["']refresh["'][^>]*>/i)?.[0];

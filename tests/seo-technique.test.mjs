@@ -81,9 +81,11 @@ test('le dispensaire présente un extrait local concis sans modifier son titre v
 
   assert.equal(title, 'Dispensaire infirmier à Quevaucamps, près de Basècles | CIT');
   assert.ok(title.length <= 60, `titre trop long : ${title.length}`);
-  assert.equal(description, 'Dispensaire infirmier ouvert 24h/24 à Quevaucamps, près de Basècles et Beloeil. Pansements, injections, prises de sang et centre de prélèvement.');
+  assert.equal(description, 'Dispensaire infirmier à Quevaucamps, près de Basècles et Beloeil. Équipe joignable 24h/24 par téléphone ou visiophone, présence si nécessaire.');
   assert.ok(description.length <= 160, `description trop longue : ${description.length}`);
   assert.match(html, /<h1>Dispensaire de soins<br><span class="grad">de Quevaucamps<\/span><\/h1>/);
+  assert.doesNotMatch(html, /"openingHours"/);
+  assert.doesNotMatch(html, /dispensaire(?: de soins infirmiers)? ouvert 24h\/24/i);
 });
 
 test('l article prise de sang renforce son intention locale sans perdre sa structure éditoriale', async () => {

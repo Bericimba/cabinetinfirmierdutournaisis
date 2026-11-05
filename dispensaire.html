@@ -239,6 +239,7 @@ footer a{color:var(--teal-mid);font-size:.825rem;}
   .step{grid-template-columns:44px 1fr;}
   .step-num{width:44px;height:44px;font-size:1.1rem;}
   .cta-float{display:flex;}
+  #audio-player{display:none!important;}
   section{padding:2.5rem 1rem;}
   h2{font-size:1.5rem;}
   .footer-inner{flex-direction:column;text-align:center;}
@@ -646,7 +647,7 @@ footer a{color:var(--teal-mid);font-size:.825rem;}
 <script>
 var music=document.getElementById('bg-music'),btn=document.getElementById('audio-btn'),label=document.getElementById('audio-label');
 function toggleMusic(){var p=!music.paused;if(!p){music.volume=0.35;music.play().catch(function(){});btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';localStorage.setItem('cit_music','on');}else{music.pause();btn.innerHTML='🎵';btn.setAttribute('aria-label','Activer la musique');btn.setAttribute('aria-pressed','false');btn.style.background='linear-gradient(135deg,#D4187A,#7B4FB5)';localStorage.setItem('cit_music','off');}label.textContent=!p?'Musique activée':'Musique désactivée';label.style.opacity='1';setTimeout(function(){label.style.opacity='0';},2000);}
-window.addEventListener('load',function(){if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
+window.addEventListener('load',function(){if(window.matchMedia('(max-width: 768px)').matches){music.pause();label.style.opacity='0';return;}if(localStorage.getItem('cit_music')==='on'){music.volume=0.35;music.play().then(function(){btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}).catch(function(){document.addEventListener('click',function s(){if(localStorage.getItem('cit_music')==='on'){music.play();btn.innerHTML='🔊';btn.setAttribute('aria-label','Désactiver la musique');btn.setAttribute('aria-pressed','true');btn.style.background='linear-gradient(135deg,#1A9E8F,#7B4FB5)';}document.removeEventListener('click',s);});});}setTimeout(function(){label.style.opacity='0';},4000);});
 btn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';label.style.opacity='1';});
 btn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';setTimeout(function(){label.style.opacity='0';},1500);});
 </script>

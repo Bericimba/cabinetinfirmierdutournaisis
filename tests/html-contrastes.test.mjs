@@ -71,6 +71,13 @@ test('les petits textes et les liens tactiles de l accueil restent accessibles',
   assert.match(index, /footer li a\{display:inline-flex;align-items:center;min-height:28px;\}/);
 });
 
+test('les intitulés des publics de l article prise de sang restent lisibles', async () => {
+  const article = await page('blog-prise-de-sang-domicile.html');
+
+  assert.ok(contrast('#0B6F65', '#E0F5F3') >= 4.5);
+  assert.match(article, /\.list-item strong\{[^}]*color:#0B6F65;/);
+});
+
 test('les textes colorés du dispensaire gardent un contraste suffisant', async () => {
   const dispensary = await page('dispensaire.html');
 

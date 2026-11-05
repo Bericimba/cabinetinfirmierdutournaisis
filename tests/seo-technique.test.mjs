@@ -102,6 +102,8 @@ test('l article prise de sang renforce son intention locale sans perdre sa struc
   assert.match(html, /Besoin d’une prise de sang à domicile \?/);
   assert.match(html, /Notre équipe intervient à Tournai, Quevaucamps, Basècles, Beloeil et dans le Tournaisis\./);
   assert.match(html, /"headline": "Comment se déroule une prise de sang à domicile \?"/);
+  assert.match(html, /Mis à jour le 4 novembre 2026/);
+  assert.doesNotMatch(html, /Mis à jour le 19 septembre 2026/);
 });
 
 test('l ancienne URL Cystocath redirige les visiteurs vers l article canonique', async () => {

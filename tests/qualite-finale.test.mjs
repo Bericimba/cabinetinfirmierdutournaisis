@@ -65,6 +65,29 @@ test('les cinq boutons audio ont un nom et un état accessibles', async () => {
   }
 });
 
+test('sur mobile le bouton d appel reste disponible sans lecteur musical flottant', async () => {
+  for (const name of ['index.html', 'dispensaire.html']) {
+    const html = await file(name);
+    const start = html.indexOf('@media(max-width:768px)');
+    const end = html.indexOf('@media(max-width:420px)', start);
+    const mobileStyles = html.slice(start, end);
+
+    assert.match(mobileStyles, /\.cta-float\{display:flex;\}/, name);
+    assert.match(mobileStyles, /#audio-player\{display:none!important;\}/, name);
+  }
+});
+
+test('sur mobile une préférence musicale enregistrée ne redémarre pas sans contrôle visible', async () => {
+  for (const name of ['index.html', 'dispensaire.html']) {
+    const html = await file(name);
+    assert.match(
+      html,
+      /matchMedia\('\(max-width: 768px\)'\)\.matches\)\{[\s\S]*?music\.pause\(\);[\s\S]*?return;/,
+      name
+    );
+  }
+});
+
 test('le résumé destiné aux assistants correspond aux seize questions de la FAQ', async () => {
   const llms = await file('llms.txt');
   const faq = await file('faq-soins-infirmiers.html');

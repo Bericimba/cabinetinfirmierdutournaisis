@@ -284,6 +284,7 @@ footer a:hover{color:var(--pink-mid);}
   .btn-primary,.btn-secondary{width:100%;text-align:center;}
   .hero-btns{flex-direction:column;}
   .cta-float{display:flex;}
+  #audio-player{display:none!important;}
   section{padding:2.5rem 1rem;}
   h2{font-size:1.5rem;}
   .cards-grid{grid-template-columns:1fr 1fr;}
@@ -815,6 +816,11 @@ function toggleMusic(){
 
 // Au chargement, reprendre si musique était activée
 window.addEventListener('load', function(){
+  if(window.matchMedia('(max-width: 768px)').matches){
+    music.pause();
+    label.style.opacity='0';
+    return;
+  }
   var saved = localStorage.getItem('cit_music');
   if(saved === 'on'){
     // Petite astuce : on attend une interaction utilisateur minimale
